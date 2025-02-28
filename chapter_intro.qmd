@@ -435,7 +435,7 @@ $$
 - Consider a normal random variable $R$ with  $\mu=0$ and $\sigma=1$. In other words, $R \sim N(0,1)$. We call it a standard normal random variable.
 - Suppose that we want to find the probability that $R$ is lower than $x$. Graphically, this probability is the shadowed area in the figure below:
 
-```{r, echo=FALSE, fig.width=15, fig.height=10, fig.align="center"}
+```{r, echo=FALSE, fig.align="center"}
 
 library(ggplot2)
 
@@ -610,9 +610,9 @@ ggplot(data, aes(x = Returns, fill = Type)) +
         - VaR at 10\% =  `norm.inv(0.1,0,1) = -1.282` (R: `qnorm(0.10, mean = 0, sd = 1)`)
 
     
-:::{.aside}    
+<!-- :::{.aside}    
 Closed-form: $VaR(X) = \Phi ^{-1}(1-p)\sigma + \mu$
-:::
+::: -->
 
 
 ---

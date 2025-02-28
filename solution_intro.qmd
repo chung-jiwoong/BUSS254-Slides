@@ -1,0 +1,353 @@
+---
+title: "Practice Problem Set 1"
+subtitle: "BUSS254 Investments"
+author: "Prof. Ji-Woong Chung"
+format: html
+number-sections: true
+execute:
+    echo: true
+    eval: true
+---
+
+-   If you notice any typos or errors, please feel free to [email me](chung_jiwoong@gmail.com).
+
+
+---
+
+## Problem
+
+Go to [finance.yahoo.com](https://finance.yahoo.com)) search for the ticker symbol of Palantir Technologies Inc.
+
+###
+
+-   Click on the **"Summary"** tab. What is the company's main line of business?
+
+**Solution:** *Varies depending on the date of checking*
+
+###
+
+-   In the **"Statistics"** tab, how many shares of the company’s stock are outstanding?
+-   What is the company’s total market capitalization?
+-   What was its net profit in the most recent fiscal year?
+
+**Solution:** *Varies depending on the date of checking*
+
+###
+
+-   In the **"Holders"** tab, what percentage of total shares is held by insiders?
+
+**Solution:** *Varies depending on the date of checking*
+
+###
+
+-   In the **"Analysis"** tab, what is the average price target predicted by analysts covering this firm?
+-   How does this compare to the stock's current trading price?
+
+**Solution:** *Varies depending on the date of checking*
+
+###
+
+-   In the **"Financials"** tab, what were the company’s total assets at the end of the most recent fiscal year?
+
+**Solution:** *Varies depending on the date of checking*
+
+---
+
+## Problem
+
+XYZ stock price and dividend history are as follows:
+
+| Year | Beginning-of-year Price | Dividend paid at Year-End |
+|------|--------------------------|---------------------------|
+| 2010 | \$100                    | \$4                       |
+| 2011 | \$110                    | \$4                       |
+| 2012 | \$90                     | \$4                       |
+| 2013 | \$95                     | \$4                       |
+
+###
+
+What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
+
+**Solution:**
+
+First, calculate the returns for each year:
+
+*   2010: $(\$110 + \$4 - \$100) / \$100 = 0.14 = 14\%$
+*   2011: $(\$90 + \$4 - \$110) / \$110 = -0.1455 = -14.55\%$
+*   2012: $(\$95 + \$4 - \$90) / \$90 = 0.10 = 10\%$
+
+Arithmetic average return: $(0.14 - 0.1455 + 0.10) / 3 = 0.0315 = 3.15\%$
+
+Geometric average return: $[(1 + 0.14) \times (1 - 0.1455) \times (1 + 0.10)]^{1/3} - 1 = 0.0271 = 2.71\%$
+
+###
+
+An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sells one share at the beginning of 2012, and sells all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?
+
+**Solution:**
+
+This requires finding the discount rate that makes the present value of all cash flows equal to zero.
+
+*   Time 0 (Beginning of 2010): -$300 (3 shares @ \$100)
+*   Time 1 (Beginning of 2011): -$220 (2 shares @ \$110) + \$12 (Dividends) = -$208
+*   Time 2 (Beginning of 2012):  +\$90 (1 share @ \$90) + \$20 (5 shares x \$4 dividend) = \$110
+*   Time 3 (Beginning of 2013):  +\$380 (4 shares @ \$95) + \$16 (4 shares x \$4 dividend) = \$396
+
+Using a financial calculator or spreadsheet software, find the IRR that solves:
+
+$−300 + \frac{-208}{(1 + I)} + \frac{110}{(1 + I)^2} + \frac{396}{(1 + I)^3} = 0$
+
+The IRR is approximately 10.71%.
+
+---
+
+## Problem
+
+The following table is a simple scenario of the stock market:
+
+| Scenario         | Probability | Holding-period return (%) |
+|------------------|-------------|---------------------------|
+| Severe recession | 0.01        | -40                       |
+| Mild Recession   | 0.09        | -10                       |
+| Normal           | 0.60        | +5                        |
+| Mild growth      | 0.20        | +12                       |
+| Boom             | 0.10        | +60                       |
+
+###
+
+Calculate the expected return and the standard deviation of the holding-period return.
+
+**Solution:**
+
+Expected Return:
+
+$E[R] = (0.01 \times -40) + (0.09 \times -10) + (0.60 \times 5) + (0.20 \times 12) + (0.10 \times 60) = 8.5\%$
+
+Standard Deviation:
+
+$\sigma = \sqrt{\sum_{i=1}^{n} p_i (R_i - E[R])^2}$
+
+$\sigma = \sqrt{0.01(-40 - 8.5)^2 + 0.09(-10 - 8.5)^2 + 0.6(5 - 8.5)^2 + 0.2(12 - 8.5)^2 + 0.1(60 - 8.5)^2} = 15.95\%$
+
+###
+
+What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5%.
+
+**Solution:**
+
+VaR at 5% means the return that you expect to happen only 5% of the time. Looking at the scenarios and their probabilities:
+
+*   Severe recession: 1% probability, -40% return
+*   Mild recession: 9% probability, -10% return
+
+Since the severe recession scenario has a 1% probability and the mild recession has a 9% probability, the fifth percentile VaR is the return associated with the mild recession, i.e., -10%.
+
+###
+
+Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return.
+
+**Solution:**
+
+Since the severe recession scenario has a 1% probability, the one-percentile VaR is the return associated with the severe recession, i.e., -40%.
+
+---
+
+## Problem
+
+Warren is currently holding a portfolio comprising 40% in stock A and 60% in stock B. The expected returns on stocks A and B are 20% and 10%, respectively and the standard deviation of stocks A and B are 25% and 16%, respectively. The correlation coefficient of stocks A and B is 0.5 and the return on T-bill is 3%. [Sharpe ratio = $(E[R]-R_f)/\sigma$]
+
+###
+
+Compute the expected return and standard deviation of Warren's portfolio.
+
+**Solution:**
+
+Given:
+
+*   $w_A = 0.4$, $w_B = 0.6$
+*   $E[R_A] = 0.20$, $E[R_B] = 0.10$
+*   $\sigma_A = 0.25$, $\sigma_B = 0.16$
+*   $\rho_{AB} = 0.5$
+*   $R_f = 0.03$
+
+Expected return of the portfolio:
+
+$E[R_P] = w_A E[R_A] + w_B E[R_B] = (0.4 \times 0.20) + (0.6 \times 0.10) = 0.14 = 14\%$
+
+Standard deviation of the portfolio:
+
+$\sigma_P = \sqrt{w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2w_A w_B \rho_{AB} \sigma_A \sigma_B}$
+
+$\sigma_P = \sqrt{(0.4^2 \times 0.25^2) + (0.6^2 \times 0.16^2) + (2 \times 0.4 \times 0.6 \times 0.5 \times 0.25 \times 0.16)} = 0.1735 = 17.35\%$
+
+###
+
+Which of the following changes will be most preferred by Warren?
+
+1.  Standard deviation of stocks A and B reduce to 16% and 9%, respectively;
+2.  The correlation coefficient of stocks A and B changes to $-0.5$; or
+3.  The expected return on stock A increases to 30%.
+
+**Solution:**
+
+The best approach to solve this problem is to compare Sharp Ratio of the new portfolios.
+
+1.  Reduced standard deviations:
+
+$\sigma_P = \sqrt{(0.4^2 \times 0.16^2) + (0.6^2 \times 0.09^2) + (2 \times 0.4 \times 0.6 \times 0.5 \times 0.16 \times 0.09)} = 0.0872 = 8.72\%$
+
+Sharpe Ratio = $(0.14 - 0.03) / 0.0872 = 1.26$
+
+2.  Correlation coefficient changes to $-0.5$:
+
+$\sigma_P = \sqrt{(0.4^2 \times 0.25^2) + (0.6^2 \times 0.16^2) + (2 \times 0.4 \times 0.6 \times -0.5 \times 0.25 \times 0.16)} = 0.1249 = 12.49\%$
+
+Sharpe Ratio = $(0.14 - 0.03) / 0.1249 = 0.88$
+
+3.  Expected return on A increases to 30%:
+
+$E[R_P] = (0.4 \times 0.30) + (0.6 \times 0.10) = 0.18 = 18\%$
+
+Sharpe Ratio = $(0.18 - 0.03) / 0.1735 = 0.86$
+
+Comparing the Sharpe ratios, Warren would prefer the first change (reduced standard deviations), as it results in the highest Sharpe ratio.
+
+---
+
+## Programming Exercise (Optional)
+
+### 
+
+Google "How to install R and RStudio" and follow the instructions to install both software on your computer.
+
+Next, download the "chapter_intro.qmd" file from the course website (`https://github.com/chung-jiwoong/BUSS284-Sides`). Once downloaded, open the file using RStudio.
+
+**Instruction:**
+
+*Windows (Winget):**
+
+Winget is the Windows Package Manager, a command-line tool that simplifies software installation on Windows 10 and later.
+
+1.  **Install R:**
+
+    *   Open Command Prompt or PowerShell as an administrator.
+    *   Type the following command and press Enter:
+
+    ```powershell
+    winget install R.R
+    ```
+    *   Confirm any prompts.
+
+2.  **Install RStudio:**
+
+    *   Open Command Prompt or PowerShell as an administrator.
+    *   Type the following command and press Enter:
+
+    ```powershell
+    winget install RStudio.RStudio
+    ```
+    *   Confirm any prompts.
+
+3.  **Verify Installation:**
+
+    *   Open RStudio. If it opens successfully, R and RStudio have been installed correctly.
+
+**macOS (Homebrew):**
+
+Homebrew is a popular package manager for macOS.  If you don't have it installed already, you'll need to install that first.
+
+1.  **Install Homebrew (if you don't have it already):**
+
+    *   Open Terminal.
+    *   Run the following command and follow the prompts:
+
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+2.  **Install R:**
+
+    *   Open Terminal.
+    *   Type the following command and press Enter:
+
+    ```bash
+    brew install r
+    ```
+
+3.  **Install RStudio:**
+
+    *   Open Terminal.
+    *   Type the following command and press Enter:
+
+    ```bash
+    brew install --cask rstudio
+    ```
+
+4.  **Verify Installation:**
+
+    *   Open RStudio. If it opens successfully, R and RStudio have been installed correctly.
+
+
+---
+
+###
+
+Download **Hyundai Motor (005380.KQ) and Tesla (TSLA)** daily stock returns for the year **2024** using the `quantmod` package. **Daily arithmetic and geometric average returns** for both stocks. **Standard deviation of returns**, which measures risk.
+
+Copy and paste the following R code into an R script in **RStudio**, then execute it by clicking **"Run"**.
+
+
+```{r, echo=T, eval=T}
+# Load necessary packages
+library(quantmod)
+library(PerformanceAnalytics)
+library(zoo)  # For missing value handling
+
+# Download stock data from Yahoo Finance
+symbols <- c("005380.KQ", "TSLA")
+getSymbols(symbols, src = "yahoo", from = "2024-01-01", to = Sys.Date(), auto.assign = TRUE)
+
+# Extract adjusted closing prices
+hyundai_prices <- Cl(get("005380.KQ"))
+tesla_prices <- Cl(TSLA)
+
+# Handle missing values for Hyundai Motor
+hyundai_prices <- na.omit(hyundai_prices)  # Interpolate missing values
+
+# Compute daily returns and remove any remaining missing values
+hyundai_returns <- na.omit(dailyReturn(hyundai_prices))
+tesla_returns <- na.omit(dailyReturn(tesla_prices))
+
+# Compute arithmetic mean return
+arithmetic_mean_hyundai <- mean(hyundai_returns)
+arithmetic_mean_tesla <- mean(tesla_returns)
+
+# Compute geometric mean return
+geometric_mean_hyundai <- prod(1 + hyundai_returns)^(1 / length(hyundai_returns)) - 1
+geometric_mean_tesla <- prod(1 + tesla_returns)^(1 / length(tesla_returns)) - 1
+
+# Compute standard deviation
+std_dev_hyundai <- sd(hyundai_returns)
+std_dev_tesla <- sd(tesla_returns)
+
+# Print results
+cat("Hyundai Motor - Arithmetic Mean Return:", round(arithmetic_mean_hyundai, 6), "\n")
+cat("Hyundai Motor - Geometric Mean Return:", round(geometric_mean_hyundai, 6), "\n")
+cat("Hyundai Motor - Standard Deviation:", round(std_dev_hyundai, 6), "\n\n")
+
+cat("Tesla - Arithmetic Mean Return:", round(arithmetic_mean_tesla, 6), "\n")
+cat("Tesla - Geometric Mean Return:", round(geometric_mean_tesla, 6), "\n")
+cat("Tesla - Standard Deviation:", round(std_dev_tesla, 6), "\n")
+```
+````
+**Solution:** *Solution generated based on the day the data is pulled. For example as of 2024-07-03*
+
+```
+Hyundai Motor - Arithmetic Mean Return: 0.000598 
+Hyundai Motor - Geometric Mean Return: 0.000555 
+Hyundai Motor - Standard Deviation: 0.015694 
+
+Tesla - Arithmetic Mean Return: 0.000135 
+Tesla - Geometric Mean Return: -8e-07 
+Tesla - Standard Deviation: 0.027997 
+```
