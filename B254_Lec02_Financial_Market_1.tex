@@ -1,0 +1,906 @@
+\documentclass[10pt]{beamer}
+\usepackage{etex}
+
+%\documentclass[handout]{beamer}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{natbib}
+\usepackage{tabularx,color,colortbl}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{comment}\excludecomment{hide}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage[singlelinecheck=off]{caption}
+\usepackage{booktabs}
+\usepackage{fixltx2e}
+\usepackage[flushleft]{threeparttable}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{lscape}
+\usepackage{slashbox}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{xypic}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.pathreplacing}
+
+%\usepackage{pgfpages}
+%\setbeameroption{show notes}
+\setbeameroption{hide notes}
+%\setbeameroption{show notes on second screen}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letter,border shrink=5mm]
+
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+
+
+\newcolumntype{N}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcommand{\Ind}{\,\rotatebox[origin=c]{90}{\ensuremath{\models}}\,} %prob independence
+\newcommand{\tab}{\hspace*{2em}}
+\newenvironment{proenv}{\only{\setbeamercolor{local structure}{fg=white}}}{}
+\newenvironment{conenv}{\only{\setbeamercolor{local structure}{fg=blue}}}{}
+
+\setbeamertemplate{itemize itemsep}[15pt]
+
+
+%\usetheme{Ilmenau}
+\usetheme{boadilla}
+\usecolortheme{dolphin}
+\useinnertheme{circles}
+
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline}[frame number]
+
+
+%\setbeamerfont{institute}{size=\footnotesize}
+%\setbeamerfont{author}{size=\small}
+%\setbeamerfont{date}{size=\small}
+
+
+
+\title{Financial Markets: Part I \\
+	\vspace{5pt} {\footnotesize BUSS254 Investments}}
+\author{Prof. Ji-Woong Chung}
+\institute{}
+\date{}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	\graphicspath{{figures//}}
+	
+	
+	\begin{frame}
+		\frametitle{Lecture Outline}
+		\begin{itemize}\itemsep15pt
+			\item Money markets: Call, Repo, CD, CP, etc.
+			\item Day counting and pricing money market securities
+			\item Capital markets: Bond, Equity
+			\item Derivatives markets: Futures, options etc.
+			\item Trading mechanisms
+			\item Investment Companies
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\section{Money Markets}
+	\begin{frame}
+		\begin{center}
+			{\Large Money Markets}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Financial Instruments} \vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{Financial_Market}
+			{\scriptsize Source: Financial Markets in Korea, 2021}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Money Markets}
+		
+		\begin{itemize}
+			\item Money market securities are short-term debt instruments issued by governments, financial institutions, and corporations.
+			\begin{itemize}
+				\item Short-term government bonds, repurchase agreements, certificate of deposit, commercial paper, bankers' acceptance, Eurodollar etc.
+				\item Individuals typically access the instruments via a mutual fund (money market fund).
+			\end{itemize}
+			
+			\item Typical characteristics
+			\begin{itemize}
+				\item Short maturity (overnight $\sim$ 1 year)
+				\item High liquidity
+				\item Low risk
+				\item Low return
+				\item Large denomination: typically large institutions
+				\item Dealer market
+			\end{itemize}
+			
+			\item The regulations of money markets vary widely across jurisdictions.
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Money Markets (cont'd)} \vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.47]{Money_Market_Size} \\
+			{\scriptsize Source: Financial Markets in Korea, 2021}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Money Markets (cont'd)}
+		
+		\begin{itemize}
+			\item Why care about the money market?
+			
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Investors need to locate their money every day. 
+				\begin{itemize}  \vspace{5pt} \itemsep10pt
+					\item The money market offers a series of financial instruments with different risk-return characteristics.
+				\end{itemize}
+				
+				\item Public debt manager or company treasurers.
+				\begin{itemize}  \vspace{5pt} \itemsep10pt
+					\item Need to have the liquidity to pay current expenditures. But maintaining a liquid cash buffer is costly, due to forgoing interest. So the money market provides a set of alternatives to invest money in relatively safe and liquid instruments. It also provides the means to raise short-term funds facilitating the management of liquidity.
+				\end{itemize} 
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Money Markets (cont'd)}
+		
+		\begin{itemize}
+			\item Why care about the money market? (cont'd)
+			
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				
+				\item Central bankers conduct monetary policy by carrying out open market operations, where they buy or sell treasury bills, and other money market instruments, to affect their prices and steer short-term interest rates.
+				\begin{itemize}  \vspace{5pt} \itemsep10pt
+					\item The money market is the first link in monetary policy transmission. Changes in money market rates affect the cost of bond reserves and short-term funds. And this is transmitted to long-term interest rates, ultimately affecting credit, household consumption, and firm investment decisions.  
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Money Markets (cont'd)}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item The money market also establishes an important link between banks and other financial institutions, such as money market funds. 
+			
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item For example, banks tend to tap the money market to get short-term funding, which they use to finance part of their longer-term lending. 
+				\item So maintaining this situation requires the steady rollover of liabilities. 
+				\item This creates a source of risk, and a channel for the transmission of distress between financial institutions and across financial markets and products.
+			\end{itemize}
+			
+			\item Money markets are smaller in size than capital markets. But they play a critical role in the entire financial market and the economy
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Only a selected number of high-quality entities are engaged, so the prices of money market instruments provide a reference for many other securities in the market.
+			\end{itemize} 
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Call Market}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item A marketplace where financial institutions borrow (lend) money on a very short-term basis to resolve their temporary surpluses or shortages of funds. 
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Mostly, uncollateralized, brokered, and overnight.
+				\item The market has been declining in size due to regulations.\footnote{Non-banks discouraged from call market participation over time. BIS' regulation of liquidity coverage ratio (=liquid assets/30 days cash outflows).}
+				\item Call loans (lending), call money (borrowing)
+			\end{itemize}
+			\item For banks that must hold reserve requirements, the call market helps them to smooth shortages or excesses in their reserve balances.
+			\item The call market is also important in the implementation of monetary policy. 
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Before 2008, BOK directly set call rate as the Base Rate 
+				\item Now, call rates are closely linked to BOK repo rate (via open market operations). 
+			\end{itemize}
+			
+			%		\begin{itemize}
+				%			\item An adjustment in the Base Rate by the Bank of Korea Monetary Policy Board promptly affects the overnight call rate, and this leads to changes in short- and long-term market interest rates, and deposit and loan rates, ultimately influencing activities 	in the real economy. 
+				%			
+				%			\item The Bank of Korea adjusts liquidity in the market
+				%			through open market operations (OMOs) in such a way that the unsecured overnight call rate does not deviate significantly from the Bank of Korea Base Rate. 
+				%		\end{itemize}
+			\item Federal funds market (U.S.), Call market (Japan), Unsecured market (Euro)
+			
+			%The Fed sets a target for the federal funds rate in formulating its monetary policy and announces this target at the conclusion of its regular policy meetings.
+			%By purchasing U.S. Treasury securities in the open market, the Fed increases the availability of bank reserves and the money supply, putting downward pressure on the federal funds rate. The reverse is true when the Fed sells Treasuries. These exchanges are called open market operations.
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Call Market (cont'd)} 
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item The BOK sets a target for the call rate (the Base Rate) in formulating its monetary policy and announces this target at the conclusion of its regular policy meetings.
+			
+			\item By purchasing government securities in the open market, the BOK increases the availability of bank reserves and the money supply, putting downward pressure on the call rate. The reverse is true when the BOK sells government securities. These exchanges are called open market operations.
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Call Market (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.47]{Call_Rate} \\
+			{\scriptsize Source: Financial Markets in Korea, 2021}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Repurchase Agreement}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item A repurchase agreement (repo) is a short-term secured loan.
+			
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item One party sells securities (ownership transfer) to another and agrees to repurchase those securities later at a higher price. The securities serve as collateral - high credit quality.
+				\item Reverse repo from the buyer's perspective
+				\item Repo rate: interest rate implied by the difference between purchase and repurchase price 
+			\end{itemize}
+			
+			\item Types of repos
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Customer (financial institutions and their customers), institution repo (among institutions), Bank of Korea repo (BOK and institutions)
+				\item Overnight, term, and open repos.
+				\item Delivery, tri-party, hold-in-custody repos, where collateral is delivered to buyers, kept with third-party (institution repos), and kept with sellers (customer repos), respectively.
+			\end{itemize}		
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Repurchase Agreement (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.47]{Repo_Market}
+			{\scriptsize 
+				\begin{itemize}
+					\item As of 2020, \texteuro 8.3 trillion in Euro, \$2.7 trillion in U.S.
+					\item Alternative to deposits or MMFs.
+					\item Tighter regulation on the call market drove non-bank financial institutions to the repo market.
+				\end{itemize}
+			}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Repurchase Agreement (cont'd)}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item The repo market allows financial institutions that own lots of securities (e.g. banks, broker-dealers, hedge funds) to borrow cheaply and allows parties with lots of spare cash (e.g. money market mutual funds) to earn a small return on that cash without much risk. 
+			\item Central banks use repos and reverse repos to conduct monetary policy. 
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item When the bank buys securities from a seller who agrees to repurchase them, it is injecting reserves into the financial system. Conversely, when the bank sells securities with an agreement to repurchase, it is draining reserves from the system. 
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Repurchase Agreement: BOK Repo}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item BOK holds regular auctions of seven-day maturity
+			repo sales every Thursday in order to control short-term liquidity. 
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Flexibly controls timing and collateral securities
+			\end{itemize}			
+		\end{itemize}		
+		
+		\begin{center}
+			\includegraphics[scale=0.45]{BOK_repo} \\
+			{\scriptsize Repo (seller): liquidity absorption, Reverse repo (buyer): liquidition provision}
+		\end{center}		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Certificate of Deposites}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item A negotiable certificate of deposit (CD) is a time deposit with a bank that is transferable (vs. non-negotiable CD). 
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Subject to reserve requirement (like deposits)
+				\item Not covered by deposit insurance since 2001 (unlike U.S.)
+				\item CDs are issued at a discount.
+			\end{itemize}		
+			
+			\item The CD rate is announced twice daily (at 12:00
+			and 16:30) by the Korea Financial Investment Association.
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item 10 securities companies provide the data based on 91-day CDs issued by AAA nationwide banks.
+				\item Simple average (rounding off to the third decimal place) of the eight returns after excluding the highest and lowest yields submitted.
+			\end{itemize} 	
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Certificate of Deposites (cont'd)}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item The CD rate is widely used as a reference rate for floating rate loans and interest rate swaps, and it also affects bank loans and deposit rates.
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item But 91-day CDs are not liquid
+				\item It may not be representative and susceptible to wide swings.
+			\end{itemize}		
+			
+			\item Alternative short-term reference rate to substitute the CD rate
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item KORIBOR (Korea Inter-Bank Offered Loan) since July 2004. 
+				\item COFIX (Cost of Funds Index) since Feburary
+				2010
+				\item KOFR (Korea Overnight Financing Reference rate) since February 2021 - based on repo rates on government bonds and MSB (Monetary Stabilization Bond)
+			\end{itemize} 	
+		\end{itemize}		
+		
+		
+	\end{frame}
+	
+	\begin{comment}
+		\begin{frame}
+			\frametitle{The LIBOR Scandals \scriptsize{pp. 34, BKM}} %\vspace{-5pt}
+			\begin{center}
+				\includegraphics[scale=0.4]{LIBOR}
+				%{\scriptsize \color{orange} -- 91-day CD (left)  \color{cyan} -- Bank debentures (left) \color{olive}  $\blacksquare$ Spread (right)}		
+			\end{center}
+			
+		\end{frame}
+	\end{comment}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Certificate of Deposits (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.45]{CD_Rate}
+			{\scriptsize \color{orange} -- 91-day CD (left)  \color{cyan} -- Bank debentures (left) \color{olive}  $\blacksquare$ Spread (right)}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Commercial Paper}
+		
+		\begin{itemize} 
+			\item Issued by a corporation with a sound
+			credit rating for short-term funds (e.g., working capital). 
+			
+			\begin{itemize}
+				\item Easier and faster to issue than bonds/stocks
+				\item Not backed by collateral (except asset-backed
+				CPs)
+				\item Lower interest rate than bank loans.
+				\item Should be rated by at least 2 rating agencies.
+				\item CPs are issued at a discount.
+			\end{itemize}		
+			
+			\item The CP rate is announced twice daily (at 12:00
+			and 16:30) by the Korea Financial Investment Association (just like CP rate).
+			\begin{itemize}
+				\item A1-rated (highest) CP from eight financial institutions
+				\item Simple average of the six returns after excluding the maximum and minimum rates.
+			\end{itemize}
+			
+			\item Asset Backed CPs
+			\begin{itemize}
+				\item CPs backed by underlying assets (term deposits, loans, corporate bonds, trade receivables, real estate etc.)
+				\item Establishes a Special Purpose Company (SPC) and goes through securitization 
+			\end{itemize}
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Commercial Paper (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.47]{CP_Market}
+			%{\scriptsize \color{orange} -- 91-day CD (left)  \color{cyan} -- Bank debentures (left) \color{olive}  $\blacksquare$ Spread (right)}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Short-Term Bonds}
+		
+		\begin{itemize}  \vspace{5pt} \itemsep10pt
+			\item Corporate bonds issued and distributed electronically 
+			
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item Though legally a bond, it works like CPs. 
+				\item Unlike CPs, physical certificates are not issued.
+				\item CPs are electronically issued and traded in U.S. (since 2000)
+			\end{itemize}		
+			
+			\item Introduced in January 2013 in Korea
+			\begin{itemize}  \vspace{5pt} \itemsep10pt
+				\item To replace CP: improve transparency, require board's approval
+				\item To diversify short-term funding for non-bank institutions away from CP and Call markets.
+			\end{itemize}
+			
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Short-Term Bonds (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.47]{STB_Market}
+			%{\scriptsize \color{orange} -- 91-day CD (left)  \color{cyan} -- Bank debentures (left) \color{olive}  $\blacksquare$ Spread (right)}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{U.S. Treasury Bills}
+		
+		\begin{itemize}
+			\item US federal government (Treasury Department) debt with maturity lower than one-year 		
+			\begin{itemize}
+				\item Maturities of 4, 8, 13, 26, or 52 weeks
+				\item Issued at a discount (no coupon), highly liquid,  denominations of $\ge \$100$, exempt from state and local taxes, but not federal tax.
+				\item T-bills are also issued as cash-management bills (no regular auction) with maturities ranging from a few days to 1 year 
+				\item The most marketable money market instrument
+				%\item https://www.treasurydirect.gov/marketable-securities/treasury-bills/
+			\end{itemize}		
+			
+			\item The Federal Reserve is one of the largest purchasers of government debt securities. 
+			\begin{itemize}
+				\item The monetary policy set by the Federal Reserve through the federal funds rate has a strong impact on T-Bill prices.
+				\item A rising federal funds rate tends to draw money away from Treasuries, and vice versa.
+			\end{itemize}
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Eurodollars}
+		
+		\begin{itemize}
+			\item US Dollar-denominated deposits at foreign banks or foreign branches of American banks (ouside the U.S.). 		
+			\begin{itemize}
+				\item Not regulated by the Federal Reserve, higher rate than domestic rate
+				\item Most Eurodollar deposits are for large sums, and most are time deposits of less than 6 months' maturity.
+			\end{itemize}		
+			
+			\item The rate on overnight Eurodollars tends to closely track the fed funds rate. 
+			\begin{itemize}
+				\item For a domestic U.S. bank with a reserve deficiency, borrowing Eurodollars is an alternative to purchasing fed funds.
+				\item Also, for a domestic bank with excess funds, a Europlacement (i.e., a deposit of dollars in the Euromarket) is an alternative to the sale of fed funds.
+			\end{itemize}
+			\item Euroyen, Eurosterling, Eurofranc, etc.
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\section{Pricing Money Market Securities}
+	\begin{frame}
+		\begin{center}
+			{\Large Pricing Money Market Securities}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Alternative Ways of Quoting Prices}
+		
+		\begin{itemize}
+			\item (Bond Equivalent) Yield (y) vs. Discount (d)
+			
+			\item Depending on the jurisdiction/instruments, prices are quoted as y or d.
+			
+			\begin{itemize}
+				\item CDs and CPs issued at a discount, but quoted in yield in Korea
+				\item T-bills and CPs (but not CDs) are issued at a discount and quoted as discount in the U.S.
+			\end{itemize}		
+			
+			
+			\item Example: Pay \$90 for a \$100 zero that matures in 90 days.
+			
+			$$
+			y = \left( \frac{100-90}{90} \right) \left( \frac{365}{90}\right) = 0.4506
+			$$
+			
+			$$
+			d = \left( \frac{100-90}{100} \right) \left( \frac{365}{90}\right) = 0.4055
+			$$
+			
+			
+		\end{itemize}	
+		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Alternative Ways of Quoting Prices (cont'd)}
+		
+		Consider a zero coupon bond with price $P$ and face value $M$ \vspace{10pt}
+		\begin{align*}
+			&P = \frac{1}{\left( 1+ y \times \frac{days}{365}\right)} M  \quad \text{and} \quad  P = \left( 1 - d \times \frac{days}{365} \right) M \\
+			&\Rightarrow \frac{1}{\left( 1+ y \times \frac{days}{365}\right)} = \left( 1 - d \times \frac{days}{365} \right) \\
+			&\Rightarrow d = \frac{y}{\left( 1+ y \times \frac{days}{365}\right)} \quad \text{and} \quad  y = \frac{d}{\left( 1 - d \times \frac{days}{365} \right)} \\
+			&\Rightarrow y > d
+		\end{align*}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Example}
+		
+		\begin{itemize}
+			\item What is the 180-day discount ``factor'' of 7\% per year?
+		\end{itemize}	
+		$$
+		\frac{1}{\left( 1+ 0.07 \times \frac{180}{365} \right) } = 0.9666 
+		$$
+		
+		\begin{itemize}
+			\item What is the price of a \$500 180-day zero coupon bond if the yield is 7\%?
+		\end{itemize}	
+		$$
+		0.9666 \times \$500 = \$483.31
+		$$		
+		
+		\begin{itemize}
+			\item What is the discount on the face value of the bond?
+		\end{itemize}	
+		$$
+		\left(1 - d \times \frac{180}{365} \right) = 0.9666
+		$$	
+		$$
+		d = 6.7728\% \text{, which is the same as } \left( \frac{500-483.31}{500} \right) \left( \frac{365}{180} \right)
+		$$
+		%d=6.7664%??
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Day Count Conventions}
+		
+		\begin{itemize}
+			\item Pricing in financial markets started long before computers…
+			
+			\begin{itemize}
+				\item People in different countries took different strategies to ease the calculation of accrued interests over time
+				\item 30 days per month? 360 or 365 days per year?
+			\end{itemize}		
+			
+			\item Conventions vary from country to country and from instrument to instrument
+			\begin{itemize}
+				\item Actual/Acutal: US treasury bonds, Australia
+				\item 30/360 method: US corporate/municipal bonds, Eurobonds
+				\item Actual/360: US money market 
+				\item Actual/365: Korea, UK, Japan \vspace{10pt}
+				\item $ X/Y $, where $X$ is the number of days in a month, and $Y$ is the number of days in a year.
+				
+				{\scriptsize Source: https://www.rbcits.com/en/gmi/global-custody/market-profiles.page}
+				
+				%Usefuly website: https://thismatter.com/money/bonds/bond-pricing.htm
+			\end{itemize}
+			
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Example}
+		
+		\begin{itemize}
+			\item Consider a Treasury bond and a corporate bond both have the same annual coupon payment dates (Principal: \$100, coupon rate: 8\%).
+			
+			\begin{itemize}
+				\item Their last coupon payment date is March 1, 2018, and the next coupon date is September 1, 2018.
+			\end{itemize}		
+			
+			\item How much interest is accured for the period from March 1, 2018 to July 3, 2018, for the two bonds, respectively?
+			
+			\begin{itemize}
+				\item Act/Act: $ \frac{124}{184} \times \$4 =2.6957 $ \vspace{5pt}
+				\item 30/360: $ \frac{122}{180} \times \$4 =2.7111 $ 
+			\end{itemize}
+			
+			\item How about from October 3, 2018 to January 1, 2019?
+			
+			\begin{itemize}
+				\item Act/Act: $ \frac{90}{184} \times \$4 =1.9889 $ \vspace{5pt}
+				\item 30/360: $ \frac{88}{180} \times \$4 =1.9555 $ \vspace{5pt}
+			\end{itemize}	
+		
+			
+			\item Excel functions: \texttt{Days} and \texttt{Days360}	
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Example (cont'd)}
+		
+		\begin{itemize}
+			\item What if we use Actual/365?
+			\begin{itemize}
+				\item Divide 8\% by 365 = 0.02191
+				\item Multiply by \# of days from March 1 to July 3, 2018 (124) = 2.7178
+			\end{itemize}
+			
+			\item Actual/360?
+			\begin{itemize}
+				\item Divide 8\% by 360 = 0.02222
+				\item Multiply by \# of days from March 1 to July 3, 2018 (124) = 2.7555
+			\end{itemize} \vspace{10pt}
+			
+			\item[NB] Therefore, 8\% in Actual/360 is equivalent to $8\% \times \frac{365}{360} = 8.1111\% $
+			\begin{itemize}
+				\item Divide 8.1111\% by 365 = 0.02222
+				\item Multiply by \# of days from March 1 to July 3, 2018 (124) = 2.7555
+			\end{itemize}	\vspace{10pt}
+			
+			\item[NB] 1\% in Actual/360 would earn $1\% \times 365/360$ of interest in 365 days.
+			
+			% Interesting example: https://www.adventuresincre.com/lenders-calcs/#:~:text=4%25%20by%2012.-,Actual%2F365%20(aka%20365%2F365),days%20in%20the%20current%20month.
+			
+		\end{itemize}		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Pricing CDs}
+		
+		\begin{itemize}
+			\item A 90-day CD with \$100,000 face value was issued on March 17, 2015 in the U.S., offering a 6\% yield (under ACT/360 day convention) with a market rate of 7 \%.
+			
+			\item[NB] Unlike US, CDs are issued at a discount in Korea.
+			
+		\end{itemize}		
+		
+		\begin{enumerate}
+			\item Compute the payoff.
+			\item Compute the price of the CD on March 17, 2015
+			\item On April 10, 2015, the market rate dropped to 5.5 percent. Compute the price of the CD in the secondary market
+			\item On May 10, the market rate further dropped to 5 percent. Compute the return of an investor that purchased the CD on April 10 and sold it on May 10 (30 days)
+		\end{enumerate}
+		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Pricing CDs (cont'd)}
+		
+		\begin{enumerate} \itemsep10pt
+			
+			\item Compute the payoff.
+			\begin{itemize}
+				\item Payoff $ = 100,000 \times \left(1+ 6\% \times \frac{90}{360} \right) = 101,500 $
+			\end{itemize}
+			
+			\item Compute the price of the CD on March 17, 2015
+			\begin{itemize}
+				\item PV $ = \frac{101,500}{\left( 1+ 7\% \times \frac{90}{360} \right)}  = 99,754 $
+			\end{itemize}
+			
+			\item On April 10, 2015, the market rate dropped to 5.5 percent. Compute the price of the CD in the secondary market
+			\begin{itemize}
+				\item \texttt{Days(Date(2015,4,10),Date(2015,3,17))=24} \vspace{5pt}
+				\item PV $ = \frac{101,500}{\left( 1+ 5.5\% \times \frac{90-24}{360} \right)}  = 100,487 $
+			\end{itemize}			
+			
+			
+		\end{enumerate}
+		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Pricing CDs (cont'd)}
+		
+		\begin{enumerate} \setcounter{enumi}{3} \itemsep10pt
+			
+			\item On May 10, the market rate further dropped to 5 percent. Compute the return of an investor that purchased the CD on April 10 and sold it on May 10 (30 days)
+			\begin{itemize}
+				\item \texttt{Days(Date(2015,5,10),Date(2015,3,17))=54} \vspace{5pt}
+				
+				\item PV $ = \frac{101,500}{\left( 1+ 5.0\% \times \frac{90-54}{360} \right)}  = 100,995 $ \vspace{5pt}
+				
+				\item \texttt{Days(Date(2015,5,10),Date(2015,4,10))=30} \vspace{5pt}
+				
+				\item Return $ = \left( \frac{100,995}{100,487} -1 \right) \times \frac{360}{30} = 6.07 \% $
+			\end{itemize}		
+			
+		\end{enumerate}
+		
+		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Commerical Paper Yields}
+		
+		\begin{itemize}
+			\item Yields on commercial paper are quoted on a discount basis (like Treasurey bills) in the U.S. 
+			
+			%The following example is from Choudhry, pp. 416  
+			\item A 60-day CP has a nominal (face) value of \$100,000. It is issued at a discount of $7.5\%$ per annum (Act/360). The discount is calculated as:
+		\end{itemize}	
+		$$
+		d = 0.075 \times \frac{60}{360} \times \$100,000 = \$1,250
+		$$
+		\begin{itemize}
+			\item The issue price for the CP is therefore $\$100,000 - \$1,250 = \$98,750 $.
+			\item The yield is:
+		\end{itemize}
+		$$
+		y = \frac{d}{\left( 1 - d \times \frac{days}{360} \right) } = \frac{0.075}{\left( 1- 0.075 \times \frac{60}{360} \right) } = 7.59\%
+		$$
+		$$ 
+		\text{or  } y = \frac{\$1,250}{\$98,750} \times \frac{360}{90} = 7.59\%
+		$$
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{U.S. Treasury Bill Quotes}
+		
+		\begin{itemize}
+			\item US T-bills are quoted on a discount basis (reference price is face value) using Act/360 method.
+		\end{itemize}
+		\begin{center}
+			\includegraphics[scale=0.6]{T_bill}
+		\end{center}
+		\begin{itemize}
+			\item \texttt{Days360(Date(2022,12,15),date(2022,12,20))} = 5 days
+		\end{itemize} \vspace{10pt}
+		$$
+		P = \left( 1 - d \times \frac{5}{360} \right) \times 100 = \left( 1- 3.685\% \times \frac{5}{360} \right) \times 100 = 99.9488
+		$$
+		$$
+		y = \left( \frac{100-99.9488}{99.9488} \times \frac{\color{red}365}{5} \right) = 3.738\% \text{, which is ASKED YIELD}
+		$$	
+		% Why multiply by 365 below? It's just convention: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_bill_rates&field_tdr_date_value_month=202303
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Pricing Repo}
+		
+		\begin{itemize}
+			\item X sells \$9,876,000 worth of T-bills and agrees to repurchase them in 14 days at \$9,895,000 in the U.S. What is the repo rate?
+		\end{itemize}	\vspace{10pt}
+		$$
+		y = \left( \frac{9,895,000}{9,876,000} -1 \right) \times \frac{360}{14} = 4.9470\%
+		$$
+		%Note here that we now use 360 to annualize the yield, unlike what we did for T-bill (365 days) in the previous slide. (https://www.wallstreetprep.com/knowledge/repurchase-agreement-repo/)
+		\begin{itemize}
+			\item If the overnight repo rate is 4.5\% what is the payment tomorrow for a repo of \$10,000,000
+		\end{itemize} \vspace{10pt}
+		$$
+		10,000,000 \times \left( 1+0.045 \times \frac{1}{360} \right) = 10,001,250
+		$$
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	
+\end{document} 

@@ -1,0 +1,850 @@
+\documentclass[10pt]{beamer}
+\usepackage{etex}
+
+%\documentclass[handout]{beamer}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{natbib}
+\usepackage{tabularx,color,colortbl}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{comment}\excludecomment{hide}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage[singlelinecheck=off]{caption}
+\usepackage{booktabs}
+\usepackage{fixltx2e}
+\usepackage[flushleft]{threeparttable}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{lscape}
+\usepackage{slashbox}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{xypic}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.pathreplacing}
+
+%\usepackage{pgfpages}
+%\setbeameroption{show notes}
+\setbeameroption{hide notes}
+%\setbeameroption{show notes on second screen}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letter,border shrink=5mm]
+
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+
+
+\newcolumntype{N}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcommand{\Ind}{\,\rotatebox[origin=c]{90}{\ensuremath{\models}}\,} %prob independence
+\newcommand{\tab}{\hspace*{2em}}
+\newenvironment{proenv}{\only{\setbeamercolor{local structure}{fg=white}}}{}
+\newenvironment{conenv}{\only{\setbeamercolor{local structure}{fg=blue}}}{}
+
+\setbeamertemplate{itemize itemsep}[15pt]
+
+
+%\usetheme{Ilmenau}
+\usetheme{boadilla}
+\usecolortheme{dolphin}
+\useinnertheme{circles}
+
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline}[frame number]
+
+
+%\setbeamerfont{institute}{size=\footnotesize}
+%\setbeamerfont{author}{size=\small}
+%\setbeamerfont{date}{size=\small}
+
+
+
+\title{Financial Markets: Part III \\
+	\vspace{5pt} {\footnotesize BUSS254 Investments}}
+\author{Prof. Ji-Woong Chung}
+\institute{}
+\date{}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	\graphicspath{{figures//}}
+	
+	
+	\begin{frame}
+		\frametitle{Lecture Outline}
+		\begin{itemize}\itemsep15pt
+			\item Money markets: Call, Repo, CD, CP, etc.
+			\item Day counting and pricing money market securities
+			\item Capital markets: Bond, Equity
+			\item Derivatives markets: Futures, options etc.
+			
+			\item \textcolor{red}{Trading mechanisms}
+			\item \textcolor{red}{Investment Companies}
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\section{Trading Mechanisms}
+	\begin{frame}
+		\begin{center}
+			{\Large Trading Mechanisms}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Trading Mechanics}
+		
+		\begin{itemize}
+			\item Why trade?
+			\begin{itemize}	
+				\item Information-driven 
+				\item Non-information: Hedging or liquidity 
+				\item Noise trading
+			\end{itemize}	
+			
+			\bigskip
+			
+			\item Types of orders
+			\begin{itemize}	
+				\item Market order: order at the best available price now $\rightarrow$ Price uncertainty
+				\item Limit order: specify acceptable terms of trades $\rightarrow$ Execution uncertainty
+				\item Stop (buy/loss) order: Becomes a market buy/sell order when the trigger price is encountered, to unwind the existing positions
+				\item Short sales
+				\item Margin trading
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Margin Trading}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Purchase: Borrowing + Margin (Equity)
+			\smallskip		
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Initial margin: amount of equity required to open a position
+				\item Maintenance margin: Minimum equity to keep the position
+				\item Margin call if value of securities falls too much: Put more equity ($\ge$ initial margin) or liquidate the position
+			\end{itemize}
+			
+		\end{itemize}
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Margin Trading: Example}
+		
+		\begin{itemize}
+			\item Share price \$100, Shares Purchased:100
+			\item Initial Margin: 60\%, Maintenance Margin: 30\%
+			\item Initial Position \\
+			
+			\begin{table}
+				\begin{tabular}{lclc} 
+					\toprule
+					Stock	& \$10,000 	& Borrowed 	& \$4,000 \\
+					&			& Equity 	& \$6,000 \\
+					\bottomrule
+				\end{tabular}
+			\end{table}
+			
+			\item Stock price falls to \$70 per share
+			
+			\begin{table}
+				\begin{tabular}{lclc} 
+					\toprule
+					Stock	& \$7,000 	& Borrowed 	& \$4,000 \\
+					&			& Equity 	& \$3,000 \\
+					\bottomrule
+				\end{tabular}
+			\end{table}
+			
+			\item Margin\% = Equity/MV = \$3,000/\$7,000 = 43\%
+			
+			
+		\end{itemize}
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Margin Trading: Maintenance Margin}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item How far can the stock price fall before a margin call?
+			\item Maintenance margin = 30\%
+			\item Equity = MV $-$ Borrowing = $100P - \$4000$
+			\item Margin\% = Equity/MV = $(100P - \$4000)/100P$ \\
+			\smallskip
+			$\rightarrow$ $(100P - \$4,000)/100P = 0.30$ \\
+			\smallskip
+			$\rightarrow$ $P = \$57.14$
+			
+		\end{itemize}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Short Sales}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Selling securities that you do not own to profit from a decline in the price of the securities
+			\smallskip
+			\begin{itemize}
+				\item Borrow securities through a dealer/broker
+				\item Sell them and deposit the proceeds and the margin in an account (you cannot withdraw proceeds until you ``cover'')
+				\item Closing out the position: Buy the securities and return to the party from which they were borrowed
+			\end{itemize}
+			
+			\item Naked short-selling: selling shares that have not yet been borrowed, assuming that the shares can be acquired in time to meet any delivery deadline. Illegal.
+			
+			
+		\end{itemize}
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Short Sales: Example}
+		
+		\begin{table}
+			\begin{tabular}{lr} 
+				\toprule
+				Stock X				&1000 Shares	\\
+				Initial Margin		&50\%			\\
+				Maintenance Margin	&30\%			\\
+				Initial Price		&\$100			\\
+				Sale Proceeds	   	&\$100,000		\\
+				Margin/Equity		&\$50,000		\\
+				Stock Owed 	   		&1000 shares	\\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		\begin{table}
+			\begin{tabular}{ll} 
+				\toprule
+				\textbf{Assets}				&\textbf{Liabilities}	\\
+				\$100,000 (sales proceeds)	&\$100,000 (shares)		\\
+				\$50,000 (initial margin)	&						\\
+				&\textbf{Equity}		\\
+				&\$50,000 				\\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Short Sales: Example (cont'd)}
+		
+		\begin{itemize}
+			\item Price falls to \$70 per share
+		\end{itemize} 
+		
+		\begin{table}
+			\begin{tabular}{ll} 
+				\toprule
+				\textbf{Assets}				&\textbf{Liabilities}	\\
+				\$100,000 (sales proceeds)	&\$70,000 (shares)		\\
+				\$50,000 (initial margin)	&						\\
+				&\textbf{Equity}		\\
+				&\$80,000 				\\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+		
+		\begin{itemize}
+			\item Profit = Ending equity - Beginning equity \\
+			= $\$80,000 - \$50,000 = \$30,000$ \\
+			= Decline in share price $\times$ Number of shares sold short
+			
+		\end{itemize}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Short Sales: Example (cont'd)}
+		
+		\begin{itemize}
+			\item How much can the stock price rise before a margin call? \\ \smallskip
+			= Equity / MV = (Assets $-$ Liab.)/MV  \\
+			\smallskip
+			$= (\$150,000^* - 1000P)/(1000P) = 0.30$ \\
+			\smallskip
+			$P = \$ 115.38$ \\
+			\smallskip
+			*Initial margin plus sale proceeds
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Trading Mechanisms}
+		
+		\begin{columns}[onlytextwidth,t]
+			\begin{column}{0.48\textwidth}
+				\textbf{Auction Market}
+				\begin{itemize}
+					\item Centralized: Investors interact directly.
+					\item Bid (buy offer) and ask (sell offer) orders are consolidates in a limit order book (LOB).
+					\item Limit-order, order-driven market
+					\item Example: NYSE, Paris, Milan, Tokyo, Korea
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{0.48\textwidth}
+				\textbf{Dearler Market}
+				\begin{itemize}
+					\item Decentralized: Trades via dealers.
+					\item Bid-ask quoted by dealers: Inventory risk
+					\item Inter-dealer market
+					\item Quote-driven market
+					\item Example: Nasdaq, bond and forex markets
+				\end{itemize}
+			\end{column}
+			
+		\end{columns}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Auction Market}
+		
+		\begin{figure}
+			\includegraphics[scale=0.4]{AuctionMarket}
+		\end{figure}
+		
+		\begin{itemize}
+			\item Call (batch) auction: Trading at specified time intervals
+			\begin{itemize}
+				\item Usually around open and close
+				\item Useful for infrequently traded securities. Reduces risk of price distortion by temporary order imbalances.
+			\end{itemize}
+			\item Continuous auction: Trading on a continuous basis
+		\end{itemize}	
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Call Auction}
+		%	\begin{itemize}
+			%		\item \href{https://youtu.be/lrjDuKGCPCY}{\color{blue}{Video Lecture 1}} and  \href{https://youtu.be/nU1rqULBT0Y}{\color{blue}{Video Lecture 2}}	
+			%	\end{itemize}
+		
+		\begin{figure}
+			\includegraphics[scale=0.45]{CallAuction}
+		\end{figure}	
+		{\scriptsize Buy orders sorted by decreasing price (demand), and sell orders by increasing price (supply)}
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Call Auction (cont'd)}
+		
+		\begin{figure}
+			\includegraphics[scale=0.45]{AfterCallAuction}
+		\end{figure}	
+		{\scriptsize Price set so that supply = demand.
+			All executable orders are filled at that price}
+		
+		
+	\end{frame}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{frame}
+		\frametitle{Continuous Auction: Limit Order Book}
+		\begin{itemize}
+			\item ``Non-marketable'' orders (e.g., those not executed in the initial call) are placed in a limit order book (LOB)
+			\item Incoming orders are executed against the LOB according to price and time priority rules
+		\end{itemize}	
+		
+		\begin{table}
+			\centering
+			\begin{tabular}{ccc|ccc}
+				\hline
+				\multicolumn{3}{c|}{Bid} & \multicolumn{3}{c}{Ask} \\ \hline
+				Price  & Size & Time     & Price & Size & Time     \\ \hline
+				74.42  & 300  & 11:49:39 & 74.48 & 300  & 11:49:35 \\
+				74.41  & 100  & 11:46:55 & 74.48 & 500  & 11:49:50 \\
+				74.36  & 400  & 11:48:30 & 75.74 & 100  & 08:25:17 \\
+				74.36  & 400  & 11:48:32 & 76.00 & 150  & 08:02:02 \\ \hline
+			\end{tabular}%
+		\end{table}	
+		
+		\begin{itemize}
+			\item Market sell order of 200 (or limit sell with price $<$ 74.42)
+			\item Market buy order of 900 (or limit buy with price $>$ 75.74)
+			\item Because of the two orders, the bid-ask spread widens from $74.48 - 74.42 = 0.06$ to $76.00 - 74.42 = 1.58$. \\
+			\textbf{The two orders have “consumed” liquidity.}
+			\item Market liquidity: the ability to trade securities quickly at a price close to its consensus value
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Dark Pools}
+		\begin{itemize}
+			\item Electronic trading platforms accessible only to institutional investors.
+			\begin{itemize}
+				\item Operated by stock exchanges (e.g., Turquoise by the LSE, Smartpool by Euronext, or Xetra by the Deutsche Börse), brokers (e.g., BlockCross by ICAP or Blockmatch by Instinet) or banks (e.g., SigmaX by Goldman Sachs or SG CIB AlphaY by Société Générale). 
+				\item Operate in parallel with continuous limit order markets and  offer investors an alternative way to execute their orders.
+			\end{itemize}
+			
+			\item Generally, dark pools do not contribute to price discovery
+			\begin{itemize}
+				\item Reference prices drawn from other markets
+			\end{itemize}
+			\item ``Dark'': orders are not displayed to the rest of market participants.
+			\begin{itemize}
+				\item Reduces the risk of information leakage
+			\end{itemize}
+			
+		\end{itemize}	
+		
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Dealer Market}
+		{\scriptsize In dealer markets, investors do not trade directly with each other, but must	contact a dealer, find out his price, and trade at this price, or else try another dealer.}
+		\begin{figure}
+			\includegraphics[scale=0.45]{DealerMarket}
+		\end{figure}	
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Dealer Market (cont'd)}
+		
+	{\scriptsize
+		\begin{table}[]
+			\begin{tabular}{llllr}
+				Market Maker & Bid Price                  & Offer Price                & Quote size & Time of Quote \\ \hline
+				ALPHA        & {\color[HTML]{FF0000} 326} & 330                        & 75 × 75    & 8:53                 \\
+				BETA         & 324                        & 330                        & 75 × 75    & 9:14                 \\
+				GAMMA        & 325                        & {\color[HTML]{FF0000} 329} & 75 × 75    & 9:16                 \\
+				DELTA        & 323                        & 332                        & 75 × 75    & 8:53                 \\
+				EPSILON      & 325                        & {\color[HTML]{FF0000} 329} & 25 × 25    & 9:36                 \\
+				ZETA         & {\color[HTML]{FF0000} 326} & 330                        & 75 × 75    & 11:30                \\
+				ETA          & 325                        & 330                        & 75 × 75    & 9:45                 \\
+				THETA        & 325                        & 330                        & 75 × 75    & 9:23                 \\
+				IOTA         & 324                        & {\color[HTML]{FF0000} 329} & 75 × 75    & 10:27                \\
+				KAPPA        & 323                        & 330                        & 75 × 75    & 9:45                 \\
+				LAMBDA       & 325                        & 330                        & 75 × 75    & 8:53                
+			\end{tabular}
+		\end{table}
+	}
+		
+		
+		\begin{itemize} \itemsep10pt
+			\item Seller 4 wants to sell 60 shares; first contacts dealer Beta. Beta is willing to buy at \$324 and sell at \$330. Seller 4 can then decide either to sell at \$324 or to seek another dealer. 
+			\item If Beta fills Seller 4’s order by buying the security, this exposes Beta to the risk of a sudden fall in the price of the security, and hence a loss on the value of his inventories. A major determinant of bid and ask prices.
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Dealer Market (cont'd)}
+		
+		\begin{itemize} 
+			
+			\item Unlike a limit order market, there is no enforcement of price priority: This search is costly
+			\item Dealer markets often enable traders to bargain over price and quantity.
+			\item In some dealer markets (e.g., Nasdaq), the dealers’ quotes are displayed on screens providing real-time information.
+			\begin{itemize}
+				\item But no real-time information is available in the corporate bond market.
+				\item Currency markets give indicative quotes.
+			\end{itemize}
+			
+			
+			\item Sometimes dealers enter preferencing arrangements with brokers. 
+			\begin{itemize}
+				\item A broker commits to route his orders to a specific dealer, and the dealer commits to execute them at the best quoted price in the market.
+				\item A related practice is \textit{payment for order flow}: dealers offering rebates to brokers who route specific categories of orders.
+			\end{itemize}
+			
+			\item In some markets (e.g., NYSE), dealers undertake special market-making obligations. They commit to continuous firm bid and ask prices for up to a specified trade size. (``designated market makers'')
+			%Designated market makers replaced what formerly were called specialist firms at the NYSE. In return for assuming their obligations, DMMs are given some advantages in	trade execution. However, unlike the specialist firms that they replaced, they are not given advanced looks at the trading orders of other market participants.
+			
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\section{Investment Companie}
+	\begin{frame}
+		\begin{center}
+			{\Large Investment Companies}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies}
+		
+		\begin{itemize} 
+			\item Pool funds of individual investors and invest in a wide range of securities or other assets
+			
+			\begin{itemize}
+				\item Unit Investment Trusts: fixed portfolio, unmanaged
+				\item Managed Investment Companies: open-end vs. closed-end, active vs. passive
+				\item Hedge funds, real estate investment trusts (equity trusts vs. mortgage trusts)
+			\end{itemize}
+			
+			
+			\item Services provided:
+			
+			\begin{itemize}
+				\item Record keeping and administration 
+				\item Diversification
+				\item Professional management
+				\item Lower transaction costs
+			\end{itemize}
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Net Asset Value (NAV)
+			
+			\begin{itemize}
+				\item The value of each share in the investment company
+				$$
+				\frac{\text{MV of Assets -- Liabilities}}{\text{Shares outstanding}}
+				$$
+			\end{itemize}
+			
+			
+			\item A mutual fund that manages a portfolio of securities worth \$120 million. Suppose the fund owes \$4 million to its investment advisers and another \$1 million for rent, wages due, and miscellaneous expenses. The fund has 5 million shares outstanding.
+			$$
+			\text{NAV} = \frac{120 - 5}{5} = \$23 \text{ per share}
+			$$
+			
+			\item Unlike closed-end funds, open-end mutual funds do not trade on organized exchanges. Instead, investors simply buy shares from and liquidate through the investment company at net asset value. Thus, the number of outstanding shares of these funds	changes daily.
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Mutual Funds: How to purchase?
+			
+			\begin{itemize}
+				\item Direct-marketed funds
+				\item Sales-force distributed: Revenue sharing on sales force distributed, potential conflicts of interest
+				\item Financial supermarkets 
+			\end{itemize}
+			
+			
+			\item Fee Structure:
+			\begin{itemize}
+				\item Operating expenses (management)
+				\item Front-end load (commissions)
+				\item Back-end load (commissions)
+				\item 12 b-1 charge (distribution)
+			\end{itemize}
+			
+			\item Fees must be disclosed in the prospectus. Share classes with different fee combinations
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\scriptsize \item Example: The table below lists fees for different classes of the Dreyfus High Yield Fund in 2018.
+			Notice the trade-off between the front-end loads versus 12b-1 charges in the choice between Class A and Class C shares. Class I shares are sold only to institutional investors and carry lower fees.
+			
+		\end{itemize}
+		
+		\begin{center} 
+			\includegraphics[scale=0.55]{MF_Fees}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Impact of costs on investment performance
+			
+		\end{itemize}
+		
+		\begin{center} 
+			\includegraphics[scale=0.55]{MF_Fees_Performance}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item The Equity Fund sells Class A shares with a front-end load of 4\% and Class B shares with 12b-1 fees of .5\% annually as well as back-end load fees that start at 5\% and fall by 1\% for each full year the investor holds the portfolio (until the fifth year). 
+			\item Assume the rate of return on the fund portfolio net of operating expenses is 10\% annually.
+			\item What will be the value of a \$10,000 investment in Class A and Class B shares if the shares are sold after
+			\begin{itemize}
+				\item[a] 1 year
+				\item[b] 4 years
+				\item[c] 10 years
+			\end{itemize}
+			\item Which fee structure provides higher net proceeds at the end of each	investment horizon?
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{center} 
+			\includegraphics[scale=0.5]{MF_Size}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{center} 
+			\includegraphics[scale=0.5]{MF_By_Region}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Exchange-Traded Funds
+			\begin{itemize}
+				\item Advantages: unlike index funds, trade continuously like stocks, can be sold short or purchased on margin, lower costs
+				\item Disadvantages: prices can depart from NAV, must be purchased from a broker
+				
+			\end{itemize}
+			\item Traditionally, ETFs were required to track specified indexes
+			\item Recently, actively managed ETFs with other investment objectives were introduced: value, growth, dividend yield, liquidity, recent performance, or volatility. %2017
+			\begin{itemize}
+				\item Still disclose portfolio composition each day. 
+			\end{itemize}
+			
+			\item A more recent innovation is non-transparent actively managed ETFs 
+			\begin{itemize}
+				\item Frequent portfolio disclosure could enable competitors to take advantage of their buying and selling programs
+				\item In 2014, the SEC gave permission to Eaton Vance to offer an actively managed ``nontransparent'' (NextShares, began trading in 2016).
+			\end{itemize}
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		
+		\begin{center}
+			Global exchange-traded funds (ETFs) from 2003 to 2021 (Statistica)
+			\includegraphics[scale=0.5]{ETF_Size}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Mutual Funds: Performance 		\\
+			\begin{center}
+				\includegraphics[scale=0.45]{MF_Performance}
+			\end{center}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Mutual Funds: Performance Persistence		\\
+			\begin{center}
+				\includegraphics[scale=0.45]{MF_Persistence}
+			\end{center}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{Closed_End}
+		\end{center}
+		
+		\begin{itemize} 
+			\item Closed-end Fund Puzzle
+			
+			\begin{itemize}
+				\item The common divergence of price from net asset value, often by wide margins, is a puzzle that has yet to be fully explained
+				
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Investment Companies (cont'd)}
+		
+		\begin{itemize} 
+			\item Hedge Funds
+			
+			\begin{itemize}
+				\item Commonly structured as private partnerships
+				\item Subject to only minimal regulation
+				\begin{itemize}
+					\item Can pursue investment strategies involving, for example, heavy use of derivatives, short sales, and leverage; such strategies typically are not open to mutual fund managers
+				\end{itemize}
+				
+				\item Open only to wealthy or institutional investors. \item Many require initial ``lock-ups'': periods as long as several years in which investments cannot be withdrawn. 
+				
+				\begin{itemize}
+					\item Allows hedge funds to invest in illiquid
+					assets without worrying about meeting demands for redemption of funds. 
+				\end{itemize}
+				
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\section{References}
+	\begin{frame}
+		\frametitle{References}
+		
+		\begin{itemize} \itemsep10pt
+			\item Financial Markets in Korea (Bank of Korea): \\ https://www.bok.or.kr/portal/bbs/P0000603/list.do?menuNo=200460
+			
+			\item Korea Treasury Bonds (Ministry of Economy and Finance):\\
+			https://ktb.moef.go.kr/eng/main.do
+			
+			\item Capital Market Factbook (SIFMA): \\ https://www.sifma.org/resources/research/fact-book/
+			
+			\item The Korea Exchange (KRX): \\
+			http://global.krx.co.kr/
+			
+			\item Investment Company Factbook (ICI) \\
+			https://www.icifactbook.org/
+			
+			\item BKM, Chapter 2, 3, and 4
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+\end{document} 

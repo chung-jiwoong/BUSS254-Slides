@@ -24,7 +24,7 @@ execute:
 
 - Overview of financial markets
 - Review: measures of return and risk
-- Reading: BKM §1 and 5
+- Reading: BKM Ch. 1 and 5
 
 
 # Overview

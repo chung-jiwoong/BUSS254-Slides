@@ -1,0 +1,1036 @@
+\documentclass[10pt]{beamer}
+\usepackage{etex}
+
+%\documentclass[handout]{beamer}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{natbib}
+\usepackage{tabularx,color,colortbl}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{comment}\excludecomment{hide}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage[singlelinecheck=off]{caption}
+\usepackage{booktabs}
+\usepackage{fixltx2e}
+\usepackage[flushleft]{threeparttable}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage{lscape}
+\usepackage{slashbox}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{tikz}
+\usepackage{xypic}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.pathreplacing}
+
+%\usepackage{pgfpages}
+%\setbeameroption{show notes}
+\setbeameroption{hide notes}
+%\setbeameroption{show notes on second screen}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letter,border shrink=5mm]
+
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[a4paper,border shrink=5mm]
+
+
+\newcolumntype{N}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcommand{\Ind}{\,\rotatebox[origin=c]{90}{\ensuremath{\models}}\,} %prob independence
+\newcommand{\tab}{\hspace*{2em}}
+\newenvironment{proenv}{\only{\setbeamercolor{local structure}{fg=white}}}{}
+\newenvironment{conenv}{\only{\setbeamercolor{local structure}{fg=blue}}}{}
+
+\setbeamertemplate{itemize itemsep}[15pt]
+
+
+%\usetheme{Ilmenau}
+\usetheme{boadilla}
+\usecolortheme{dolphin}
+\useinnertheme{circles}
+
+\usenavigationsymbolstemplate{}
+\setbeamertemplate{footline}[frame number]
+
+
+%\setbeamerfont{institute}{size=\footnotesize}
+%\setbeamerfont{author}{size=\small}
+%\setbeamerfont{date}{size=\small}
+
+
+
+\title{Financial Markets: Part II \\
+	\vspace{5pt} {\footnotesize BUSS254 Investments}}
+\author{Prof. Ji-Woong Chung}
+\institute{}
+\date{}
+
+\begin{document}
+	
+	\frame{\titlepage}
+	\graphicspath{{figures//}}
+	
+	
+	\begin{frame}
+		\frametitle{Lecture Outline}
+		\begin{itemize}\itemsep15pt
+			\item Money markets: Call, Repo, CD, CP, etc.
+			\item Day counting and pricing money market securities
+			\item Capital markets: Bond, Equity
+			\item Derivatives markets: Futures, Options etc.
+			\item Trading mechanisms
+			\item Investment Companies
+		\end{itemize}
+	\end{frame}
+	
+	
+	
+	\section{Capital Markets}
+	\begin{frame}
+		\begin{center}
+			{\Large Capital Markets}
+		\end{center}
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Financial Instruments} \vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.4]{Financial_Market}
+			{\scriptsize Source: Financial Markets in Korea, 2021}		
+		\end{center}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Capital Markets}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Money market instruments include short-term, marketable,
+			liquid, low-risk debt securities. 
+			\item Capital markets, in contrast, include longer term and riskier	securities. 
+			\item Securities in the capital market are
+			much more diverse than those found within the
+			money market. 
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Bond market: longer term borrowing or debt instruments, fixed-income capital market
+				\item Stock market: corporate ownership is traded
+			\end{itemize}
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Capital Markets (cont'd)} \vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.43]{Capital_Market_Size}
+			%{\scriptsize Source: Financial Markets in Korea, 2021}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market}
+		
+		\begin{itemize}
+			\item Major classes of bonds
+			\begin{itemize}
+				\item Government/Agency bonds: US Treasury Bonds, UK Gilt, Korea (KTB, National Housing Bonds, T-Bills, Foreign Exchange Stabilization Fund Bond)
+				\item Municipal bonds
+				\item Corporate bonds
+				\item Financial bonds: banks, finance companies		
+			\end{itemize}	
+			
+			\item Each government/agency may issue unique bonds
+			\begin{itemize}
+				\item Monetary Stabilization Bonds (MSBs): BOK		
+				\item Special bonds: e.g., KEPCO, KDIC %Korea Development Bank, the Korea Deposit Insurance Corporation, Korea Asset Management Corporation
+			\end{itemize}
+			
+			\item Many different types of bonds
+			\begin{itemize}
+				\item Domestic and international bonds (Euro bonds, foreign bonds)
+				\item Secured and unsecured bonds (collateral)
+				\item Guaranteed and non-guaranteed bonds
+				\item Fixed rate and floating rate bonds
+				\item Zero-coupon and coupon bonds
+				\item Convertible bonds, bonds with warrant, exchange bond etc.
+			\end{itemize}
+			\item Traded on exchanges or over-the-counter markets
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market (cont'd)}
+		
+		\begin{itemize}
+			\item Monetary Stabilization Bonds
+			\begin{itemize}
+				\item Issued by BOK to adjust monetary liquidity
+				\item One of the major tools for open market operations
+				\item 91-day (discount), 1-, 2-, and 3-year (coupon)
+			\end{itemize}	
+			
+			\begin{center}
+				\includegraphics[scale=0.45]{MSB_balance}
+			\end{center}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Asset-Backed Securities
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Collateralized by an underlying pool of assets,  of low liquidity:  loans (CLO), bonds (CBO), mortgages (MBS), or receivables (CARD)
+				
+				\item Goes through a securitization process
+				
+				\item Transfer of ownership of the underlying assets from the asset originator to a special purpose company/vehicle %(since 1998 in Korea)
+				
+				\item A major contributor of the 2008 Financial Crisis
+			\end{itemize}	
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market (cont'd)}
+		
+		\begin{center}
+			\includegraphics[scale=0.48]{Securitization}
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			
+			\item Covered Bonds
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				%https://www.thebalancemoney.com/what-is-covered-bond-417123
+				\item Similar to ABS
+				\item But the underlying assets (cover pool) remain on the balance sheet of the issuing bank
+				\item Essentially a standard corporate bond issued by a financial institution with an extra layer of protection for investors. 
+				\item More common in Europe and particularly in Germany.
+				%The underlying loans of a covered bond stay on the balance sheet of the issuer.			
+				%Therefore, even if the institution becomes insolvent, investors holding the bonds may still receive their scheduled interest payments from the underlying assets of the bonds, as well as the principal at the bond’s maturity.
+				%Because of this extra layer of protection, covered bonds typically have AAA ratings.
+			\end{itemize}	
+			
+			\item Foreign Exchange Stabilization Fund Bond
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Foreign currency denominated government bonds, issued in overseas bond markets.
+				\item To provide base rates for Korean bonds in the international financial market
+				\item To stabilize foreign exchange rates 
+			\end{itemize}	
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market (cont'd)}
+		
+		\begin{center}
+			\includegraphics[scale=0.42]{Korea_Govnt_Bonds} \\
+			{\scriptsize Ministry of Economy and Finance: Korea Treasury Bonds, 2021}
+		\end{center}
+		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{Global_Bond_Issue} \\
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.43]{Global_Bond_Outstanding}
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.6]{Debt_Financing} \\
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets}
+		
+		\begin{itemize}
+			\item Common stocks: represent an ownership claim of the earnings and assets of a company
+			\item Preferred stocks: receive dividends before common stocks
+			\begin{itemize}
+				\item limited voting rights
+				\item can come with options: e.g., redeemable (to cash) convertible (to common stock) preferred shares 
+			\end{itemize}
+			\item Residual claims in the event of bankruptcy/liquidation
+			
+			\item A company can issue multiple share classes have different voting rights or special rights 
+			\begin{itemize}
+				\item Introduced in Korea in November 2023.
+			\end{itemize}
+			
+			\item Primary markets: private placements, initial public offering (IPO), seasoned equity offering (SEO)
+			\item Traded on exchanges or over-the-counter markets
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item The Korea Exchange (KRX: www.krx.co.kr)
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item KOSPI (Korea Composite Stock Price Index): 1956
+				\item KOSDAQ (Korea Securities Dealers Automated Quotations): 1996
+				\item KONEX (Korea New Exchange): 2013 for SMEs
+				\item K-OTC: 2014
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.33]{KOSPI}\\
+			\includegraphics[scale=0.33]{KOSDAQ}
+			%{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Stock market performcne
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Go to finance.yahoo.com and compare major stock market indices 
+				\item For example, from 2001 to Dec 20, 2022 
+			\end{itemize}
+			
+		\end{itemize}
+		
+		\begin{table}[]
+			\begin{tabular}{lr}
+				Index      & Cum. Return \\ \hline
+				KOSPI      & 361.53\%    \\
+				KOSDAQ     & 34.21\%     \\
+				S\&P 500   & 189.46\%    \\
+				NASDAQ     & 326.92\%    \\
+				DOW        & 204.50\%    \\
+				Nikkei 225 & 91.41\%     \\
+				Hangseng   & 50.15\%     \\
+				FTSE 100   & 25.15\%    
+			\end{tabular}
+		\end{table}
+		
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{Global_Equity_Issue} \\
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.43]{Global_Equity_Cap}
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.6]{Financing_by_Country} \\
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2023}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Markets (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Cross-listing
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Listing equity shares on one or more foreign exchanges.
+				\item The number of firms doing this has exploded in recent years (roughly 10\% worldwide).
+				\item The primary purpose of cross-listing is to reduce their cost of capital. 	
+			\end{itemize}
+			
+			\begin{enumerate} \vspace{5pt} \itemsep10pt
+				\item Direct listing
+				\item Depository Receipts
+				\begin{itemize} \vspace{5pt} \itemsep10pt
+					\item A receipt that represents the number of foreign shares that are deposited at a national bank.
+					\item When the depositary bank is in the U.S., the instruments are known as American Depositary Receipts (ADRs). European banks issue European depositary receipts, U.K Global Depository Receipt (GDP), Indian Depository Receipt  etc.
+					
+				\end{itemize} 
+			\end{enumerate}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Stock Market Indices}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item A hypothetical portfolio of investment holdings that represents a segment of the financial market.	
+			\begin{itemize}
+				\item Measure of the overall stock market performance
+				\item Can be used to compare performance of money managers
+				\item Benchmarks for passive funds (index funds, ETFs etc.)
+				\item Bases of many derivatives
+			\end{itemize}
+			
+			\item There are hundreds of thousands of indices depending on
+			\begin{itemize}
+				\item Representativeness (sector, region, size, etc.)
+				\item Weighting scheme
+			\end{itemize}
+			
+			\item Major indices
+			\begin{itemize}
+				\item DJIA, S\&P500, Nasdaq (US), FTSE100 (UK), Nikkei225 (Japan), CAC 40 (France), DAX (Germany), HCI (Hong Kong)
+				\item KOSPI200, KOSDAQ50
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Stock Market Indices (cont'd)}
+		
+		\begin{itemize}
+			\item Price-Weighted Index	
+			\begin{itemize}
+				\item Each company's stock is weighted by its price per share, and the index is an average of the share prices of all the companies.
+				\item Greater weight to stocks with higher prices
+				\item (kind of) Investing equal numbers of shares	of each stock (buy-and-hold)
+				\item Examples: DJIA, Nikkei 225
+			\end{itemize}
+			
+			\item Market value-weighted index
+			\begin{itemize}
+				\item Individual components are weighted according to their relative total market capitalization (can consider free-floating shares only).
+				\item A higher market cap will receive a higher weighting in the index
+				\item Investing in proportion to market value (buy-and-hold)
+				\item Examples: S\&P 500, NASDAQ, KOSPI, KOSDAQ
+			\end{itemize}
+			
+			\item Equal-weighted index
+			\begin{itemize}
+				\item Equally weighted average of the returns of each stock
+				\item Investing equal dollar values in each stock (requires continuous rebalancing)
+				\item Examples: S\&P 500 Equal Weight, MSCI Equal Weight
+			\end{itemize}
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}[t]
+		\frametitle{Stock Market Indices (cont'd)}
+		
+		\begin{table}[]
+			\begin{tabular}{cccccccccc}
+				& &  &  &  & \multicolumn{2}{c}{No split} & & \multicolumn{2}{c}{Split} \\ \cline{6-7} \cline{9-10} 
+				Stock &  & P1    & Q1 &  & P2    & Q2  &  & P2    & Q2  \\ \cline{1-1} \cline{3-4} \cline{6-7} \cline{9-10} 
+				A     &  & \$10  & 40 &  & \$15  & 40  &  & \$15  & 40  \\
+				B     &  & \$50  & 80 &  & \$50  & 80 &  & \$25  & 160 \\
+				C     &  & \$140 & 50 &  & \$150 & 50  &  & \$150 & 50 
+			\end{tabular}
+		\end{table}
+		
+		
+		\begin{itemize}
+			\item Price-Weighted Index	
+			\begin{itemize}
+				\item Day 1: $ (10 + 50 + 140)/3 = 66.67 $
+				\item Day 2 - No split: $ (15 + 50 + 150)/3 = 71.67 $
+				\item Day 2 - Split: 
+				\begin{itemize}
+					\item Find $d$ such that $ (10 + 25 + 140)/d = 66.7 $, $d=2.625$.
+					\item Then $ (15 + 25 + 150)/2.624 = 72.38$
+				\end{itemize}
+				
+				\item $d$ is called the Dow Divisor, continuously adjusted for corporate actions, such as dividend payments and stock splits.
+				\item As of December 2021, the divisor for DJIA is 0.15172752595384.
+				\item Note that, with split, the change in index does not represent the investment outcome of holding 1 share of each stock. $72.38/66.67 = 8.57\% \neq 71.67/66.67 = 7.5\% $
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}[t]
+		\frametitle{Stock Market Indices (cont'd)}
+		
+		\begin{table}[]
+			\begin{tabular}{cccccccccc}
+				&  &  &  &  & \multicolumn{2}{c}{No split} & & \multicolumn{2}{c}{Split} \\ \cline{6-7} \cline{9-10} 
+				Stock &  & P1    & Q1 &  & P2    & Q2  &  & P2    & Q2  \\ \cline{1-1} \cline{3-4} \cline{6-7} \cline{9-10} 
+				A     &  & \$10  & 40 &  & \$15  & 40  &  & \$15  & 40  \\
+				B     &  & \$50  & 80 &  & \$50  & 80 &  & \$25  & 160 \\
+				C     &  & \$140 & 50 &  & \$150 & 50  &  & \$150 & 50 
+			\end{tabular}
+		\end{table}
+		
+		
+		\begin{itemize}
+			\item Market value-Weighted Index	
+			\begin{itemize}
+				\item Day 1: $ (400 + 4,000 + 7,000) = 11,400 $
+				\item Day 2: $ (600 + 4,000 + 7,500) = 12,100 $
+				\begin{itemize}
+					\item Using Day 1 as the base year (e.g., set it equal to 100)
+					\item Day 2 index = $12,100/11,400  \times 100 = 106.14 $
+				\end{itemize}
+				
+				\item If you invest in proportion to market value, i.e., 3.50\% (A), 35.07\% (B), and 61.40\% (C), the return is $ 3.50\% \times (600/400-1) + 35.07\% \times (4,000/4,000-1) + 61.40\% \times (7,500/7,000) = 6.14\%  $
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}[t]
+		\frametitle{Stock Market Indices (cont'd)}
+		
+		\begin{table}[]
+			\begin{tabular}{cccccccccc}
+				&  &  &  &  & \multicolumn{2}{c}{No split} & & \multicolumn{2}{c}{Split} \\ \cline{6-7} \cline{9-10} 
+				Stock &  & P1    & Q1 &  & P2    & Q2  &  & P2    & Q2  \\ \cline{1-1} \cline{3-4} \cline{6-7} \cline{9-10} 
+				A     &  & \$10  & 40 &  & \$15  & 40  &  & \$15  & 40  \\
+				B     &  & \$50  & 80 &  & \$50  & 80 &  & \$25  & 160 \\
+				C     &  & \$140 & 50 &  & \$150 & 50  &  & \$150 & 50 
+			\end{tabular}
+		\end{table}
+		
+		
+		\begin{itemize}
+			\item Equal-Weighted Index	
+			\begin{itemize}
+				\item Day 1: Base year, set it equal to 100
+				\item Day 2: $ (\frac{1}{3} \frac{600}{400} + \frac{1}{3} \frac{4,000}{4,000} + \frac{1}{3} \frac{7,500}{7,000}) = 119.04 $
+				
+				\item If you invest equal amount, say \$700, in each stock, i.e., 70 shares (A), 14 shares (B), and 5 shares (C), the return is $ \frac{1}{3} \times (\frac{600}{400}-1) + \frac{1}{3} \times (\frac{4,000}{4,000}-1) + \frac{1}{3} \times \frac{7,500}{7,000} = 19.04\%  $
+			\end{itemize}
+			
+			\item When using market-value (equal) weight, large-cap (small-cap) stocks are overweighted.
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Bond Market Indices}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Well-known bond market indicators 
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Merrill Lynch
+				\item Barclays
+				\item Citi 
+			\end{itemize}
+			\item The major problem
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Bonds trade infrequently, which makes it hard to get reliable, up-to-date prices
+				\item True rates of return on many bonds are difficult to compute
+			\end{itemize}
+			
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\section{Derivatives Markets}
+	\begin{frame}
+		\begin{center}
+			{\Large Derivatives Markets}
+		\end{center}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Financial contracts whose value derives from other underlying assets
+			\begin{itemize} 
+				\item Forward, futures, options, and swaps
+				\item Underlying assets: equity, commodity, credit, interest rates, currency etc.
+%				\item Collateralized debt obligation
+				\item Some are traded on exchanges, but OTC much bigger
+			\end{itemize}
+			\item Forward/futures: an agreement to buy/sell underlying assets at a specified time at an agreed price.
+			\item Options: buyers have the right to buy/sell underlying assets at a specified time at an agreed price (vs. warrants)
+			\item Swaps: an agreement to exchange financial assets or cash in the future (a series of forwards).
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			\item Brief history of exchange-traded derivatives market in Korea
+			\begin{itemize} \itemsep7pt
+				\item KOSPI 200 futures: May 1996
+				\item KOSPI 200 options: July 1997
+				\item KOSDAQ 50 future: January 2001, renamed to KOSDAQ 150 futures in 2015
+				\item KOSDAQ 50 options: November 2001
+				
+				\item Single stock options: January 2002
+				\item Single stock futures: May 2008
+				
+				
+				\item Mini KOSPI 200 futures: March 2018 (1/5 of KOSPI 200 futures transaction amount)
+				\item KRX 200 futures: March 2018
+				
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{Korea_Futures} \\
+			%{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{KOSPI200futures_KOSPI} \\
+			%{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{World_Futures_Market} \\
+			\includegraphics[scale=0.5]{World_Option_Market}
+			%{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} %\vspace{-10pt}
+		\begin{center}
+			\includegraphics[scale=0.5]{Derivatives_Market} \\
+			{\scriptsize Source: Capital Market Factbook - SIFMA, 2022}		
+		\end{center}
+		
+	\end{frame}	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item Interest Rate Futures
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item CD futures: April 1999, delisted in December 2007
+				% 91-day CD market, not liquid
+				
+				\item 3-year KTB futures: September 1999
+				\item MSB futures: December 2002, delisted in February 2011
+			\end{itemize}
+			
+			\item Interest Rate Swap
+			\begin{itemize} \vspace{5pt} \itemsep10pt
+				\item Two borrowers exchange interest payment obligations
+				\item Maturity: 3 months to 20 years (one to five years most active)
+				\item Began to develop in 1999 (OTC), and expanded
+				significantly after 2005
+			\end{itemize}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Currency Swap
+			\begin{itemize}
+				\item Two or more parties exchange their principal and interest payment obligations for loans borrowed in different currencies
+				\item Maturity: 3 months to 20 years (one to five years most active)
+				\item First swap: September 1999 (OTC)
+			\end{itemize}
+			
+			\item Forward on currency
+			\begin{itemize}
+				\item Outright forward: Deliverable vs. Non-deliverable forward
+				\item Forward exchange swap: Spot + Forward
+			\end{itemize}
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.4]{Forex_Derivatives} 
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Credit Derivatives
+			\begin{itemize}
+				\item Separate and transfer the credit risk of an underlying asset between protection buyer and seller
+				\item Need to precisely define types and the time of credit events
+			\end{itemize}
+			
+			\begin{enumerate} \vspace{10pt} \itemsep10pt
+				\item Credit default swap (CDS)
+				\item Total return swap: swap credit risk + market risk
+				\item Credit-linked notes = bond $-$ CDS
+				\item Sythetic collaterized debt obligation = CDO $-$ CDS
+				% See Wikipedia for more detail
+				% Introduction to Structured Products: In an unfunded credit derivative, typified by a credit default swap, the protection seller does not make an upfront payment to the protection buyer. In a funded credit derivative, typified by a credit-linked note (CLN), the investor in the note is the credit protection seller and is making an upfront payment to the protection buyer when buying the note. Thus, the protection buyer is the issuer of the note. If no credit event occurs during the life of the note, the redemption value of the note is paid to the investor on maturity. If a credit event does occur, then on maturity a value less than par will be paid out to the investor. This value will be reduced by the nominal value of the reference asset to which the CLN is linked. In this chapter, we discuss CLNs.
+			\end{enumerate}
+			
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} \vspace{-5.2pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.4]{CDS_structure} 
+			\includegraphics[scale=0.4]{TRS_structure} 
+		\end{center}		
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} \vspace{-5.2pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.4]{CLN_structure} 
+			\includegraphics[scale=0.4]{CDO_structure} 
+		\end{center}		
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} \vspace{-5.2pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.4]{CDS_Premium} 
+			\includegraphics[scale=0.4]{CDS_Korea} 
+		\end{center}		
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)} \vspace{-5.2pt}
+		
+		\begin{center}
+			\includegraphics[scale=0.4]{Credit_Derivatives} 
+		\end{center}		
+		
+	\end{frame}
+	
+	
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Derivative-linked securities
+			\begin{enumerate}
+				\item Equity-linked warrants
+				\begin{itemize}
+					\item Since 2005, like options but no daily settlement, can invest small amount
+				\end{itemize} 
+			\end{enumerate}
+			
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.43]{ELW_vs_Options} 
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Derivative-linked securities
+			\begin{enumerate} \setcounter{enumi}{1}
+				\item Equity-linked securities
+				\begin{itemize}
+					\item Since 2003, wide range of payoff structure
+				\end{itemize} 	
+			\end{enumerate}
+			
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.45]{ELS} 		
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Derivative-linked securities
+			\begin{enumerate} \setcounter{enumi}{1}
+				\item Equity-linked securities
+				
+			\end{enumerate}
+			
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.45]{ELS_example} 
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Derivative-linked securities
+			\begin{enumerate} \setcounter{enumi}{2}
+				\item Debt-linked securities		
+				\begin{itemize}
+					\item Since 2005, linked to interest rates, exchange rates, commodities prices, etc, mostly for institutional investors
+				\end{itemize} 			
+			\end{enumerate}
+			
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.45]{CLN} 			
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item Derivative-linked securities
+			\begin{enumerate} \setcounter{enumi}{3}
+				\item Exchange-traded notes
+				\begin{itemize}
+					\item Since 2014, ELW $\sim$ options, ELS/DLS $\sim$ fixed income, ETN $\sim$ ETF
+				\end{itemize} 
+			\end{enumerate}
+			
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.45]{ETN_vs_ETF} 
+		\end{center}	
+		
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Derivatives Markets (cont'd)}
+		
+		\begin{itemize}
+			
+			\item E: individual stocks or indices
+			\item D: forex, gold, credit, etc.
+			\vspace{5mm}
+			\item ELS and DLS: issued by securities companies
+			\item ELT and DLT: issued by banks
+			\item ELF and DLF: issued by asset managment companies
+			\item ELD and DLD: principal protected
+			\item Options (anyone), Warrants (Companies), ELW (securities companies)
+			\item ETN (securities companies), ETF (funds)
+			
+			
+		\end{itemize}
+		
+		
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{Risk/Return Characteristics of Securities}
+		
+		\begin{itemize} \vspace{5pt} \itemsep10pt
+			\item These financial securities offer different risk-return profile, which is the main focus of interest of this course (and asset allocation decisions)
+			\item Factors affecting risk of a security:
+			\begin{enumerate} \vspace{5pt} \itemsep10pt
+				\item Maturity of the security
+				\item Credit quality of the issuer
+				\item Priority over income and assets
+				\item Liquidity
+			\end{enumerate}
+			\item Returns (over long periods of time) should be consistent with risk
+		\end{itemize}
+		
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+		\frametitle{Risk vs. Return}
+		
+		\begin{center}
+			\includegraphics[scale=0.25]{RiskReturn} \\
+			{\scriptsize BNP Paribas, "Strategic Asset Allocation for 2019 and beyond"}
+			%https://wealthmanagement.bnpparibas/asia/en/expert-voices/strategic-asset-allocation-for-2019-and-beyond.html
+		\end{center}
+		
+	\end{frame}
+	
+	
+	
+	
+\end{document} 
