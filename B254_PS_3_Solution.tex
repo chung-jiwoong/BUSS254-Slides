@@ -1,0 +1,344 @@
+\documentclass[11.5pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+% \usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage[colorlinks=true,urlcolor=cmu]{hyperref}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}	% Positioning tables
+\definecolor{darkgreen}{rgb}{0,0.66,0}
+\definecolor{cmu}{rgb}{0.76,0,0}
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.5in
+\headheight     0.0in
+\topmargin      0.0in
+\textheight=7.8in
+
+\begin{document}
+
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+
+\renewcommand{\headheight}{0.7in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{\textbf{\sc{BUSS254. Investments}}}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[R]{\sc{{Instructor: Ji-Woong Chung}}}
+\fancyfoot[L]{\sc{}}
+\pagestyle{fancy}
+\vspace{1.5cm}
+\onehalfspacing
+
+\begin{center}
+\large{\textbf{\sc{Problem Set 3}}}
+\vspace{1.0cm}
+\end{center}
+
+%\noindent The answer key will not be shared. Feel free to share your answers in the course webpage to receive feedbacks (or help others). 
+
+
+\vspace{20pt}
+
+
+\noindent 1. Consider the five stocks in the following table. $P_t$ is stock price and $Q_t$ is shares outstanding in day $t$. Stock C splits two-for-one in day 2 and Stock D has two stock splits: two-for-one in day 1 and four-for-one in day 2. \\
+
+
+\begin{table}[h]
+	\begin{tabular}{ccccccccc}
+		\hline
+		& P0  & Q0  &  & P1  & Q1  &  & P2 & Q2  \\ \cline{1-3} \cline{5-6} \cline{8-9} 
+		A & 90  & 100 &  & 95  & 100 &  & 95 & 100 \\
+		B & 50  & 200 &  & 45  & 200 &  & 45 & 200 \\
+		C & 100 & 200 &  & 110 & 200 &  & 55 & 400 \\
+		D & 200 & 100 &  & 120 & 200 &  & 45 & 800 \\
+		E & 20  & 100 &  & 30  & 100 &  & 33 & 100 \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{enumerate}[a]
+
+\item Calculate the rate of return on a price-weighted index of the five stocks for the first day ($t = 0$ to $t = 1$).
+
+\item What must happen to the divisor for the price-weighted index in day 2?
+
+\item Calculate the rate of return of the price-weighted index for the second day ($t = 1$ to $t = 2$ ). 
+
+\item Calculate the first- and second-day rates of return on the following indexes of the five stocks:
+
+\begin{itemize}
+	\item a market value-weighted index.
+	
+	\item an equally weighted index. 
+\end{itemize}
+
+
+\end{enumerate}
+
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+\indent a.	At t = 0, the value of the index is: (90 + 50 + 100 + 200 + 20)/5 = 92 
+
+In the absence of a split, stock D would sell for 200.  After the split, stock D sells at 100.  Therefore, we need to set the divisor (d) such that:
+92= (90 + 50 + 100 + \textbf{100} + 20)/d => d = 3.9130 
+
+At t = 1, the value of the index is: (95+ 45 + 110 + 120 + 30)/ 3.9130= 102.2222 
+
+The rate of return is: (102.2222/92) – 1 = 11.11\%  \\
+
+\indent b.	After the split of stocks C and D, we need to set the divisor (d) such that:
+102.2222= (95+ 45 + \textbf{55} + \textbf{30} + 30)/d => d = 2.4946 \\
+
+
+\indent c.	At t = 2, the value of the index is: (95+ 45 + 55 + 45 + 33)/ 2.4946= 109.4379 
+
+The rate of return is: (109.4379/102.2222) – 1 = 7.06\%  \\
+
+\indent d.	TMV(t = 0): (\$90*100 + \$50*200 + \$100*200+ \$200*100+ \$20*100) = \$61,000 
+
+TMV(t = 1): (\$95*100 + \$45*200 + \$110*200+ \$120*200+ \$30*100) = \$67,500 
+
+TMV(t = 2): (\$95*100 + \$45*200 + \$55*400+ \$45*800+\$33*100) = \$79,800 
+
+Rate of return on day 1 = (\$67,500/\$61,000) – 1 = 10.66\% 
+
+Rate of return on day 2 = (\$79,800/\$67,500) – 1 = 18.22\%
+
+
+
+
+\vspace{40pt}
+
+
+
+\noindent 2. Consider the following limit order book of a specialist. The last trade in the stock occurred at a price of \$50.
+
+\begin{table}[h]
+	\begin{tabular}{ccccc}
+		\hline
+		\multicolumn{2}{c}{Limit Buy Orders} &  & \multicolumn{2}{c}{Limit Sell Orders} \\ \cline{1-2} \cline{4-5} 
+		Price             & Shares           &  & Price              & Shares           \\ \cline{1-2} \cline{4-5} 
+		\$49.95           & 500              &  & \$50.50            & 100              \\
+		49.90             & 800              &  & 51.50              & 100              \\
+		49.85             & 500              &  & 54.75              & 300              \\
+		49.80             & 200              &  & 58.25              & 100              \\
+		49.50             & 600              &  &                    &                  \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{enumerate}[a]
+	\item If a market buy order for 100 shares comes in, at what price will it be filled?
+	
+	\item At what price would the next market buy order of 200 shares be filled?
+	
+	\item If a market sell order for 100 shares comes in, at what price will it be filled?
+	
+	\item At what price would the next market sell order of 200 shares be filled?
+	
+	\item If you were the specialist with obligations to maintain a fair and orderly market, would you want to increase or decrease your inventory (i.e., your holdings) of this stock? Explain.
+	
+\end{enumerate}
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+a. The buy order will be filled at the best limit-sell order price: \$50.50. The market price increases by \$0.5.
+
+b. The next market buy order will be filled at the next-best limit-sell order price: \$51.50 for the first 100 shares and \$54.75 for the next 100 shares.  The market price increases from \$50.50 to \$54.75, or 8.42\%. 
+
+c. The sell order will be filled at the best limit-sell order price: \$49.95.  The market price drops by \$0.05.
+
+d. The next market sell order will be filled at the same price at: \$49.95. The market price remains unchanged.
+
+e. The main duty of the specialist is to provide stock liquidity and reduce unnecessary stock price volatility. The current limit order book is imbalanced with more buy orders than sell orders. This could result in a substantial price increase due to the high demand of the buy orders and the low supply of sell orders. To reduce large price fluctuation from potential buyers, the specialist should provide liquidity by posting limit sell orders at prices at and slightly above the current stock price \$50. Therefore, the specialist wants to decrease the inventory, i.e., her personal holdings of the stock.
+
+
+
+\vspace{40pt}
+
+
+
+\noindent 3. Susan opens a brokerage account and purchases 100 shares of XYZ at \$10 per share.  The initial margin requirement (IMR) is 50\%, the maintenance margin requirement (MMR) is 30\%.  If Susan borrows money from the brokerage firm, the interest rate on the loan is 10\% per annum.  
+
+\begin{enumerate}[a]
+\item What is the maximum amount that she can borrow when she first purchase the stock?
+
+\item If the price falls to \$8 one-year later, what is the remaining margin on her account (in dollar amount)?
+
+\item Compute the rate of return to her investment if the price falls to \$8 one-year later.
+
+\item How low can the price of the stock fall before she get a margin call?  Assume the price drop happens immediately after she purchases the stock. 
+
+\end{enumerate}
+
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+a. Market value of the position: 100*\$10 = \$1,000. The IMR is 50\%, hence she can borrow \$500.
+
+b. Market value of the position: 100*\$8 = \$800. This should equal to \%500 (debt) + Margin. Therefore, the margin is \$800 - \$500 = \$300.
+
+c. \$300/\$500 - 1 = -40\%. When considering the interest on the loan, (\$300 - \$500*10\%)/\$500 -1 = -50\%.
+
+
+d. (100*x - \$500)/100*x $\le$ 30\%. Solve for x = \$7.1428.
+
+
+
+
+\vspace{40pt}
+
+
+
+\noindent 4. Suppose Susan opens a brokerage account to short-sell 100 shares of XYZ at \$10 per share.  The initial margin requirement is 50\%, the maintenance margin is 20\%.  If Susan borrows stocks to short-sell, the interest rate on the stock loan (in terms of dollar amount) is 10\% per annum.  
+
+
+\begin{enumerate}[a]
+\item How much she needs to deposit in the account to short-sell 100 shares of XYZ?
+
+\item If the price increases to \$11 a year later, what is the remaining margin on her account (in dollar amount)?
+
+\item Compute the rate of return to her investment if the price increases to \$11 a year later.
+
+\item How high can the price of the stock rise before she gets a margin call?  Assume the price increase happens immediately after she sells short the stock.
+
+\end{enumerate}
+	
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+a. The short position: 100*\$10=\$1,000. The IMR is \%50, so she deposits \$500. 
+
+b. The short position: 100*\$11=\$1,100. Assets (\$1,500) = Equity + Debt (\$1,100). Hence, the margin (equity) - \$400.
+
+c. \$400/\$500-1 = -20\%. With the interest on the loan, (\$400-\$1,000*10\%)/\$500-1 = -40\%. 
+
+d. (\$1,500-100*x)/100*x $\le$ 20\%. x = \$12.5.
+
+
+
+\vspace{40pt}
+
+
+
+\noindent 5. XYZ stock price and dividend history are as follows:
+
+\begin{table}[h]
+	\begin{tabular}{ccc}
+		\hline
+		Year & Beginning-of-year Price & Dividend paid at   Year-End \\ \hline
+		2010 & \$100                   & \$4                         \\
+		2011 & \$110                   & \$4                         \\
+		2012 & \$90                    & \$4                         \\
+		2013 & \$95                    & \$4                         \\ \hline
+	\end{tabular}
+\end{table}  
+
+
+\begin{enumerate}[a]
+	\item What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
+	
+	\item An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sell one share at the beginning of 2012, and sell all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)? 
+		
+\end{enumerate}
+
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+a. AM = 3.1515\% and GM = 2.3319\%
+
+b. 
+\begin{table}[h]
+	\begin{tabular}{ccc}
+		\hline
+		Year & Cash flows & Dividend paid at   Year-End \\ \hline
+		2010 & - 3 * \$100              & 3* \$4                         \\
+		2011 & - 2 * \$110              & 5 * \$4                         \\
+		2012 & +\$90                    & 4 * \$4                         \\
+		2013 & + 4 * \$95               & 0 * \$4                         \\ \hline
+	\end{tabular}
+\end{table}  
+
+Cash flow streams: -300, (-200+12), (90+20), 380. Using IRR function in Excel, the IRR is -0.1661\%.
+
+
+
+\newpage
+
+
+
+\noindent 6. The following table is a simple scenario of the stock market:
+
+\begin{table}[h]
+	\begin{tabular}{lcc}
+		\hline
+		Scenario         & Probability & Holding-period   return (\%) \\ \hline
+		Severe recession & 0.01        & -40                          \\
+		Mild Recession   & 0.09        & -10                          \\
+		Normal           & 0.60        & +5                           \\
+		Mild growth      & 0.20        & +12                          \\
+		Boom             & 0.10        & +60                          \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{enumerate}[a]
+	\item Calculate the expected return and the standard deviation of the holding-period return.
+	
+	\item  What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5\%.
+	
+	\item  Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return. 
+
+\end{enumerate}
+
+
+
+\vspace{10pt}
+
+\indent \textbf{Answer:} 
+
+a. E(R)=10.1\%, $\sigma$=18.07\%
+
+b. VaR at 5\% = -10\%
+
+c. VaR at 1\% = -40\%
+
+%
+%\vspace{40pt}
+%
+%
+%
+%\noindent 7. Warren is currently holding a portfolio comprising 40\% in stock A and 60\% in stock B.  The expected returns on stocks A and B are 20\% and 10\%, respectively and the standard deviation of stocks A and B are 25\% and 16\%, respectively.  The correlation coefficient of stocks A and B is 0.5 and the return on T-bill is 3\%. [Hint: Sharpe ratio = $(E[R]-R_f)/sigma$]
+%
+%
+%\begin{enumerate}[a]
+%	\item Compute the expected return and standard deviation of Warren's portfolio.
+%	
+%	\item Which of the following changes will be most preferred by Warren?
+%	\begin{enumerate}[i]
+%	\item standard deviation of stocks A and B reduce to 16\% and 9\%, respectively;
+%	\item the correlation coefficient of stocks A and B changes to $-0.5$; or
+%	\item the expected return on stock A increases to 30\%.
+%	\end{enumerate}
+%	
+%\end{enumerate}
+
+\end{document} 

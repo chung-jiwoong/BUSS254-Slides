@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.41">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prof.&nbsp;Ji-Woong Chung">
+
+<title>Practice Problem Set - Solution</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="solution_market3_files/libs/clipboard/clipboard.min.js"></script>
+<script src="solution_market3_files/libs/quarto-html/quarto.js"></script>
+<script src="solution_market3_files/libs/quarto-html/popper.min.js"></script>
+<script src="solution_market3_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="solution_market3_files/libs/quarto-html/anchor.min.js"></script>
+<link href="solution_market3_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="solution_market3_files/libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="solution_market3_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="solution_market3_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="solution_market3_files/libs/bootstrap/bootstrap-1bc8a17f135ab3d594c857e9f48e611b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Practice Problem Set - Solution</h1>
+<p class="subtitle lead">BUSS254 Investments</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Ji-Woong Chung </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li>If you notice any typos or errors, please feel free to <a href="chung_jiwoong@korea.ac.kr">email me</a>.</li>
+</ul>
+<hr>
+<section id="problem" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="problem"><span class="header-section-number">1</span> Problem</h2>
+<p>Consider the five stocks in the following table. <span class="math inline">\(P_t\)</span> is stock price and <span class="math inline">\(Q_t\)</span> is shares outstanding in day <span class="math inline">\(t\)</span>. Stock C splits two-for-one in day 2 and Stock D has two stock splits: two-for-one in day 1 and four-for-one in day 2.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">P0</th>
+<th style="text-align: left;">Q0</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">P1</th>
+<th style="text-align: left;">Q1</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">P2</th>
+<th style="text-align: left;">Q2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">90</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">95</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">95</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">50</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">110</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">120</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">800</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Calculate the rate of return on a price-weighted index of the five stocks for the first day (<span class="math inline">\(t = 0\)</span> to <span class="math inline">\(t = 1\)</span>).</p></li>
+<li><p>What must happen to the divisor for the price-weighted index in day 2?</p></li>
+<li><p>Calculate the rate of return of the price-weighted index for the second day (<span class="math inline">\(t = 1\)</span> to <span class="math inline">\(t = 2\)</span> ).</p></li>
+<li><p>Calculate the first- and second-day rates of return on the following indexes of the five stocks:</p></li>
+</ol>
+<ul>
+<li><p>a market value-weighted index.</p></li>
+<li><p>an equally weighted index.</p></li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>A price-weighted index is calculated by summing the prices of the stocks in the index and dividing by a divisor. Initially, the divisor is simply the number of stocks in the index. However, when a stock splits, the divisor needs to be adjusted to avoid a sudden drop in the index value.</p>
+<p>At t = 0, the value of the index is: (90 + 50 + 100 + 200 + 20)/5 = 92</p>
+<p>Stock D splits two-for-one on day 1. In the absence of a split, stock D would still sell for 200. After the split, stock D sells at 120, but for the divisor calculation, we use 100 (what the value would be AFTER the split). Therefore, we need to set the divisor (d) such that: 92= (90 + 50 + 100 + <strong>100</strong> + 20)/d =&gt; d = 3.9130 (This is adjusted divisor for day 1)</p>
+<p>At t = 1, the value of the index is: (95+ 45 + 110 + 120 + 30)/ 3.9130= 102.2222</p>
+<p>The rate of return is: (102.2222/92) – 1 = 11.11%</p></li>
+<li><p>Stocks C and D split on Day 2. We need to readjust the divisor for Day 2.</p>
+<p>After the split of stocks C and D, we need to set the divisor (d) such that: 102.2222= (95+ 45 + <strong>55</strong> + <strong>30</strong> + 30)/d =&gt; d = 2.4946</p></li>
+<li><p>The previously calculated adjusted divisor is used here</p>
+<p>At t = 2, the value of the index is: (95+ 45 + 55 + 45 + 33)/ 2.4946= 109.4379</p>
+<p>The rate of return is: (109.4379/102.2222) – 1 = 7.06%</p></li>
+<li><p>A market value-weighted index is calculated by summing the total market value of each stock in the index.</p>
+<p>TMV(t = 0): ($90*100 + $50*200 + $100*200+ $200*100+ $20*100) = $61,000</p>
+<p>TMV(t = 1): ($95*100 + $45*200 + $110*200+ $120*200+ $30*100) = $67,500</p>
+<p>TMV(t = 2): ($95*100 + $45*200 + $55*400+ $45*800+$33*100) = $79,800</p>
+<p>Rate of return on day 1 = ($67,500/$61,000) – 1 = 10.66%</p>
+<p>Rate of return on day 2 = ($79,800/$67,500) – 1 = 18.22%</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-1" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="problem-1"><span class="header-section-number">2</span> Problem</h2>
+<p>Consider the following limit order book of a specialist. The last trade in the stock occurred at a price of $50.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Limit Buy Orders</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Limit Sell Orders</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Price</td>
+<td style="text-align: left;">Shares</td>
+<td style="text-align: left;">Price</td>
+<td style="text-align: left;">Shares</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">$49.95</td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">$50.50</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">49.90</td>
+<td style="text-align: left;">800</td>
+<td style="text-align: left;">51.50</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">49.85</td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">54.75</td>
+<td style="text-align: left;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">49.80</td>
+<td style="text-align: left;">200</td>
+<td style="text-align: left;">58.25</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">49.50</td>
+<td style="text-align: left;">600</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>If a market buy order for 100 shares comes in, at what price will it be filled?</p></li>
+<li><p>At what price would the next market buy order of 200 shares be filled?</p></li>
+<li><p>If a market sell order for 100 shares comes in, at what price will it be filled?</p></li>
+<li><p>At what price would the next market sell order of 200 shares be filled?</p></li>
+<li><p>If you were the specialist with obligations to maintain a fair and orderly market, would you want to increase or decrease your inventory (i.e., your holdings) of this stock? Explain.</p></li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>A market buy order will execute against the lowest priced sell orders in the limit order book. In this case, the best available (lowest) sell price is $50.50. Since the order is for 100 shares, it will be completely filled at this price. This price would be the new market price, thus increasing by $0.5.</p></li>
+<li><p>The next market buy order will be filled at the next-best limit-sell order price. The first 100 shares will be filled at $51.50, and the remaining 100 shares will be filled at $54.75. The overall market price increases from $50.50 to $54.75, or 8.42%. The increased price is due to demand exceeding supply.</p></li>
+<li><p>A market sell order will execute against the highest priced buy orders in the limit order book. In this case, the best available (highest) buy price is $49.95. Since the order is for 100 shares, it will be completely filled at this price. Thus, the market price drops by $0.05.</p></li>
+<li><p>The next market sell order will be filled at the same price at: $49.95 because there is sufficient demand for 200 shares at this price. The market price remains unchanged.</p></li>
+<li><p>The main duty of the specialist is to provide stock liquidity and reduce unnecessary stock price volatility. The current limit order book is imbalanced with more buy orders than sell orders. This could result in a substantial price increase due to the high demand of the buy orders and the low supply of sell orders. To reduce large price fluctuation from potential buyers, the specialist should provide liquidity by posting limit sell orders at prices at and slightly above the current stock price $50. Therefore, the specialist wants to decrease the inventory, i.e., her personal holdings of the stock. The specialist would sell shares from her inventory to satisfy demand and keep the market orderly.</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">3</span> Problem</h2>
+<p>Susan opens a brokerage account and purchases 100 shares of XYZ at $10 per share. The initial margin requirement (IMR) is 50%, the maintenance margin requirement (MMR) is 30%. If Susan borrows money from the brokerage firm, the interest rate on the loan is 10% per annum.</p>
+<ol type="a">
+<li><p>What is the maximum amount that she can borrow when she first purchase the stock?</p></li>
+<li><p>If the price falls to $8 one-year later, what is the remaining margin on her account (in dollar amount)?</p></li>
+<li><p>Compute the rate of return to her investment if the price falls to $8 one-year later.</p></li>
+<li><p>How low can the price of the stock fall before she get a margin call? Assume the price drop happens immediately after she purchases the stock.</p></li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>The initial margin requirement (IMR) dictates the percentage of the investment that the investor must fund with their own money. The remaining portion can be borrowed from the broker.</p>
+<p>Market value of the position: 100*$10 = $1,000. The IMR is 50%, hence she must fund 50% of $1000 with her own money and the remaining $500 can be borrowed. Therefore, she can borrow $500.</p></li>
+<li><p>One year later, the stock price has decreased. This decreases the market value of the stock, thereby decreasing the equity/margin.</p>
+<p>Market value of the position: 100*$8 = $800. The loan amount remains constant at $500. This means that debt + Equity = Assets. Debt is the amount of loan which is fixed at $500. Therefore, Equity = Assets - Debts = $800 - $500 = $300.</p></li>
+<li><p>Rate of Return = (Ending Equity - Beginning Equity) / Beginning Equity</p>
+<p>The initial equity was 50% of $1000, or $500.</p>
+<p>$300/$500 - 1 = -40%. When considering the interest on the loan, the interest cost is 10% of $500. ($300 - $500*10%)/$500 -1 = -50%.</p></li>
+<li><p>A margin call occurs when the equity in the account falls below the maintenance margin requirement (MMR). Let “x” be the stock price when the margin call is received. Equity is calculated as (100*x) - loan amount.</p>
+<p>The formula for the margin call price: (Equity) / (Market Value) &gt; MMR. Here, ((100*x) - $500) / (100x) &gt; 30%. Solve for x.</p>
+<p>((100*x) - $500)/100*x &lt;= 30%. Solve for x = $7.1428. When the stock price drops below this, Susan will receive a margin call.</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-3" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="problem-3"><span class="header-section-number">4</span> Problem</h2>
+<p>Suppose Susan opens a brokerage account to short-sell 100 shares of XYZ at $10 per share. The initial margin requirement is 50%, the maintenance margin is 20%. If Susan borrows stocks to short-sell, the interest rate on the stock loan (in terms of dollar amount) is 10% per annum.</p>
+<ol type="a">
+<li><p>How much she needs to deposit in the account to short-sell 100 shares of XYZ?</p></li>
+<li><p>If the price increases to $11 a year later, what is the remaining margin on her account (in dollar amount)?</p></li>
+<li><p>Compute the rate of return to her investment if the price increases to $11 a year later.</p></li>
+<li><p>How high can the price of the stock rise before she gets a margin call? Assume the price increase happens immediately after she sells short the stock.</p></li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>When short selling, the investor borrows shares and sells them in the market, hoping the price will decline. The investor must deposit an initial margin to cover potential losses.</p>
+<p>The short position: 100*$10=$1,000. The IMR is 50%, so she deposits 50% which is $500. The proceeds from the short sell are retained by the broker.</p></li>
+<li><p>If the price increases, the short position will be worth more, thus decreasing equity.</p>
+<p>The short position: 100*$11=$1,100. Assets ($1,000 + $500) = Equity + Liabilities ($1,100). Hence, the margin (equity) = Assets - Liability = $1500 - $1100 = $400.</p></li>
+<li><p>Rate of Return = (Ending Equity - Beginning Equity) / Beginning Equity = ($400-$500)/$500.</p>
+<p>$400/$500-1 = -20%. With the interest on the loan, the formula is = ($400-$1,000*10%)/$500-1 = -40%.</p></li>
+<li><p>When short selling, the margin call price rises as the stock price increases (opposite of a normal long position).</p>
+<p>The formula for margin call is = ((Proceeds from short sell + initial margin) - (100 * price)) / (100 * price). Here, = (($1000+$500) - (100*x))/(100x) &gt;20%.</p>
+<p>($1,500-100*x)/100*x &lt;= 20%. Solve for x = $12.5. When the stock price rises above this, a margin call is triggered.</p></li>
+</ol>
+<hr>
+</section>
+<section id="problem-4" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="problem-4"><span class="header-section-number">5</span> Problem</h2>
+<p>XYZ stock price and dividend history are as follows:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Beginning-of-year Price</th>
+<th style="text-align: left;">Dividend paid at Year-End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2010</td>
+<td style="text-align: left;">$100</td>
+<td style="text-align: left;">$4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">$110</td>
+<td style="text-align: left;">$4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2012</td>
+<td style="text-align: left;">$90</td>
+<td style="text-align: left;">$4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2013</td>
+<td style="text-align: left;">$95</td>
+<td style="text-align: left;">$4</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)</p></li>
+<li><p>An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sell one share at the beginning of 2012, and sell all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?</p></li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>The rates of return vary each year based on the stock’s price fluctuation. <em>Return in 2010 = (Ending Price + Dividends - Beginning Price) / (Beginning Price) = (110+4 - 100)/100 = 14% </em>Return in 2011 = (90+4-110)/110 = -14.55% <em>Return in 2012 = (95+4-90)/90 = 10% </em>Return in 2013 = (Ending Price + Dividends - Beginning Price) / (Beginning Price) = (0+4 -95)/95 = -95/95 = -95.79%</p>
+<p>The arithmetic average return (AM) = (Sum of Annual Returns) / number of periods = (14 -14.55 + 10 + 0.1579) / 4 = 3.1515%</p>
+<p>The geometric average rate of return (GM) = [(1 + Return1) * (1 + Return2) * (1 + Return3) … ]^(1/number of periods) -1.</p>
+<p>The geometric average rate of return (GM) = [(1 + 0.14) * (1 + -0.1455) * (1 + 0.1) * (1 + 0.0421)]^(1/4)-1 = 2.3319%</p></li>
+<li><p>Dollar Weighted Return looks at how much of a particular asset an investor invests in and what is the return on invested assets.</p></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Cash flows</th>
+<th style="text-align: left;">Dividend paid at Year-End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2010</td>
+<td style="text-align: left;">- 3 * $100</td>
+<td style="text-align: left;">3* $4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">- 2 * $110</td>
+<td style="text-align: left;">5 * $4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2012</td>
+<td style="text-align: left;">+$90</td>
+<td style="text-align: left;">4 * $4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2013</td>
+<td style="text-align: left;">+ 4 * $95</td>
+<td style="text-align: left;">0 * $4</td>
+</tr>
+</tbody>
+</table>
+<pre><code>The cashflow takes into account the price of purchase as well as any dividends or payouts. For instance in 2010, the total investment is = 3 * 100 = \$300. However at year end 2010, dividends were issued. Thus, total cashflow = 3 * 4= 12.
+Cash flow streams: -300, (-200+12), (90+20), 380. Using IRR function in Excel, the IRR is -0.1661%. This is a negative return of -16.61%</code></pre>
+<hr>
+</section>
+<section id="problem-5" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="problem-5"><span class="header-section-number">6</span> Problem</h2>
+<p>The following table is a simple scenario of the stock market:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scenario</th>
+<th style="text-align: left;">Probability</th>
+<th style="text-align: left;">Holding-period return (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Severe recession</td>
+<td style="text-align: left;">0.01</td>
+<td style="text-align: left;">-40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mild Recession</td>
+<td style="text-align: left;">0.09</td>
+<td style="text-align: left;">-10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Normal</td>
+<td style="text-align: left;">0.60</td>
+<td style="text-align: left;">+5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mild growth</td>
+<td style="text-align: left;">0.20</td>
+<td style="text-align: left;">+12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Boom</td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;">+60</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Calculate the expected return and the standard deviation of the holding-period return.</p></li>
+<li><p>What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5%.</p></li>
+<li><p>Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return.</p></li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol type="a">
+<li><p>The expected return E(R) is the weighted average of the possible returns, where the weights are the probabilities of each scenario.</p>
+<p>E(R) = (Probability1 * Return1 + Probability2 * Return2…) = (0.01*-40) + (0.09*-10) + (0.60*5) + (0.20*12) + (0.10*60) = 10.1%</p>
+<p>The Standard Deviation is the measure of portfolio risk based on potential deviation from the expected rate of return.</p>
+<p>Standard Deviation = <span class="math inline">\(\sqrt{(Probability1 * (Return1-E(R))^2 + Probability2 * (Return2-E(R))^2 + ...)}\)</span></p>
+<p>Standard Deviation = <span class="math inline">\(\sqrt{ 0.01 * (-40-10.1)^2 + 0.09 * (-10-10.1)^2+0.6 * (5-10.1)^2 + 0.2 * (12-10.1)^2 + 0.1 * (60-10.1)^2}\)</span> = 18.07%</p></li>
+<li><p>Value at Risk (VaR) is a statistic used to quantify the level of financial risk within a firm, portfolio or position over a specific time frame. This problem sets the time frame at 5%. To find the 5th percentile VaR, order the returns from worst to best and find the return that corresponds to the 5th percentile. 1% + 9% = 10% &gt; 5%. Thus, VaR at 5% = -10%</p></li>
+<li><p>To find the 1st percentile VaR, order the returns from worst to best and find the return that corresponds to the 1st percentile. Probability of worst case (-40%) is 1% therefore VaR at 1% = -40%</p></li>
+</ol>
+<hr>
+</section>
+<section id="programming-exercises-optional" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="programming-exercises-optional"><span class="header-section-number">7</span> Programming Exercises (Optional)</h2>
+<section id="r-exercise-1-market-value-weighted-index-calculation-with-real-stock-data" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="r-exercise-1-market-value-weighted-index-calculation-with-real-stock-data"><span class="header-section-number">7.1</span> R Exercise 1: Market Value-Weighted Index Calculation with Real Stock Data</h3>
+<ol type="1">
+<li>Install and load the <code>quantmod</code> package if you haven’t already.</li>
+<li>Modify the <code>tickers</code> vector to include the ticker symbols of three different stocks you want to analyze.</li>
+<li>Adjust the <code>weights</code> vector so the weights are 0 to 1 and sum to 1.</li>
+<li>Modify the <code>start_date</code> and <code>end_date</code> variables to fetch data for a specific period you are interested in. Be sure to consider a timeframe to accurately test your model.</li>
+<li>Run the code below and analyze the output. Does the result make sense?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if quantmod is installed, and install if it isn't</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(quantmod)) <span class="fu">install.packages</span>(<span class="st">"quantmod"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the quantmod package</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quantmod)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ticker symbols of the stocks to include in the index</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>tickers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"AAPL"</span>, <span class="st">"MSFT"</span>, <span class="st">"GOOG"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the weights of each stock in the index (must sum to 1)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>weights <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.3</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the start date for the historical data</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="st">"2023-01-01"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the end date for the historical data</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>end_date <span class="ot">&lt;-</span> <span class="st">"2023-01-31"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to calculate the market value-weighted index</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>calculate_mkt_value_index <span class="ot">&lt;-</span> <span class="cf">function</span>(tickers, weights, start_date, end_date) {</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an empty list to store the adjusted closing prices</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  prices <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fetch the data within the function, ensuring it's in the function's environment</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (ticker <span class="cf">in</span> tickers) {</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fetch historical data for each ticker using getSymbols, adjusting for splits</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">getSymbols</span>(ticker, <span class="at">from =</span> start_date, <span class="at">to =</span> end_date, <span class="at">adjust =</span> <span class="cn">TRUE</span>, <span class="at">env =</span> <span class="fu">environment</span>()) <span class="co">#Load Symbols into function environment</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop through the tickers and extract the adjusted closing prices</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(tickers)){</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract the adjusted closing prices using Ad()</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    prices[[i]] <span class="ot">&lt;-</span> <span class="fu">Ad</span>(<span class="fu">get</span>(tickers[i]))</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Select the prices within the date range</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    prices[[i]] <span class="ot">&lt;-</span> prices[[i]][<span class="fu">paste0</span>(start_date,<span class="st">"::"</span>,end_date)]</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create a numeric vector to store the initial market values</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  initial_market_values <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(tickers))</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop through the tickers and calculate the initial market values</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(tickers)){</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The initial market value is the weight divided by the initial price</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    initial_market_values[i] <span class="ot">&lt;-</span> weights[i] <span class="sc">/</span> prices[[i]][<span class="dv">1</span>]</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create a numeric vector to store the index values</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  index_values <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">nrow</span>(prices[[<span class="dv">1</span>]]))</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop through the dates and calculate the index values</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(prices[[<span class="dv">1</span>]])){</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize a temporary sum</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    temp_sum <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Loop through the tickers and add to the sum</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(tickers)){</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>      <span class="co"># The value for each stock is the initial market value multiplied by the current price</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>      temp_sum <span class="ot">&lt;-</span> temp_sum <span class="sc">+</span> (initial_market_values[i] <span class="sc">*</span> prices[[i]][j])</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store the sum as the index value for that date</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    index_values[j] <span class="ot">&lt;-</span> temp_sum</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create an xts time series object from the index values, using the dates from the price data</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  index_values <span class="ot">&lt;-</span> <span class="fu">xts</span>(index_values, <span class="at">order.by =</span> <span class="fu">index</span>(prices[[<span class="dv">1</span>]]))</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Return the xts object containing the index values</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(index_values)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the function to calculate the market value-weighted index</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>index_values <span class="ot">&lt;-</span> <span class="fu">calculate_mkt_value_index</span>(tickers, weights, start_date, end_date)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the index values</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(index_values)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the index values</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(index_values, <span class="at">main =</span> <span class="st">"Market Value-Weighted Index"</span>, <span class="at">ylab =</span> <span class="st">"Index Value"</span>, <span class="at">xlab =</span> <span class="st">"Date"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="r-exercise-2-margin-call-simulation-with-single-stock" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="r-exercise-2-margin-call-simulation-with-single-stock"><span class="header-section-number">8</span> R Exercise 2: Margin Call Simulation with Single Stock</h2>
+<ol type="1">
+<li>Install and load the <code>quantmod</code> package if you haven’t already.</li>
+<li>Modify the <code>ticker</code> variable to analyze a different stock. Consider using a more volatile ticker to have a higher probability of receiving a margin call.</li>
+<li>Adjust the <code>num_shares</code>, <code>initial_margin_requirement</code>, <code>maintenance_margin_requirement</code>, and <code>interest_rate</code> variables. See what happens with your change.</li>
+<li>Modify the <code>start_date</code> and <code>end_date</code> to a specific timeframe. Be sure that your selected start and end date is reasonable and within the stock’s tradable history. Make the time frame long enough to potentially see a margin call.</li>
+<li>Run the code below and analyze the output. Does the result make sense?</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if quantmod is installed, and install if it isn't</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(quantmod)) <span class="fu">install.packages</span>(<span class="st">"quantmod"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the quantmod package</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quantmod)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the ticker symbol of the stock to analyze</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>ticker <span class="ot">&lt;-</span> <span class="st">"TSLA"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the number of shares purchased</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>num_shares <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the initial margin requirement (as a decimal)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>initial_margin_requirement <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the maintenance margin requirement (as a decimal)</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>maintenance_margin_requirement <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the annual interest rate on the loan (as a decimal)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>interest_rate <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the start date for the historical data</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="st">"2024-12-15"</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the end date for the historical data</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>end_date <span class="ot">&lt;-</span> <span class="st">"2025-02-28"</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhanced function to simulate the margin account and return more information</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>simulate_margin_account_enhanced <span class="ot">&lt;-</span> <span class="cf">function</span>(ticker, num_shares, initial_margin_requirement, maintenance_margin_requirement, interest_rate, start_date, end_date) {</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fetch stock data using getSymbols</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getSymbols</span>(ticker, <span class="at">from =</span> start_date, <span class="at">to =</span> end_date, <span class="at">adjust =</span> <span class="cn">TRUE</span>, <span class="at">env =</span> <span class="fu">environment</span>())</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extract adjusted closing prices</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  stock_data <span class="ot">&lt;-</span> <span class="fu">Ad</span>(<span class="fu">get</span>(ticker))</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get the initial stock price</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  initial_price <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">first</span>(stock_data))</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculate the initial investment</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  initial_investment <span class="ot">&lt;-</span> num_shares <span class="sc">*</span> initial_price</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculate the loan amount</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  loan_amount <span class="ot">&lt;-</span> initial_investment <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> initial_margin_requirement)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculate the initial margin (equity)</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  initial_margin <span class="ot">&lt;-</span> initial_investment <span class="sc">*</span> initial_margin_requirement</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Initialize variables to store margin call information</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  margin_call_date <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  margin_call_value <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop through the stock data to simulate the margin account</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(stock_data)) {</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the current stock price</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    current_price <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(stock_data[i])</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the current market value of the shares</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    current_market_value <span class="ot">&lt;-</span> num_shares <span class="sc">*</span> current_price</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the current equity in the account</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    equity <span class="ot">&lt;-</span> current_market_value <span class="sc">-</span> loan_amount</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the margin ratio</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    margin_ratio <span class="ot">&lt;-</span> equity <span class="sc">/</span> current_market_value</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if a margin call is triggered</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (margin_ratio <span class="sc">&lt;</span> maintenance_margin_requirement) {</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>      <span class="co"># If a margin call is triggered, store the date and the portfolio value</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>      margin_call_date <span class="ot">&lt;-</span> <span class="fu">index</span>(stock_data[i])</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>      margin_call_value <span class="ot">&lt;-</span> current_market_value</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>      <span class="cf">break</span>  <span class="co"># Exit the loop after the margin call</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Return all the relevant information as a list</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">margin_call_date =</span> margin_call_date,</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">margin_call_value =</span> margin_call_value</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Call the enhanced function</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">simulate_margin_account_enhanced</span>(ticker, num_shares, initial_margin_requirement, maintenance_margin_requirement, interest_rate, start_date, end_date)</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the results from the list</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>margin_call_date <span class="ot">&lt;-</span> results<span class="sc">$</span>margin_call_date</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>margin_call_value <span class="ot">&lt;-</span> results<span class="sc">$</span>margin_call_value</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if a margin call was triggered</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(margin_call_date)) {</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If a margin call was triggered, print the date and the portfolio value</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Margin call triggered on:"</span>, margin_call_date, <span class="st">"at portfolio value: $"</span>, <span class="fu">round</span>(margin_call_value, <span class="dv">2</span>)))</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  <span class="co"># If no margin call was triggered, print a message</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"No margin call triggered within the specified date range."</span>)</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

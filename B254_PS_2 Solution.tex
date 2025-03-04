@@ -1,0 +1,160 @@
+\documentclass[11.5pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+% \usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage[colorlinks=true,urlcolor=cmu]{hyperref}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\definecolor{darkgreen}{rgb}{0,0.66,0}
+\definecolor{cmu}{rgb}{0.76,0,0}
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.5in
+\headheight     0.0in
+\topmargin      0.0in
+\textheight=7.8in
+
+\begin{document}
+
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+
+\renewcommand{\headheight}{0.7in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{\textbf{\sc{BUSS254. Investments}}}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[R]{\sc{{Instructor: Ji-Woong Chung}}}
+\fancyfoot[L]{\sc{}}
+\pagestyle{fancy}
+\vspace{1.5cm}
+\onehalfspacing
+
+\begin{center}
+\large{\textbf{\sc{Problem Set 2 - Solution}}}
+\vspace{1.0cm}
+\end{center}
+
+%\noindent The answer key will not be shared. Feel free to share your answers in the course webpage to receive feedbacks (or help others). 
+
+
+\vspace{20pt}
+
+
+\noindent 1. Suppose you want to buy a 90-day treasury bill with a face value of \$10,000 and a discount (= bank discount rate) of 4\%. The price you would pay for this bill is? Use Actual/360.
+
+\vspace{20pt}
+\textbf{Answer:} Price = Face value - (Face value x Bank discount rate x Days to maturity / 360)
+
+Price = 10,000 - (10,000 x 0.04 x 90 / 360)
+
+Price = 9,900
+
+
+
+\vspace{80pt}
+
+
+
+\noindent 2. Suppose you want to sell a 180-day commercial paper with a face value of \$50,000 and a money market yield of 5\%. The price you would receive for this paper is? Use Actual/360.
+
+\vspace{20pt}
+\textbf{Answer:} Price = Face value / (1 + Money market yield x Days to maturity / 360)
+
+Price = 50,000 / (1 + 0.05 x 180 / 360)
+
+Price = 48,780.48
+
+
+
+
+
+\vspace{80pt}
+
+
+
+\noindent 3. Suppose you want to hedge your exposure to the British pound by using a money market hedge. You have £100,000 receivable in six months and the current spot rate is \$1.40/£. The annual interest rate in the US is 2\% and in the UK is 3\%. Follow the the steps below. Use ACT/365.
+
+\begin{enumerate}[A]
+\item Borrow an amount of pounds that will grow to £100,000 in six months at the UK interest rate. How much?
+
+\vspace{20pt}
+\textbf{Answer:} 
+Amount borrowed = £100,000 / (1 + 0.03 x 180 / 365) \\
+Amount borrowed = £98,493.15
+
+\item Convert the borrowed pounds into dollars at the spot rate.
+
+\vspace{20pt}
+\textbf{Answer:}
+Amount converted = £98,493.15 x $\$1.40/\text{£}$\\
+Amount converted = \$137,890.41
+
+\item Invest the dollars in a US money market instrument that will mature in six months at the US interest rate. How much will it become?
+
+\vspace{20pt}
+\textbf{Answer:}
+Amount invested = \$137,890.41 x (1 + 0.02 x 180 /365)\\
+Amount invested = \$139,250.425
+
+
+\item Use the proceeds from the receivable to repay the pound loan and keep the remaining dollars as your hedged amount. What is the implied exchange rate you apply in six months?
+
+\vspace{20pt}
+\textbf{Answer:} \$139,250.425/ £100,000 = \$1.3925/£
+%Amount repaid = £100,000 x \$1.40/£ = \$140,000\\
+%Amount hedged = \$139,250.425 - \$140,000 = -\$749.575  \\
+
+
+
+\end{enumerate}
+
+
+
+\vspace{50pt}
+
+
+
+\noindent 4. Suppose you want to sell a 120-day floating-rate note with a face value of \$100,000 and a coupon rate of LIBOR + 0.5\%. The current LIBOR is 2\% and the required yield spread by investors is 0.25\% over the reference rate. The price you would receive for this FRN is?
+
+\vspace{20pt}
+\textbf{Answer:}
+Price = (Face value + Face value * Coupon rate) / (1 + Required yield spread * Days to maturity / 360)
+
+Price = (100,000 + 100,000 * (0.02 + 0.005)) / (1 + (0.02 + 0.0025) * 120 /360)
+
+Price = \$102,500 / \$101,016.67
+
+Price = \$101,477.78
+
+
+\newpage
+
+
+
+\noindent 5. On 6 September 2020, Bank A (borrower) agrees to sell £1 million nominal of a UK gilt, the 8\% Treasury maturing in 2023, which is trading at a dirty price of 104.3. The agreement will begin on 7 September, the value date. The term of the trade is 30 days, so the termination date is 7 October 2020 and the agreed repo rate for the (effectively collateralised) loan is set at 6.75\%. On 7 September Bank B (lender) receives £1m nominal 8\% Treasury, which has a settlement value of £1,043,000 (clean price plus accrued interest). How much interest does Bank A pay to Bank B on the termination date, 7 October 2020? Use Actual/365.
+
+\vspace{20pt}
+\textbf{Answer:}
+ 1,043,000 * 6.75\% * 30/365 = 5786.5
+
+
+
+\vspace{60pt}
+
+
+
+\noindent 6. Between February 28, 2018, and March 1, 2018, you have a choice between owning a U.S. government bond (Actual/Actual) and a U.S. corporate bond (30/360). They pay the same coupon and have the same quoted price. Assuming no risk of default, which would you prefer? (Hint: use days360(start,end,TRUE) for 30/360 method)
+
+\vspace{20pt}
+\textbf{Answer:}
+It sounds as though you should be indifferent, but in fact you should have a marked preference for the corporate bond. Under the 30>360 day count convention used for corporate bonds, there are 3 days between February 28, 2018, and March 1, 2018. Under the actual/actual (in period) day count convention used for government bonds, there is only 1 day. You would earn approximately three times as much interest by holding the corporate bond.
+
+
+
+\end{document} 

@@ -1,0 +1,333 @@
+---
+title: "Practice Problem Set"
+subtitle: "BUSS254 Investments"
+author: "Prof. Ji-Woong Chung"
+format: html
+number-sections: true
+execute:
+    echo: false
+    eval: false
+---
+
+-   If you notice any typos or errors, please feel free to [email me](chung_jiwoong@korea.ac.kr).
+
+---
+
+
+## Problem
+
+Consider the five stocks in the following table. $P_t$ is stock price and $Q_t$ is shares outstanding in day $t$. Stock C splits two-for-one in day 2 and Stock D has two stock splits: two-for-one in day 1 and four-for-one in day 2.
+
+|       | P0  | Q0  |    | P1  | Q1  |    | P2 | Q2  |
+| :---- | :-- | :-- | :- | :-- | :-- | :- | :- | :-- |
+| A     | 90  | 100 |    | 95  | 100 |    | 95 | 100 |
+| B     | 50  | 200 |    | 45  | 200 |    | 45 | 200 |
+| C     | 100 | 200 |    | 110 | 200 |    | 55 | 400 |
+| D     | 200 | 100 |    | 120 | 200 |    | 45 | 800 |
+| E     | 20  | 100 |    | 30  | 100 |    | 33 | 100 |
+
+(a) Calculate the rate of return on a price-weighted index of the five stocks for the first day ($t = 0$ to $t = 1$).
+
+(b) What must happen to the divisor for the price-weighted index in day 2?
+
+(c) Calculate the rate of return of the price-weighted index for the second day ($t = 1$ to $t = 2$ ).
+
+(d) Calculate the first- and second-day rates of return on the following indexes of the five stocks:
+
+*   a market value-weighted index.
+
+*   an equally weighted index.
+
+---
+
+## Problem
+
+Consider the following limit order book of a specialist. The last trade in the stock occurred at a price of \$50.
+
+|        | Limit Buy Orders |   | Limit Sell Orders |       |
+| :----- | :--------------- | :- | :---------------- | :---- |
+|        | Price            | Shares | Price             | Shares |
+|        | \$49.95          | 500    | \$50.50           | 100    |
+|        | 49.90            | 800    | 51.50             | 100    |
+|        | 49.85            | 500    | 54.75             | 300    |
+|        | 49.80            | 200    | 58.25             | 100    |
+|        | 49.50            | 600    |                   |        |
+
+(a) If a market buy order for 100 shares comes in, at what price will it be filled?
+
+(b) At what price would the next market buy order of 200 shares be filled?
+
+(c) If a market sell order for 100 shares comes in, at what price will it be filled?
+
+(d) At what price would the next market sell order of 200 shares be filled?
+
+(e) If you were the specialist with obligations to maintain a fair and orderly market, would you want to increase or decrease your inventory (i.e., your holdings) of this stock? Explain.
+
+---
+
+## Problem
+
+Susan opens a brokerage account and purchases 100 shares of XYZ at \$10 per share. The initial margin requirement (IMR) is 50%, the maintenance margin requirement (MMR) is 30%. If Susan borrows money from the brokerage firm, the interest rate on the loan is 10% per annum.
+
+(a) What is the maximum amount that she can borrow when she first purchase the stock?
+
+(b) If the price falls to \$8 one-year later, what is the remaining margin on her account (in dollar amount)?
+
+(c) Compute the rate of return to her investment if the price falls to \$8 one-year later.
+
+(d) How low can the price of the stock fall before she get a margin call? Assume the price drop happens immediately after she purchases the stock.
+
+
+---
+
+## Problem
+
+Suppose Susan opens a brokerage account to short-sell 100 shares of XYZ at \$10 per share. The initial margin requirement is 50%, the maintenance margin is 20%. If Susan borrows stocks to short-sell, the interest rate on the stock loan (in terms of dollar amount) is 10% per annum.
+
+(a) How much she needs to deposit in the account to short-sell 100 shares of XYZ?
+
+(b) If the price increases to \$11 a year later, what is the remaining margin on her account (in dollar amount)?
+
+(c) Compute the rate of return to her investment if the price increases to \$11 a year later.
+
+(d) How high can the price of the stock rise before she gets a margin call? Assume the price increase happens immediately after she sells short the stock.
+
+---
+
+## Problem
+
+XYZ stock price and dividend history are as follows:
+
+|      | Beginning-of-year Price | Dividend paid at Year-End |
+| :--- | :----------------------- | :------------------------ |
+| 2010 | \$100                    | \$4                         |
+| 2011 | \$110                    | \$4                         |
+| 2012 | \$90                     | \$4                         |
+| 2013 | \$95                     | \$4                         |
+
+(a) What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
+
+(b) An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sell one share at the beginning of 2012, and sell all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?
+
+
+---
+
+## Problem
+
+The following table is a simple scenario of the stock market:
+
+| Scenario         | Probability | Holding-period return (%) |
+| :--------------- | :---------- | :------------------------ |
+| Severe recession | 0.01        | -40                         |
+| Mild Recession   | 0.09        | -10                         |
+| Normal           | 0.60        | +5                          |
+| Mild growth      | 0.20        | +12                         |
+| Boom             | 0.10        | +60                         |
+
+(a) Calculate the expected return and the standard deviation of the holding-period return.
+
+(b) What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5%.
+
+(c) Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return.
+
+
+
+---
+
+## Programming Exercises (Optional)
+
+
+
+### R Exercise 1: Market Value-Weighted Index Calculation with Real Stock Data
+
+
+1.  Install and load the `quantmod` package if you haven't already.
+2.  Modify the `tickers` vector to include the ticker symbols of three different stocks you want to analyze.
+3.  Adjust the `weights` vector so the weights are 0 to 1 and sum to 1.
+4.  Modify the `start_date` and `end_date` variables to fetch data for a specific period you are interested in. Be sure to consider a timeframe to accurately test your model.
+5.  Run the code below and analyze the output. Does the result make sense?
+
+```{r, echo=T, eval=F}
+# Check if quantmod is installed, and install if it isn't
+if(!require(quantmod)) install.packages("quantmod")
+
+# Load the quantmod package
+library(quantmod)
+
+# Define the ticker symbols of the stocks to include in the index
+tickers <- c("AAPL", "MSFT", "GOOG")
+
+# Define the weights of each stock in the index (must sum to 1)
+weights <- c(0.4, 0.3, 0.3)
+
+# Define the start date for the historical data
+start_date <- "2023-01-01"
+
+# Define the end date for the historical data
+end_date <- "2023-01-31"
+
+# Define a function to calculate the market value-weighted index
+calculate_mkt_value_index <- function(tickers, weights, start_date, end_date) {
+  # Create an empty list to store the adjusted closing prices
+  prices <- list()
+
+  # Fetch the data within the function, ensuring it's in the function's environment
+  for (ticker in tickers) {
+    # Fetch historical data for each ticker using getSymbols, adjusting for splits
+    getSymbols(ticker, from = start_date, to = end_date, adjust = TRUE, env = environment()) #Load Symbols into function environment
+  }
+
+  # Loop through the tickers and extract the adjusted closing prices
+  for(i in 1:length(tickers)){
+    # Extract the adjusted closing prices using Ad()
+    prices[[i]] <- Ad(get(tickers[i]))
+    # Select the prices within the date range
+    prices[[i]] <- prices[[i]][paste0(start_date,"::",end_date)]
+  }
+
+  # Create a numeric vector to store the initial market values
+  initial_market_values <- numeric(length(tickers))
+  # Loop through the tickers and calculate the initial market values
+  for(i in 1:length(tickers)){
+    # The initial market value is the weight divided by the initial price
+    initial_market_values[i] <- weights[i] / prices[[i]][1]
+  }
+
+  # Create a numeric vector to store the index values
+  index_values <- numeric(nrow(prices[[1]]))
+  # Loop through the dates and calculate the index values
+  for(j in 1:nrow(prices[[1]])){
+    # Initialize a temporary sum
+    temp_sum <- 0
+    # Loop through the tickers and add to the sum
+    for(i in 1:length(tickers)){
+      # The value for each stock is the initial market value multiplied by the current price
+      temp_sum <- temp_sum + (initial_market_values[i] * prices[[i]][j])
+    }
+    # Store the sum as the index value for that date
+    index_values[j] <- temp_sum
+  }
+
+  # Create an xts time series object from the index values, using the dates from the price data
+  index_values <- xts(index_values, order.by = index(prices[[1]]))
+
+  # Return the xts object containing the index values
+  return(index_values)
+}
+
+# Call the function to calculate the market value-weighted index
+index_values <- calculate_mkt_value_index(tickers, weights, start_date, end_date)
+
+# Print the index values
+print(index_values)
+
+# Plot the index values
+plot(index_values, main = "Market Value-Weighted Index", ylab = "Index Value", xlab = "Date")
+```
+
+## R Exercise 2: Margin Call Simulation with Single Stock
+
+1.  Install and load the `quantmod` package if you haven't already.
+2.  Modify the `ticker` variable to analyze a different stock.  Consider using a more volatile ticker to have a higher probability of receiving a margin call.
+3.  Adjust the `num_shares`, `initial_margin_requirement`, `maintenance_margin_requirement`, and `interest_rate` variables. See what happens with your change.
+4.  Modify the `start_date` and `end_date` to a specific timeframe. Be sure that your selected start and end date is reasonable and within the stock's tradable history. Make the time frame long enough to potentially see a margin call.
+5.  Run the code below and analyze the output. Does the result make sense?
+
+```{r, echo=T, eval=F}
+# Check if quantmod is installed, and install if it isn't
+if(!require(quantmod)) install.packages("quantmod")
+
+# Load the quantmod package
+library(quantmod)
+
+# Define the ticker symbol of the stock to analyze
+ticker <- "TSLA"
+
+# Define the number of shares purchased
+num_shares <- 100
+
+# Define the initial margin requirement (as a decimal)
+initial_margin_requirement <- 0.5
+
+# Define the maintenance margin requirement (as a decimal)
+maintenance_margin_requirement <- 0.3
+
+# Define the annual interest rate on the loan (as a decimal)
+interest_rate <- 0.05
+
+# Define the start date for the historical data
+start_date <- "2024-12-15"
+
+# Define the end date for the historical data
+end_date <- "2025-02-28"
+
+# Enhanced function to simulate the margin account and return more information
+simulate_margin_account_enhanced <- function(ticker, num_shares, initial_margin_requirement, maintenance_margin_requirement, interest_rate, start_date, end_date) {
+  # Fetch stock data using getSymbols
+  getSymbols(ticker, from = start_date, to = end_date, adjust = TRUE, env = environment())
+  
+  # Extract adjusted closing prices
+  stock_data <- Ad(get(ticker))
+  
+  # Get the initial stock price
+  initial_price <- as.numeric(first(stock_data))
+  
+  # Calculate the initial investment
+  initial_investment <- num_shares * initial_price
+  
+  # Calculate the loan amount
+  loan_amount <- initial_investment * (1 - initial_margin_requirement)
+  
+  # Calculate the initial margin (equity)
+  initial_margin <- initial_investment * initial_margin_requirement
+  
+  # Initialize variables to store margin call information
+  margin_call_date <- NA
+  margin_call_value <- NA
+  
+  # Loop through the stock data to simulate the margin account
+  for (i in 1:length(stock_data)) {
+    # Get the current stock price
+    current_price <- as.numeric(stock_data[i])
+    
+    # Calculate the current market value of the shares
+    current_market_value <- num_shares * current_price
+    
+    # Calculate the current equity in the account
+    equity <- current_market_value - loan_amount
+    
+    # Calculate the margin ratio
+    margin_ratio <- equity / current_market_value
+    
+    # Check if a margin call is triggered
+    if (margin_ratio < maintenance_margin_requirement) {
+      # If a margin call is triggered, store the date and the portfolio value
+      margin_call_date <- index(stock_data[i])
+      margin_call_value <- current_market_value
+      break  # Exit the loop after the margin call
+    }
+  }
+  
+  # Return all the relevant information as a list
+  return(list(
+    margin_call_date = margin_call_date,
+    margin_call_value = margin_call_value
+  ))
+}
+
+# Call the enhanced function
+results <- simulate_margin_account_enhanced(ticker, num_shares, initial_margin_requirement, maintenance_margin_requirement, interest_rate, start_date, end_date)
+
+# Extract the results from the list
+margin_call_date <- results$margin_call_date
+margin_call_value <- results$margin_call_value
+
+# Check if a margin call was triggered
+if (!is.na(margin_call_date)) {
+  # If a margin call was triggered, print the date and the portfolio value
+  print(paste("Margin call triggered on:", margin_call_date, "at portfolio value: $", round(margin_call_value, 2)))
+} else {
+  # If no margin call was triggered, print a message
+  print("No margin call triggered within the specified date range.")
+}
+```
