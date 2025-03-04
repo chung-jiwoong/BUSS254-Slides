@@ -1,0 +1,123 @@
+---
+title: "Practice Problem Set"
+subtitle: "BUSS254 Investments"
+author: "Prof. Ji-Woong Chung"
+format: html
+number-sections: true
+execute:
+    echo: false
+    eval: false
+---
+
+-   If you notice any typos or errors, please feel free to [email me](chung_jiwoong@korea.ac.kr).
+
+---
+
+## Problem
+
+Go to [finance.yahoo.com](https://finance.yahoo.com)) search for the ticker symbol of Palantir Technologies Inc.
+
+###
+
+-   Click on the **"Summary"** tab. What is the company's main line of business?
+
+###
+
+-   In the **"Statistics"** tab, how many shares of the company’s stock are outstanding?
+-   What is the company’s total market capitalization?
+-   What was its net profit in the most recent fiscal year?
+
+###
+
+-   In the **"Holders"** tab, what percentage of total shares is held by insiders?
+
+###
+
+-   In the **"Analysis"** tab, what is the average price target predicted by analysts covering this firm?
+-   How does this compare to the stock's current trading price?
+
+###
+
+-   In the **"Financials"** tab, what were the company’s total assets at the end of the most recent fiscal year?
+
+---
+
+## Problem
+
+XYZ stock price and dividend history are as follows:
+
+| Year | Beginning-of-year Price | Dividend paid at Year-End |
+|------|--------------------------|---------------------------|
+| 2010 | \$100                    | \$4                       |
+| 2011 | \$110                    | \$4                       |
+| 2012 | \$90                     | \$4                       |
+| 2013 | \$95                     | \$4                       |
+
+###
+
+What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
+
+###
+
+An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sells one share at the beginning of 2012, and sells all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?
+
+---
+
+## Problem
+
+The following table is a simple scenario of the stock market:
+
+| Scenario         | Probability | Holding-period return (%) |
+|------------------|-------------|---------------------------|
+| Severe recession | 0.01        | -40                       |
+| Mild Recession   | 0.09        | -10                       |
+| Normal           | 0.60        | +5                        |
+| Mild growth      | 0.20        | +12                       |
+| Boom             | 0.10        | +60                       |
+
+###
+
+Calculate the expected return and the standard deviation of the holding-period return.
+
+###
+
+What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5%.
+
+###
+
+Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return.
+
+---
+
+## Problem
+
+Warren is currently holding a portfolio comprising 40% in stock A and 60% in stock B. The expected returns on stocks A and B are 20% and 10%, respectively and the standard deviation of stocks A and B are 25% and 16%, respectively. The correlation coefficient of stocks A and B is 0.5 and the return on T-bill is 3%. [Sharpe ratio = $(E[R]-R_f)/\sigma$]
+
+###
+
+Compute the expected return and standard deviation of Warren's portfolio.
+
+###
+
+Which of the following changes will be most preferred by Warren?
+
+1.  Standard deviation of stocks A and B reduce to 16% and 9%, respectively;
+2.  The correlation coefficient of stocks A and B changes to $-0.5$; or
+3.  The expected return on stock A increases to 30%.
+
+---
+
+## Programming Exercise (Optional)
+
+### 
+
+Google "How to install R and RStudio" and follow the instructions to install both software on your computer.
+
+Next, download the "chapter_intro.qmd" file from the course website (`https://github.com/chung-jiwoong/BUSS284-Sides`). Once downloaded, open the file using RStudio.
+
+---
+
+###
+
+Download **Hyundai Motor (005380.KQ) and Tesla (TSLA)** daily stock returns for the year **2024** using the `quantmod` package. **Daily arithmetic and geometric average returns** for both stocks. **Standard deviation of returns**, which measures risk.
+

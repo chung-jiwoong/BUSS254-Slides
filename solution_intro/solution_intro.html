@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.41">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prof.&nbsp;Ji-Woong Chung">
+
+<title>Practice Problem Set 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="solution_intro_files/libs/clipboard/clipboard.min.js"></script>
+<script src="solution_intro_files/libs/quarto-html/quarto.js"></script>
+<script src="solution_intro_files/libs/quarto-html/popper.min.js"></script>
+<script src="solution_intro_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="solution_intro_files/libs/quarto-html/anchor.min.js"></script>
+<link href="solution_intro_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="solution_intro_files/libs/quarto-html/quarto-syntax-highlighting-48ffa3e5b9d089919c6712c39e5b00f2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="solution_intro_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="solution_intro_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="solution_intro_files/libs/bootstrap/bootstrap-1bc8a17f135ab3d594c857e9f48e611b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Practice Problem Set 1</h1>
+<p class="subtitle lead">BUSS254 Investments</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Ji-Woong Chung </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<ul>
+<li>If you notice any typos or errors, please feel free to <a href="chung_jiwoong@korea.ac.kr">email me</a>.</li>
+</ul>
+<hr>
+<section id="problem" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="problem"><span class="header-section-number">1</span> Problem</h2>
+<p>Go to <a href="https://finance.yahoo.com">finance.yahoo.com</a>) search for the ticker symbol of Palantir Technologies Inc.</p>
+<section id="section" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="section"><span class="header-section-number">1.1</span> </h3>
+<ul>
+<li>Click on the <strong>“Summary”</strong> tab. What is the company’s main line of business?</li>
+</ul>
+<p><strong>Solution:</strong> <em>Varies depending on the date of checking</em></p>
+</section>
+<section id="section-1" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="section-1"><span class="header-section-number">1.2</span> </h3>
+<ul>
+<li>In the <strong>“Statistics”</strong> tab, how many shares of the company’s stock are outstanding?</li>
+<li>What is the company’s total market capitalization?</li>
+<li>What was its net profit in the most recent fiscal year?</li>
+</ul>
+<p><strong>Solution:</strong> <em>Varies depending on the date of checking</em></p>
+</section>
+<section id="section-2" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="section-2"><span class="header-section-number">1.3</span> </h3>
+<ul>
+<li>In the <strong>“Holders”</strong> tab, what percentage of total shares is held by insiders?</li>
+</ul>
+<p><strong>Solution:</strong> <em>Varies depending on the date of checking</em></p>
+</section>
+<section id="section-3" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="section-3"><span class="header-section-number">1.4</span> </h3>
+<ul>
+<li>In the <strong>“Analysis”</strong> tab, what is the average price target predicted by analysts covering this firm?</li>
+<li>How does this compare to the stock’s current trading price?</li>
+</ul>
+<p><strong>Solution:</strong> <em>Varies depending on the date of checking</em></p>
+</section>
+<section id="section-4" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="section-4"><span class="header-section-number">1.5</span> </h3>
+<ul>
+<li>In the <strong>“Financials”</strong> tab, what were the company’s total assets at the end of the most recent fiscal year?</li>
+</ul>
+<p><strong>Solution:</strong> <em>Varies depending on the date of checking</em></p>
+<hr>
+</section>
+</section>
+<section id="problem-1" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="problem-1"><span class="header-section-number">2</span> Problem</h2>
+<p>XYZ stock price and dividend history are as follows:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Beginning-of-year Price</th>
+<th>Dividend paid at Year-End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2010</td>
+<td>$100</td>
+<td>$4</td>
+</tr>
+<tr class="even">
+<td>2011</td>
+<td>$110</td>
+<td>$4</td>
+</tr>
+<tr class="odd">
+<td>2012</td>
+<td>$90</td>
+<td>$4</td>
+</tr>
+<tr class="even">
+<td>2013</td>
+<td>$95</td>
+<td>$4</td>
+</tr>
+</tbody>
+</table>
+<section id="section-5" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="section-5"><span class="header-section-number">2.1</span> </h3>
+<p>What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)</p>
+<p><strong>Solution:</strong></p>
+<p>First, calculate the returns for each year:</p>
+<ul>
+<li>2010: <span class="math inline">\((\$110 + \$4 - \$100) / \$100 = 0.14 = 14\%\)</span></li>
+<li>2011: <span class="math inline">\((\$90 + \$4 - \$110) / \$110 = -0.1455 = -14.55\%\)</span></li>
+<li>2012: <span class="math inline">\((\$95 + \$4 - \$90) / \$90 = 0.10 = 10\%\)</span></li>
+</ul>
+<p>Arithmetic average return: <span class="math inline">\((0.14 - 0.1455 + 0.10) / 3 = 0.0315 = 3.15\%\)</span></p>
+<p>Geometric average return: <span class="math inline">\([(1 + 0.14) \times (1 - 0.1455) \times (1 + 0.10)]^{1/3} - 1 = 0.0271 = 2.71\%\)</span></p>
+</section>
+<section id="section-6" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="section-6"><span class="header-section-number">2.2</span> </h3>
+<p>An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sells one share at the beginning of 2012, and sells all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?</p>
+<p><strong>Solution:</strong></p>
+<p>This requires finding the discount rate that makes the present value of all cash flows equal to zero.</p>
+<ul>
+<li>Time 0 (Beginning of 2010): -$300 (3 shares @ $100)</li>
+<li>Time 1 (Beginning of 2011): -$220 (2 shares @ $110) + $12 (Dividends) = -$208</li>
+<li>Time 2 (Beginning of 2012): +$90 (1 share @ $90) + $20 (5 shares x $4 dividend) = $110</li>
+<li>Time 3 (Beginning of 2013): +$380 (4 shares @ $95) + $16 (4 shares x $4 dividend) = $396</li>
+</ul>
+<p>Using a financial calculator or spreadsheet software, find the IRR that solves:</p>
+<p><span class="math inline">\(−300 + \frac{-208}{(1 + I)} + \frac{110}{(1 + I)^2} + \frac{396}{(1 + I)^3} = 0\)</span></p>
+<p>The IRR is approximately 10.71%.</p>
+<hr>
+</section>
+</section>
+<section id="problem-2" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">3</span> Problem</h2>
+<p>The following table is a simple scenario of the stock market:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Probability</th>
+<th>Holding-period return (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Severe recession</td>
+<td>0.01</td>
+<td>-40</td>
+</tr>
+<tr class="even">
+<td>Mild Recession</td>
+<td>0.09</td>
+<td>-10</td>
+</tr>
+<tr class="odd">
+<td>Normal</td>
+<td>0.60</td>
+<td>+5</td>
+</tr>
+<tr class="even">
+<td>Mild growth</td>
+<td>0.20</td>
+<td>+12</td>
+</tr>
+<tr class="odd">
+<td>Boom</td>
+<td>0.10</td>
+<td>+60</td>
+</tr>
+</tbody>
+</table>
+<section id="section-7" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="section-7"><span class="header-section-number">3.1</span> </h3>
+<p>Calculate the expected return and the standard deviation of the holding-period return.</p>
+<p><strong>Solution:</strong></p>
+<p>Expected Return:</p>
+<p><span class="math inline">\(E[R] = (0.01 \times -40) + (0.09 \times -10) + (0.60 \times 5) + (0.20 \times 12) + (0.10 \times 60) = 8.5\%\)</span></p>
+<p>Standard Deviation:</p>
+<p><span class="math inline">\(\sigma = \sqrt{\sum_{i=1}^{n} p_i (R_i - E[R])^2}\)</span></p>
+<p><span class="math inline">\(\sigma = \sqrt{0.01(-40 - 8.5)^2 + 0.09(-10 - 8.5)^2 + 0.6(5 - 8.5)^2 + 0.2(12 - 8.5)^2 + 0.1(60 - 8.5)^2} = 15.95\%\)</span></p>
+</section>
+<section id="section-8" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="section-8"><span class="header-section-number">3.2</span> </h3>
+<p>What is the fifth-percentile value at risk (VaR) of the holding-period return, i.e., VaR at 5%.</p>
+<p><strong>Solution:</strong></p>
+<p>VaR at 5% means the return that you expect to happen only 5% of the time. Looking at the scenarios and their probabilities:</p>
+<ul>
+<li>Severe recession: 1% probability, -40% return</li>
+<li>Mild recession: 9% probability, -10% return</li>
+</ul>
+<p>Since the severe recession scenario has a 1% probability and the mild recession has a 9% probability, the fifth percentile VaR is the return associated with the mild recession, i.e., -10%.</p>
+</section>
+<section id="section-9" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="section-9"><span class="header-section-number">3.3</span> </h3>
+<p>Repeat part (b) for the one-percentile value at risk (VaR) of the holding-period return.</p>
+<p><strong>Solution:</strong></p>
+<p>Since the severe recession scenario has a 1% probability, the one-percentile VaR is the return associated with the severe recession, i.e., -40%.</p>
+<hr>
+</section>
+</section>
+<section id="problem-3" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="problem-3"><span class="header-section-number">4</span> Problem</h2>
+<p>Warren is currently holding a portfolio comprising 40% in stock A and 60% in stock B. The expected returns on stocks A and B are 20% and 10%, respectively and the standard deviation of stocks A and B are 25% and 16%, respectively. The correlation coefficient of stocks A and B is 0.5 and the return on T-bill is 3%. [Sharpe ratio = <span class="math inline">\((E[R]-R_f)/\sigma\)</span>]</p>
+<section id="section-10" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="section-10"><span class="header-section-number">4.1</span> </h3>
+<p>Compute the expected return and standard deviation of Warren’s portfolio.</p>
+<p><strong>Solution:</strong></p>
+<p>Given:</p>
+<ul>
+<li><span class="math inline">\(w_A = 0.4\)</span>, <span class="math inline">\(w_B = 0.6\)</span></li>
+<li><span class="math inline">\(E[R_A] = 0.20\)</span>, <span class="math inline">\(E[R_B] = 0.10\)</span></li>
+<li><span class="math inline">\(\sigma_A = 0.25\)</span>, <span class="math inline">\(\sigma_B = 0.16\)</span></li>
+<li><span class="math inline">\(\rho_{AB} = 0.5\)</span></li>
+<li><span class="math inline">\(R_f = 0.03\)</span></li>
+</ul>
+<p>Expected return of the portfolio:</p>
+<p><span class="math inline">\(E[R_P] = w_A E[R_A] + w_B E[R_B] = (0.4 \times 0.20) + (0.6 \times 0.10) = 0.14 = 14\%\)</span></p>
+<p>Standard deviation of the portfolio:</p>
+<p><span class="math inline">\(\sigma_P = \sqrt{w_A^2 \sigma_A^2 + w_B^2 \sigma_B^2 + 2w_A w_B \rho_{AB} \sigma_A \sigma_B}\)</span></p>
+<p><span class="math inline">\(\sigma_P = \sqrt{(0.4^2 \times 0.25^2) + (0.6^2 \times 0.16^2) + (2 \times 0.4 \times 0.6 \times 0.5 \times 0.25 \times 0.16)} = 0.1735 = 17.35\%\)</span></p>
+</section>
+<section id="section-11" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="section-11"><span class="header-section-number">4.2</span> </h3>
+<p>Which of the following changes will be most preferred by Warren?</p>
+<ol type="1">
+<li>Standard deviation of stocks A and B reduce to 16% and 9%, respectively;</li>
+<li>The correlation coefficient of stocks A and B changes to <span class="math inline">\(-0.5\)</span>; or</li>
+<li>The expected return on stock A increases to 30%.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The best approach to solve this problem is to compare Sharp Ratio of the new portfolios.</p>
+<ol type="1">
+<li>Reduced standard deviations:</li>
+</ol>
+<p><span class="math inline">\(\sigma_P = \sqrt{(0.4^2 \times 0.16^2) + (0.6^2 \times 0.09^2) + (2 \times 0.4 \times 0.6 \times 0.5 \times 0.16 \times 0.09)} = 0.0872 = 8.72\%\)</span></p>
+<p>Sharpe Ratio = <span class="math inline">\((0.14 - 0.03) / 0.0872 = 1.26\)</span></p>
+<ol start="2" type="1">
+<li>Correlation coefficient changes to <span class="math inline">\(-0.5\)</span>:</li>
+</ol>
+<p><span class="math inline">\(\sigma_P = \sqrt{(0.4^2 \times 0.25^2) + (0.6^2 \times 0.16^2) + (2 \times 0.4 \times 0.6 \times -0.5 \times 0.25 \times 0.16)} = 0.1249 = 12.49\%\)</span></p>
+<p>Sharpe Ratio = <span class="math inline">\((0.14 - 0.03) / 0.1249 = 0.88\)</span></p>
+<ol start="3" type="1">
+<li>Expected return on A increases to 30%:</li>
+</ol>
+<p><span class="math inline">\(E[R_P] = (0.4 \times 0.30) + (0.6 \times 0.10) = 0.18 = 18\%\)</span></p>
+<p>Sharpe Ratio = <span class="math inline">\((0.18 - 0.03) / 0.1735 = 0.86\)</span></p>
+<p>Comparing the Sharpe ratios, Warren would prefer the first change (reduced standard deviations), as it results in the highest Sharpe ratio.</p>
+<hr>
+</section>
+</section>
+<section id="programming-exercise-optional" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="programming-exercise-optional"><span class="header-section-number">5</span> Programming Exercise (Optional)</h2>
+<section id="section-12" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="section-12"><span class="header-section-number">5.1</span> </h3>
+<p>Google “How to install R and RStudio” and follow the instructions to install both software on your computer.</p>
+<p>Next, download the “chapter_intro.qmd” file from the course website (<code>https://github.com/chung-jiwoong/BUSS284-Sides</code>). Once downloaded, open the file using RStudio.</p>
+<p><strong>Instruction:</strong></p>
+<p>*Windows (Winget):**</p>
+<p>Winget is the Windows Package Manager, a command-line tool that simplifies software installation on Windows 10 and later.</p>
+<ol type="1">
+<li><p><strong>Install R:</strong></p>
+<ul>
+<li>Open Command Prompt or PowerShell as an administrator.</li>
+<li>Type the following command and press Enter:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="fu">R</span><span class="op">.</span><span class="fu">R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Confirm any prompts.</li>
+</ul></li>
+<li><p><strong>Install RStudio:</strong></p>
+<ul>
+<li>Open Command Prompt or PowerShell as an administrator.</li>
+<li>Type the following command and press Enter:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install RStudio<span class="op">.</span><span class="fu">RStudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Confirm any prompts.</li>
+</ul></li>
+<li><p><strong>Verify Installation:</strong></p>
+<ul>
+<li>Open RStudio. If it opens successfully, R and RStudio have been installed correctly.</li>
+</ul></li>
+</ol>
+<p><strong>macOS (Homebrew):</strong></p>
+<p>Homebrew is a popular package manager for macOS. If you don’t have it installed already, you’ll need to install that first.</p>
+<ol type="1">
+<li><p><strong>Install Homebrew (if you don’t have it already):</strong></p>
+<ul>
+<li>Open Terminal.</li>
+<li>Run the following command and follow the prompts:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Install R:</strong></p>
+<ul>
+<li>Open Terminal.</li>
+<li>Type the following command and press Enter:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Install RStudio:</strong></p>
+<ul>
+<li>Open Terminal.</li>
+<li>Type the following command and press Enter:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> rstudio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Verify Installation:</strong></p>
+<ul>
+<li>Open RStudio. If it opens successfully, R and RStudio have been installed correctly.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="section-13" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="section-13"><span class="header-section-number">5.2</span> </h3>
+<p>Download <strong>Hyundai Motor (005380.KQ) and Tesla (TSLA)</strong> daily stock returns for the year <strong>2024</strong> using the <code>quantmod</code> package. <strong>Daily arithmetic and geometric average returns</strong> for both stocks. <strong>Standard deviation of returns</strong>, which measures risk.</p>
+<p>Copy and paste the following R code into an R script in <strong>RStudio</strong>, then execute it by clicking <strong>“Run”</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary packages</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quantmod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: xts</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: zoo</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'zoo'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    as.Date, as.Date.numeric</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: TTR</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PerformanceAnalytics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'PerformanceAnalytics'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:graphics':
+
+    legend</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)  <span class="co"># For missing value handling</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Download stock data from Yahoo Finance</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>symbols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"005380.KQ"</span>, <span class="st">"TSLA"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">getSymbols</span>(symbols, <span class="at">src =</span> <span class="st">"yahoo"</span>, <span class="at">from =</span> <span class="st">"2024-01-01"</span>, <span class="at">to =</span> <span class="fu">Sys.Date</span>(), <span class="at">auto.assign =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: 005380.KQ contains missing values. Some functions will not work if
+objects contain missing values in the middle of the series. Consider using
+na.omit(), na.approx(), na.fill(), etc to remove or replace them.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "005380.KQ" "TSLA"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract adjusted closing prices</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>hyundai_prices <span class="ot">&lt;-</span> <span class="fu">Cl</span>(<span class="fu">get</span>(<span class="st">"005380.KQ"</span>))</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>tesla_prices <span class="ot">&lt;-</span> <span class="fu">Cl</span>(TSLA)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Handle missing values for Hyundai Motor</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>hyundai_prices <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(hyundai_prices)  <span class="co"># Interpolate missing values</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute daily returns and remove any remaining missing values</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>hyundai_returns <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(<span class="fu">dailyReturn</span>(hyundai_prices))</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>tesla_returns <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(<span class="fu">dailyReturn</span>(tesla_prices))</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute arithmetic mean return</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>arithmetic_mean_hyundai <span class="ot">&lt;-</span> <span class="fu">mean</span>(hyundai_returns)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>arithmetic_mean_tesla <span class="ot">&lt;-</span> <span class="fu">mean</span>(tesla_returns)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute geometric mean return</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>geometric_mean_hyundai <span class="ot">&lt;-</span> <span class="fu">prod</span>(<span class="dv">1</span> <span class="sc">+</span> hyundai_returns)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">length</span>(hyundai_returns)) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>geometric_mean_tesla <span class="ot">&lt;-</span> <span class="fu">prod</span>(<span class="dv">1</span> <span class="sc">+</span> tesla_returns)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> <span class="fu">length</span>(tesla_returns)) <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute standard deviation</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>std_dev_hyundai <span class="ot">&lt;-</span> <span class="fu">sd</span>(hyundai_returns)</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>std_dev_tesla <span class="ot">&lt;-</span> <span class="fu">sd</span>(tesla_returns)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Hyundai Motor - Arithmetic Mean Return:"</span>, <span class="fu">round</span>(arithmetic_mean_hyundai, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hyundai Motor - Arithmetic Mean Return: 0.000152 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Hyundai Motor - Geometric Mean Return:"</span>, <span class="fu">round</span>(geometric_mean_hyundai, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hyundai Motor - Geometric Mean Return: -0.000135 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Hyundai Motor - Standard Deviation:"</span>, <span class="fu">round</span>(std_dev_hyundai, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hyundai Motor - Standard Deviation: 0.024127 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Tesla - Arithmetic Mean Return:"</span>, <span class="fu">round</span>(arithmetic_mean_tesla, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Tesla - Arithmetic Mean Return: 0.001234 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Tesla - Geometric Mean Return:"</span>, <span class="fu">round</span>(geometric_mean_tesla, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Tesla - Geometric Mean Return: 0.000466 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Tesla - Standard Deviation:"</span>, <span class="fu">round</span>(std_dev_tesla, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Tesla - Standard Deviation: 0.039621 </code></pre>
+</div>
+</div>
+<p>```` <strong>Solution:</strong> <em>Solution generated based on the day the data is pulled. For example as of 2024-07-03</em></p>
+<pre><code>Hyundai Motor - Arithmetic Mean Return: 0.000598 
+Hyundai Motor - Geometric Mean Return: 0.000555 
+Hyundai Motor - Standard Deviation: 0.015694 
+
+Tesla - Arithmetic Mean Return: 0.000135 
+Tesla - Geometric Mean Return: -8e-07 
+Tesla - Standard Deviation: 0.027997 </code></pre>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
