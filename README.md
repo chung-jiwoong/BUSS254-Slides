@@ -1,5 +1,12 @@
 # BUSS254: Investments
 
+---
+
+- If you find any typos, errors, or areas for improvement, please email me, submit a pull request, or report them on the discussion board.
+
+- Lecture notes are continuously updated. Please check for the latest version before each class.
+
+---
 
 Lecture1: Introduction and Overview
 [Lecture Note](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_intro/chapter_intro.html) / 

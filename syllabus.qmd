@@ -1,0 +1,142 @@
+---
+title: "BUSS254(03 and 05) Investments"
+author: "Prof. Ji-Woong Chung"
+format: html
+number-sections: true
+---
+
+
+## Course Information  
+**Time and Venue:**  
+- **(S03)** Mondays, 15:00 – 17:45 (HM B301)  
+- **(S05)** Mondays, 10:30 – 13:15 (HM B301)  
+
+**Instructor:** Ji-Woong Chung  
+- **Office:** 503, Main Building  
+- **Office Hours:** By appointment (via email)  
+- **Email:** [chung_jiwoong@korea.ac.kr](mailto:chung_jiwoong@korea.ac.kr)  
+
+**Teaching Assistant:** Jae-Kyung Kim  
+- **Email:** [kjknal77@naver.com](mailto:kjknal77@naver.com)  
+
+---
+
+## Textbook and Course Materials  
+- Lecture materials are available at the **course GitHub repository**: [https://github.com/chung-jiwoong/BUSS254-Slides](https://github.com/chung-jiwoong/BUSS254-Slides)
+
+
+---
+
+## Prerequisite  
+- **Recommended:** BUSS207 (Financial Management)  
+
+---
+
+## Course Objectives  
+This course provides an overview of **modern financial markets and instruments**, introducing fundamental **valuation principles and financial theories** essential for understanding **asset prices and investments**.  
+
+Topics include:  
+- Financial market structures  
+- Fixed income securities  
+- Derivative instruments  
+- Portfolio theory  
+- Capital asset pricing models  
+
+---
+
+## Grading  
+Your final grade will be based on:  
+- **Midterm exam (40%)** and **Final exam (50%)**  
+- **Class discussion and participation (10%)**  
+- **Optional Presentation (+5% extra credit, maximum)**  
+
+### Exams (40% + 50%)  
+- One **midterm exam** and one **final exam** will be conducted **in-class via Blackboard**.  
+- The **final exam is not cumulative**.  
+- Absences from exams will only be excused for **serious medical reasons**, with a doctor’s note.  
+- **No make-up exams** will be provided for any other reasons.  
+
+**Tentative Exam Schedule:**  
+- **Midterm Exam:** Monday, April 21st, 18:30 – 20:30  
+- **Final Exam:** Thursday, June 16th, 18:30 – 20:30  
+
+### Class Discussion and Participation (10%)  
+- Active participation is **highly encouraged** both **in class** and in the **online discussion board**.  
+- Students are expected to **ask questions, answer classmates’ questions, and engage in discussions.**  
+
+### Optional Individual or Team Presentation (+5%)  
+- Students may choose a topic related to financial markets and investments for their presentation.
+
+**Presentation Guidelines:**  
+- Work **individually or in teams** (self-formed).  
+- **First-come, first-served** for topic selection.  
+- Each presentation should be **no longer than 15 minutes**.  
+- **Evaluation Breakdown:**  
+  - **50%**: Peer evaluation by classmates  
+  - **50%**: Instructor evaluation  
+
+**Presentation Submission Requirement:**  
+- Upload presentation materials to the **GitHub Discussion Board** **at least 2 days before the presentation date**.  
+
+
+---
+
+## Academic Misconduct  
+- Academic misconduct **results in automatic failure** and triggers **university-mandated sanctions**.  
+- Any suspected misconduct will be reported to the **Department and Committee on Academic Misconduct**.  
+- **Academic misconduct includes but is not limited to**:  
+  - Cheating or sharing information during exams  
+  - Plagiarism in any submitted work  
+
+---
+
+## Grading Appeals  
+- Students may appeal exam grading by **submitting a written explanation** via email **within two weeks** after grades are released.  
+- **Unjustified requests for grade changes are prohibited** under the **Kim Young-ran Act (Improper Solicitation and Graft Act).**  
+
+---
+
+## Course Schedule and Readings  
+*The following schedule is tentative and subject to change.*  
+
+**Public holidays:**  
+- **March 3** (Independence Day)  
+- **May 5** (Children’s Day)  
+
+| **Week** | **Session** | **Topic** |
+|---------|-----------|------------|
+| 1 | 1 | Introduction and overview |
+|   | 2 | Money markets |
+| 2 | 3 | Capital markets |
+|   | 4 | Fixed income securities (Part 1) |
+| 3 | 5 | Fixed income securities (Part 2) |
+|   | 6 | Derivatives (Part 1) |
+| 4 | 7 | Review or Buffer session |
+|   | 8 | **Midterm Exam: April 21** |
+| 5 | 9 | Derivatives (Part 2) |
+|   | 10 | Portfolio theory (Part 1) |
+| 6 | 11 | Portfolio theory (Part 2) |
+|   | 12 | The Capital Asset Pricing Model |
+| 7 | 13 | The Arbitrage Pricing Model |
+|   | 14 | Market efficiency |
+| 8 | 15 | Review or Buffer session |
+|   | 16 | **Final Exam: June 16** |
+
+---
+
+## Students with Disabilities  
+- If you require **accommodations** due to a disability, notify the instructor **immediately** to make necessary arrangements.  
+
+---
+
+## Course Policies  
+
+### Copyright Law  
+- **Course materials and lectures are protected by copyright law.**  
+- Materials are for **personal use and study only**.  
+- **Do not share, distribute, or sell** course materials in **print or digital format** without permission.  
+- **Recording lectures (audio/video) is prohibited** unless permission is obtained from the instructor.  
+
+### Anti-Graft Law  
+- **Do not request grade changes** unless there is a **clear grading error**.  
+- **Unjustified requests violate the Improper Solicitation and Graft Act (Kim Young-ran Act).**  
