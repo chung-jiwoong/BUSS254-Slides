@@ -2,19 +2,17 @@
 title: "Financial Markets: Part II"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
-course: "BUSS254 Investments"
-#date: ""
 format: 
+  pdf: default
   revealjs:
     theme: simple
     transition: fade
     transition-speed: fast
     scrollable: true
-    #toc: true
+    slide-number: true
     chalkboard: TRUE
 revealjs-plugins:
-  - revealjs-text-resizer
-# Thanks to https://github.com/gadenbuie/revealjs-text-resizer#readme
+  - revealjs-text-resizer #
 execute:
   echo: true
   eval: true
@@ -37,7 +35,7 @@ execute:
 ## Financial Instruments
 
 ::: {style="text-align: center;"}
-![](img/market_Financial_Market)
+![](img/market_Financial_Market.png)
 :::
 
 ---
@@ -57,7 +55,7 @@ execute:
 ## Capital Markets: Size in Korea
 
 ::: {style="text-align: center"}
-![](img/market_Capital_Market_Size)
+![](img/market_Capital_Market_Size.png)
 :::
 
 ---
@@ -112,7 +110,7 @@ execute:
 *   91-day (discount), 1-, 2-, and 3-year (coupon)
 
 ::: {style="text-align: center"}
-![](img/market_MSB_balance)
+![](img/market_MSB_balance.png
 :::
 
 ---
@@ -141,7 +139,7 @@ execute:
 ## Bond Market (cont'd)
 
 ::: {style="text-align: center"}
-![](img/market_Securitization)
+![](img/market_Securitization.png)
 :::
 
 *   **Securitization Process** involves:
@@ -178,8 +176,8 @@ execute:
 ## Bond Market: Statistics in Korea
 
 ::: {style="text-align: center"}
-![](img/market_Korea_Govnt_Bonds1)
-![](img/market_Korea_Govnt_Bonds2)
+![](img/market_Korea_Govnt_Bonds1.png)
+![](img/market_Korea_Govnt_Bonds2.png)
 
 Source: [Ministry of Economy and Finance](https://ktb.moef.go.kr/ntndbtWtp.do)
 :::
@@ -189,7 +187,7 @@ Source: [Ministry of Economy and Finance](https://ktb.moef.go.kr/ntndbtWtp.do)
 ## Bond Markets: Global
 
 ::: {style="text-align: center"}
-![](img/market_Global_Bond_Issue)
+![](img/market_Global_Bond_Issue.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -199,7 +197,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Bond Markets: Global (cont'd)
 
 ::: {style="text-align: center"}
-![](img/market_Global_Bond_Outstanding)
+![](img/market_Global_Bond_Outstanding.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -209,7 +207,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Bond Markets: Global (cont'd)
 
 ::: {style="text-align: center"}
-![](img/market_Debt_Financing)
+![](img/market_Debt_Financing.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -279,8 +277,8 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Stock Markets: Trends
 
 ::: {style="text-align: center"}
-![](img/market_KOSPI)
-![](img/market_KOSDAQ)
+![](img/market_KOSPI.png)
+![](img/market_KOSDAQ.png)
 :::
 
 ---
@@ -483,7 +481,7 @@ shinyApp(ui = ui, server = server)
 ## Stock Markets: Global Issuance
 
 ::: {style="text-align: center"}
-![](img/market_Global_Equity_Issue)
+![](img/market_Global_Equity_Issue.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -491,7 +489,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Stock Markets: Market Capitalization
 
 ::: {style="text-align: center"}
-![](img/market_Global_Equity_Cap)
+![](img/market_Global_Equity_Cap.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -499,7 +497,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Stock Markets: Financing by Country
 
 ::: {style="text-align: center"}
-![](img/market_Financing_by_Country)
+![](img/market_Financing_by_Country.png)
 
 Source: Capital Market Factbook - SIFMA, 2023
 :::
@@ -812,7 +810,7 @@ Source: Capital Market Factbook - SIFMA, 2023
 ## Derivatives Markets: Futures
 
 ::: {style="text-align: center"}
-![](img/market_Korea_Futures)
+![](img/market_Korea_Futures.png)
 :::
 
 ---
@@ -820,7 +818,7 @@ Source: Capital Market Factbook - SIFMA, 2023
 ## Derivatives Markets: KOSPI Futures vs. KOSPI
 
 ::: {style="text-align: center"}
-![](img/market_KOSPI200futures_KOSPI)
+![](img/market_KOSPI200futures_KOSPI.png)
 :::
 
 ---
@@ -828,8 +826,8 @@ Source: Capital Market Factbook - SIFMA, 2023
 ## Derivatives Markets: Other Countries
 
 ::: {style="text-align: center"}
-![](img/market_World_Futures_Market)
-![](img/market_World_Option_Market)
+![](img/market_World_Futures_Market.png)
+![](img/market_World_Option_Market.png)
 :::
 
 ---
@@ -837,7 +835,7 @@ Source: Capital Market Factbook - SIFMA, 2023
 ## Derivatives Markets: Size
 
 ::: {style="text-align: center"}
-![](img/market_Derivatives_Market)
+![](img/market_Derivatives_Market.png)
 
 Source: Capital Market Factbook - SIFMA, 2024
 :::
@@ -881,7 +879,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Derivatives Markets: Currency Derivatives  
 
 ::: {style="text-align: center"}
-![](img/market_Forex_Derivatives)
+![](img/market_Forex_Derivatives.png)
 :::
 
 ---
@@ -923,8 +921,8 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Derivatives Markets: CDS and TRS
 
 ::: {style="text-align: center"}
-![](img/market_CDS_structure)
-![](img/market_TRS_structure)
+![](img/market_CDS_structure.png)
+![](img/market_TRS_structure.png)
 :::
 
 ---
@@ -932,8 +930,8 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Derivatives Markets: CLN and CDO
 
 ::: {style="text-align: center"}
-![](img/market_CLN_structure)
-![](img/market_CDO_structure)
+![](img/market_CLN_structure.png)
+![](img/market_CDO_structure.png)
 :::
 
 ---
@@ -941,8 +939,8 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Derivatives Markets: CDS Premium
 
 ::: {style="text-align: center"}
-![](img/market_CDS_Premium)
-![](img/market_CDS_Korea)
+![](img/market_CDS_Premium.png)
+![](img/market_CDS_Korea.png)
 :::
 
 ---
@@ -950,7 +948,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Derivatives Markets: Size
 
 ::: {style="text-align: center"}
-![](img/market_Credit_Derivatives)
+![](img/market_Credit_Derivatives.png)
 :::
 
 ---
@@ -967,7 +965,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 - Primarily used for **short-term speculation and leverage**.  
 
 ::: {style="text-align: center"}
-![](img/market_ELW_vs_Options)
+![](img/market_ELW_vs_Options.png)
 :::
 
 ---
@@ -983,7 +981,7 @@ Source: Capital Market Factbook - SIFMA, 2024
   - **Leveraged ELS**: Enhances returns with embedded derivatives.  
 
 ::: {style="text-align: center"}
-![](img/market_ELS)
+![](img/market_ELS.png)
 :::
 
 ---
@@ -992,7 +990,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 
 
 ::: {style="text-align: center"}
-![](img/market_ELS_example)
+![](img/market_ELS_example.png)
 :::
 
 ---
@@ -1005,7 +1003,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 - Primarily used by **institutional investors** for **risk management and yield enhancement**.  
 
 ::: {style="text-align: center"}
-![](img/market_CLN)
+![](img/market_CLN.png)
 :::
 
 ---
@@ -1021,7 +1019,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 
 
 ::: {style="text-align: center"}
-![](img/market_ETN_vs_ETF)
+![](img/market_ETN_vs_ETF.png)
 :::
 
 ---
@@ -1110,7 +1108,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ## Risk vs. Return
 
 ::: {style="text-align: center"}
-![](img/market_RiskReturn)
+![](img/market_RiskReturn.png)
 
 Source: [BNP Paribas]()
 :::

@@ -2,19 +2,17 @@
 title: "Introduction and Overview"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
-course: "BUSS254 Investments"
-#date: ""
 format: 
+  pdf: default
   revealjs:
     theme: simple
     transition: fade
     transition-speed: fast
     scrollable: true
-    #toc: true
+    slide-number: true
     chalkboard: TRUE
 revealjs-plugins:
-  - revealjs-text-resizer
-# Thanks to https://github.com/gadenbuie/revealjs-text-resizer#readme
+  - revealjs-text-resizer #
 execute:
   echo: true
   eval: true

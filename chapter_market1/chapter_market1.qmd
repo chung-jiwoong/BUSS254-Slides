@@ -2,19 +2,17 @@
 title: "Financial Markets: Part I"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
-course: "BUSS254 Investments"
-#date: ""
 format: 
+  pdf: default
   revealjs:
     theme: simple
     transition: fade
     transition-speed: fast
     scrollable: true
-    #toc: true
+    slide-number: true
     chalkboard: TRUE
 revealjs-plugins:
-  - revealjs-text-resizer
-# Thanks to https://github.com/gadenbuie/revealjs-text-resizer#readme
+  - revealjs-text-resizer #
 execute:
   echo: true
   eval: true
@@ -80,7 +78,7 @@ execute:
 ## Money Markets: Size
 
 ::: {style="text-align: center;"}
-![](img/market_Money_Market_Size){width=100%}
+![](img/market_Money_Market_Size.png){width=100%}
 :::
 
   - Developed in the 1960s–1970s, expanded in the 1990s due to interest rate liberalization and financial sector reforms (the Asian crisis).
@@ -96,7 +94,7 @@ execute:
 ## Money Markets: Global
 
 ::: {style="text-align: center;"}
-![](img/market_Global_Money_Market){width=100%}
+![](img/market_Global_Money_Market.png){width=100%}
 :::
 
 
@@ -154,7 +152,7 @@ execute:
 *   By buying government securities, the BOK increases bank reserves and the money supply, lowering the call rate. Selling securities has the opposite effect. These actions are known as open market operations.
 
 ::: {style="text-align: center;"}
-![](img/market_Call_Rate)
+![](img/market_Call_Rate.png)
 :::
 
 --- 
@@ -225,7 +223,7 @@ A **repurchase agreement (repo)** is a short-term secured loan where securities 
 ## RP: Market Size
 
 ::: {style="text-align: center;"}
-![](img/market_Repo_Market)
+![](img/market_Repo_Market.png)
 
 *   As of 2020, €8.3 trillion in Euro, $2.7 trillion in U.S.
 *   Alternative to deposits or MMFs.
@@ -263,7 +261,7 @@ A **repurchase agreement (repo)** is a short-term secured loan where securities 
     *   Flexibly controls timing and collateral securities
 
 ::: {style="text-align: center;"}
-![](img/market_BOK_repo)
+![](img/market_BOK_repo.png)
 :::
 
 - Repo: liquidity absorption
@@ -311,7 +309,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 ## Certificate of Deposits: Rates
 
 ::: {style="text-align: center;"}
-![](img/market_CD_Rate)
+![](img/market_CD_Rate.png)
 :::
 
 - CD rates are sometimes "sticky."
@@ -342,7 +340,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 - Typically issued through a **Special Purpose Company (SPC)** via **securitization**.  
 
 ::: {style="text-align: center;"}
-![](img/market_ABCP)
+![](img/market_ABCP.png)
 :::
 
 - Credit Enhancement Providers reduce default risk by, e.g., providing guarantees.
@@ -354,7 +352,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 ## Commercial Paper: Evolution
 
 ::: {style="text-align: center;"}
-![](img/market_CP_Market)
+![](img/market_CP_Market.png)
 :::
 
 - Rapid CP market expansion since the mid-2000s due to the convenience of ABCP issuance.
@@ -368,7 +366,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 ## Commercial Paper: Rates
 
 ::: {style="text-align: center;"}
-![](img/market_CP_Rate)
+![](img/market_CP_Rate.png)
 :::
 
 - The CP market in Korea occasionally experiences periods of stress.
@@ -403,7 +401,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 ## Short-Term Bonds: Evolution
 
 ::: {style="text-align: center;"}
-![](img/market_STB_Market)
+![](img/market_STB_Market.png)
 :::
 
 ---
@@ -429,7 +427,7 @@ To address CD rate limitations, several alternative benchmarks have been introdu
 ## U.S. Treasury: Foreign Holders
 
 ::: {style="text-align: center;"}
-![](img/market_UST_holders)
+![](img/market_UST_holders.png)
 :::
 
 - As of December 2024, Souce: U.S. Treasury
@@ -704,7 +702,7 @@ Consider a zero coupon bond with price $P$ and face value $M$
 *   US T-bills are quoted on a discount basis (reference price is face value) using Act/360 method.
 
 ::: {style="text-align: center;"}
-![](img/market_T_bill){width=120%}
+![](img/market_T_bill.png){width=120%}
 :::
 
 *   `Days360(Date(2022,12,15),date(2022,12,20))` = 5 days
