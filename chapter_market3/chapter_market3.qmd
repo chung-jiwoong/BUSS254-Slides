@@ -10,24 +10,25 @@ format:
     transition-speed: fast
     scrollable: true
     slide-number: true
-    chalkboard: TRUE
-revealjs-plugins:
-  - revealjs-text-resizer #
+    chalkboard: true
+revealjs-plugins: 
+  - revealjs-text-resizer
 execute:
   echo: true
   eval: true
 ---
 
+
 ## Lecture Outline
 
-*   Money markets: Call, Repo, CD, CP, etc.
-*   Capital markets: Bond, Equity
-*   Derivatives markets: Futures, options etc.
-*   Trading mechanisms
-*   Investment Companies
-*   Reading: BKM Ch. 3 and 4
+-   Money markets: Call, Repo, CD, CP, etc.
+-   Capital markets: Bond, Equity
+-   Derivatives markets: Futures, options etc.
+-   Trading mechanisms
+-   Investment Companies
+-   Reading: BKM Ch. 3 and 4
 
----
+------------------------------------------------------------------------
 
 ## Trading Mechanics
 
@@ -51,7 +52,7 @@ execute:
 -   **Short selling**: Selling borrowed shares to profit from a price decline.
 -   **Margin trading**: Borrowing funds to amplify trading positions, increasing both potential gains and risks.
 
----
+------------------------------------------------------------------------
 
 ## Margin Trading
 
@@ -62,50 +63,53 @@ execute:
     -   Deposit more equity ($\ge$ initial margin), or
     -   Liquidate the position.
 
----
+------------------------------------------------------------------------
 
 ## Margin Trading: Example
 
--   **Stock Price**: $100 per share
+-   **Stock Price**: \$100 per share
 -   **Shares Purchased**: 100
 -   **Initial Margin**: 60%
 -   **Maintenance Margin**: 30%
 
 Initial Position:
 
-| Asset   | Value    | Liability       | Equity   |
-| :------ | :------- | :-------------- | :------- |
-| Stock   | $10,000 | Borrowed        | $4,000  |
-|         |          | Investor Equity | $6,000  |
+| Asset | Value    | Liability       | Equity  |
+|:------|:---------|:----------------|:--------|
+| Stock | \$10,000 | Borrowed        | \$4,000 |
+|       |          | Investor Equity | \$6,000 |
 
-If Stock Price Falls to $70:
+If Stock Price Falls to \$70:
 
-| Asset   | Value   | Liability       | Equity   |
-| :------ | :------ | :-------------- | :------- |
-| Stock   | $7,000 | Borrowed        | $4,000  |
-|         |         | Investor Equity | $3,000  |
+| Asset | Value   | Liability       | Equity  |
+|:------|:--------|:----------------|:--------|
+| Stock | \$7,000 | Borrowed        | \$4,000 |
+|       |         | Investor Equity | \$3,000 |
 
 -   **Margin%** = Equity / Market Value = $\frac{\$3,000}{\$7,000} = 43\%$
-    -   Since 43% > 30% (maintenance margin), no margin call.
+    -   Since 43% \> 30% (maintenance margin), no margin call.
 
----
+------------------------------------------------------------------------
 
 ## Margin Trading: Maintenance Margin
 
 How far can the stock price fall before a margin call?
 
--   **Maintenance Margin** = 30\%
+-   **Maintenance Margin** = 30%
+
 -   **Formula for Equity**: $\text{Equity} = \text{Market Value} - \text{Borrowed Amount} = 100P - 4,000$
 
 -   **Margin% Formula**: $\frac{100P - 4,000}{100P} = 0.30$
 
 -   **Solving for Price**:
 
-$$100P - 4,000 = 30P$$
-$$70P = 4,000$$
-$$P = 57.14$$
+$$
+100P - 4,000 = 30P \\
+70P = 4,000 \\
+P = 57.14
+$$
 
----
+------------------------------------------------------------------------
 
 ## Short Sales
 
@@ -121,7 +125,7 @@ $$P = 57.14$$
     -   Selling shares **without borrowing them first**, assuming they can be acquired later.
     -   **Illegal** due to the risk of delivery failure.
 
----
+------------------------------------------------------------------------
 
 ## Short Sales: Example
 
@@ -132,70 +136,70 @@ $$P = 57.14$$
 
 Position Setup:
 
-| Item                | Value     |
-| :------------------ | :-------- |
-| **Sale Proceeds**   | \$100,000 |
-| **Initial Margin**  | \$50,000  |
-| **Stock Owed**      | 1000 shares   |
+| Item               | Value       |
+|:-------------------|:------------|
+| **Sale Proceeds**  | \$100,000   |
+| **Initial Margin** | \$50,000    |
+| **Stock Owed**     | 1000 shares |
 
 Balance Sheet:
 
-| **Assets**                | **Liabilities**       |
-| :------------------------ | :-------------------- |
+| **Assets**                | **Liabilities**         |
+|:--------------------------|:------------------------|
 | \$100,000 (sale proceeds) | \$100,000 (shares owed) |
-| \$50,000 (initial margin) |                       |
-|                           | **Equity**            |
-|                           | \$50,000             |
+| \$50,000 (initial margin) |                         |
+|                           | **Equity**              |
+|                           | \$50,000                |
 
----
+------------------------------------------------------------------------
 
 ## Short Sales: Example (cont'd)
 
 -   If Price Falls to **\$70 per share**:
 
-| **Assets**                | **Liabilities** |
-| :------------------------ | :-------------- |
-| \$100,000 (sales proceeds) | \$70,000 (shares)   |
-| \$50,000 (initial margin)   |                   |
-|                           | **Equity**        |
-|                           | \$80,000         |
+| **Assets**                 | **Liabilities**   |
+|:---------------------------|:------------------|
+| \$100,000 (sales proceeds) | \$70,000 (shares) |
+| \$50,000 (initial margin)  |                   |
+|                            | **Equity**        |
+|                            | \$80,000          |
 
 -   Profit Calculation:
 
-$$\text{Profit} = \text{Ending Equity} - \text{Beginning Equity}$$
+$$
+\text{Profit} = \text{Ending Equity} - \text{Beginning Equity} \\
+= \$80,000 - \$50,000 = \$30,000 \\
+= (\text{Initial Price} - \text{New Price}) \times \text{Shares Sold Short} \\
+= (100 - 70) \times 1000 = \$30,000
+$$
 
-$$= \$80,000 - \$50,000 = \$30,000$$
-
-$$= (\text{Initial Price} - \text{New Price}) \times \text{Shares Sold Short}$$
-
-$$= (100 - 70) \times 1000 = \$30,000$$
-
----
+------------------------------------------------------------------------
 
 ## Short Sales: Example (cont'd)
 
 -   Maximum Stock Price Before Margin Call:
 -   **Formula**:
 
-$$\text{Margin%} = \frac{\text{Assets} - \text{Liabilities}}{\text{Market Value}}$$
-
-$$= \frac{(\$150,000 - 1000P)}{1000P} = 0.30$$
+$$
+\text{Margin\%} = \frac{\text{Assets} - \text{Liabilities}}{\text{Market Value}} \\
+= \frac{(\$150,000 - 1000P)}{1000P} = 0.30
+$$
 
 -   **Solving for P**:
 
-$$150,000 - 1000P = 0.30 \times 1000P$$
-
-$$150,000 = 1300P$$
-
-$$P = 115.38$$
+$$
+150,000 - 1000P = 0.30 \times 1000P \\
+150,000 = 1300P \\
+P = 115.38
+$$
 
 -   $150,000$: Initial margin plus sale proceeds
 
----
+------------------------------------------------------------------------
 
 ## Trading Mechanisms
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 **Auction Market**
 
@@ -214,9 +218,9 @@ $$P = 115.38$$
 -   **Quote-driven market**: Dealers set prices.
 -   **Examples**: Nasdaq, bond markets, forex markets.
 :::
-:::
+:::::
 
----
+------------------------------------------------------------------------
 
 ## Auction Market
 
@@ -229,7 +233,7 @@ $$P = 115.38$$
     -   Helps **reduce price distortions** from temporary order imbalances.
 -   **Continuous Auction**: Trading happens **continuously** throughout the day.
 
----
+------------------------------------------------------------------------
 
 ## Call Auction
 
@@ -239,7 +243,7 @@ $$P = 115.38$$
 
 Buy orders sorted by decreasing price (demand), and sell orders by increasing price (supply).
 
----
+------------------------------------------------------------------------
 
 ## Call Auction (cont'd)
 
@@ -249,7 +253,7 @@ Buy orders sorted by decreasing price (demand), and sell orders by increasing pr
 
 Price set so that supply = demand. All executable orders are filled at that price
 
----
+------------------------------------------------------------------------
 
 ## Continuous Auction: Limit Order Book
 
@@ -258,13 +262,13 @@ Price set so that supply = demand. All executable orders are filled at that pric
     -   **Price priority**: Best prices executed first.
     -   **Time priority**: Older orders executed before newer ones at the same price.
 
-| Bid     |      |         | Ask     |      |         |
-| :------ | :--- | :------ | :------ | :--- | :------ |
-| Price   | Size | Time    | Price   | Size | Time    |
-| 74.42   | 300  | 11:49:39 | 74.48   | 300  | 11:49:35 |
-| 74.41   | 100  | 11:46:55 | 74.48   | 500  | 11:49:50 |
-| 74.36   | 400  | 11:48:30 | 75.74   | 100  | 08:25:17 |
-| 74.36   | 400  | 11:48:32 | 76.00   | 150  | 08:02:02 |
+| Bid   |      |          | Ask   |      |          |
+|:------|:-----|:---------|:------|:-----|:---------|
+| Price | Size | Time     | Price | Size | Time     |
+| 74.42 | 300  | 11:49:39 | 74.48 | 300  | 11:49:35 |
+| 74.41 | 100  | 11:46:55 | 74.48 | 500  | 11:49:50 |
+| 74.36 | 400  | 11:48:30 | 75.74 | 100  | 08:25:17 |
+| 74.36 | 400  | 11:48:32 | 76.00 | 150  | 08:02:02 |
 
 -   Market sell order of 200 (or limit sell with price $<$ 74.42)
 -   Market buy order of 900 (or limit buy with price $>$ 75.74)
@@ -272,7 +276,7 @@ Price set so that supply = demand. All executable orders are filled at that pric
     -   **The two orders have “consumed” liquidity.**
 -   Market liquidity: the ability to trade securities quickly at a price close to its consensus value
 
----
+------------------------------------------------------------------------
 
 ## Dark Pools
 
@@ -289,7 +293,7 @@ Price set so that supply = demand. All executable orders are filled at that pric
 
     -   Reduces the risk of information leakage
 
----
+------------------------------------------------------------------------
 
 ## Dealer Market
 
@@ -299,30 +303,30 @@ In dealer markets, investors do not trade directly with each other, but must con
 ![](img//market_DealerMarket.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Dealer Market: Example
 
 | **Market Maker** | **Bid Price** | **Offer Price** | **Quote Size** | **Time** |
-| :--------------- | :------------ | :-------------- | :------------- | :------- |
-| ALPHA            | 326           | 330             | 75 × 75         | 8:53   |
-| BETA             | 324           | 330             | 75 × 75         | 9:14   |
-| GAMMA            | 325           | 329             | 75 × 75         | 9:16   |
-| DELTA            | 323           | 332             | 75 × 75         | 8:53   |
-| EPSILON          | 325           | 329             | 25 × 25         | 9:36   |
-| ZETA             | 326           | 330             | 75 × 75         | 11:30  |
-| ETA              | 325           | 330             | 75 × 75         | 9:45   |
-| THETA            | 325           | 330             | 75 × 75         | 9:23   |
-| IOTA             | 324           | 329             | 75 × 75         | 10:27  |
-| KAPPA            | 323           | 330             | 75 × 75         | 9:45   |
-| LAMBDA           | 325           | 330             | 75 × 75         | 8:53   |
+|:-----------------|:--------------|:----------------|:---------------|:---------|
+| ALPHA            | 326           | 330             | 75 × 75        | 8:53     |
+| BETA             | 324           | 330             | 75 × 75        | 9:14     |
+| GAMMA            | 325           | 329             | 75 × 75        | 9:16     |
+| DELTA            | 323           | 332             | 75 × 75        | 8:53     |
+| EPSILON          | 325           | 329             | 25 × 25        | 9:36     |
+| ZETA             | 326           | 330             | 75 × 75        | 11:30    |
+| ETA              | 325           | 330             | 75 × 75        | 9:45     |
+| THETA            | 325           | 330             | 75 × 75        | 9:23     |
+| IOTA             | 324           | 329             | 75 × 75        | 10:27    |
+| KAPPA            | 323           | 330             | 75 × 75        | 9:45     |
+| LAMBDA           | 325           | 330             | 75 × 75        | 8:53     |
 
 -   **Seller 4** wants to sell **60 shares**.
 -   Contacts **Dealer Beta**, who quotes **Bid = \$324, Ask = \$330**.
 -   Seller 4 **can sell at \$324** or try another dealer.
 -   **Inventory Risk**: Dealers face the risk of price drops after acquiring shares.
 
----
+------------------------------------------------------------------------
 
 ## Dealer Market (cont'd)
 
@@ -347,12 +351,14 @@ In dealer markets, investors do not trade directly with each other, but must con
 
 # Investment Companies
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies
 
 -   **Pool funds** from individual investors to invest in **diversified assets**.
+
 -   **Types of Investment Companies**:
+
     -   **Unit Investment Trusts (UITs)**: Fixed portfolio, **unmanaged**.
     -   **Managed Investment Companies**:
         -   **Open-end** vs. **Closed-end** funds.
@@ -368,7 +374,7 @@ In dealer markets, investors do not trade directly with each other, but must con
     -   **Professional management**: Fund managers handle investments.
     -   **Lower transaction costs**: Economies of scale reduce expenses.
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Net Asset Value (NAV)
 
@@ -387,23 +393,19 @@ $$
 $$
 \text{NAV} = \frac{120 - 5}{5} = \$23 \text{ per share}
 $$
-
-**Open-End vs. Closed-End Funds**
-
--   **Closed-end funds** trade on exchanges like stocks.
--   **Open-end mutual funds** are **bought and redeemed** directly from the fund at NAV, so **shares outstanding change daily**.
-
----
+------------------------------------------------------------------------
 
 ## Mutual Funds: How to Invest?
 
 -   **Ways to Purchase Mutual Funds**:
 
     1.  **Direct-marketed funds**: Buy directly from the fund.
+
     2.  **Sales-force distributed**:
 
         -   Sold through brokers or financial advisors.
         -   **Revenue sharing** creates potential conflicts of interest.
+
     3.  **Financial supermarkets**:
 
         -   Platforms offering multiple funds.
@@ -416,9 +418,10 @@ $$
     -   **12b-1 fees** – Annual marketing & distribution charges
 
 -   **Fees must be disclosed** in the **fund prospectus**.
+
 -   Different **share classes** offer varying fee structures.
 
----
+------------------------------------------------------------------------
 
 ## Example: Dreyfus High Yield Fund (2018)
 
@@ -431,7 +434,7 @@ $$
 ![](img//market_MF_Fees.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Impact of Costs on Investment Performance
 
@@ -442,9 +445,9 @@ $$
 -   **Higher costs reduce net returns**.
 -   **Lower-fee funds** outperform over time due to compounding effects.
 
----
+------------------------------------------------------------------------
 
-## Comparing Share Classes: Equity Fund Example*
+## Comparing Share Classes: Equity Fund Example\*
 
 **Fee Structures**
 
@@ -455,13 +458,13 @@ $$
 
 **Scenario: What Happens to a \$10,000 Investment?**
 
-1.  **[1 year]**
-2.  **[4 years]**
-3.  **[10 years]**
+1.  **\[1 year\]**
+2.  **\[4 years\]**
+3.  **\[10 years\]**
 
 **Which share class provides higher net proceeds at different investment horizons?**
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Market Size
 
@@ -469,7 +472,7 @@ $$
 ![](img//market_MF_Size.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ### Investment Companies: By Region
 
@@ -477,13 +480,16 @@ $$
 ![](img//market_MF_By_Region.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Recent Development
 
 -   **Exchange-Traded Funds (ETFs)**:
+
     -   Trade continuously like stocks.
+
     -   Can be sold short or purchased on margin.
+
     -   Generally lower costs than mutual funds.
 
     -   **Advantages of ETFs**:
@@ -491,6 +497,7 @@ $$
         -   More flexible than index funds.
         -   Lower expense ratios than actively managed mutual funds.
         -   Tax efficiency due to in-kind redemptions.
+
     -   **Disadvantages of ETFs**:
 
         -   Prices may deviate from **Net Asset Value (NAV)**.
@@ -499,6 +506,7 @@ $$
 -   **Actively Managed ETFs**
 
     -   Traditionally, ETFs were required to track **specified indexes**.
+
     -   Recent expansion includes **actively managed ETFs** that follow different investment strategies:
 
         -   Value investing
@@ -507,7 +515,9 @@ $$
         -   Liquidity factors
         -   Recent performance trends
         -   Volatility
+
     -   **Key Feature**:
+
         -   Unlike traditional mutual funds, actively managed ETFs **disclose their portfolio composition daily**.
 
 -   **Non-Transparent Actively Managed ETFs**
@@ -520,7 +530,7 @@ $$
     -   **Key Difference**:
         -   Unlike traditional ETFs, these funds limit portfolio disclosure to protect trading strategies.
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: ETF Trends
 
@@ -530,7 +540,7 @@ $$
 Source: Statistica - Global exchange-traded funds (ETFs) from 2003 to 2021
 :::
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Mutual Fund Performance
 
@@ -538,7 +548,7 @@ Source: Statistica - Global exchange-traded funds (ETFs) from 2003 to 2021
 ![](img//market_MF_Performance.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Performance Persistence
 
@@ -546,7 +556,7 @@ Source: Statistica - Global exchange-traded funds (ETFs) from 2003 to 2021
 ![](img//market_MF_Persistence.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Closed-end Funds
 
@@ -558,7 +568,7 @@ Source: Statistica - Global exchange-traded funds (ETFs) from 2003 to 2021
 
     -   The common divergence of price from net asset value, often by wide margins, is a puzzle that has yet to be fully explained
 
----
+------------------------------------------------------------------------
 
 ## Investment Companies: Hedge Funds
 
@@ -570,13 +580,12 @@ Source: Statistica - Global exchange-traded funds (ETFs) from 2003 to 2021
         -   **Short selling**.
         -   **Leverage** to amplify returns.
     -   Not available to the general public; open only to **wealthy or institutional investors**.
-
 -   **Lock-Up Periods**:
     -   Many hedge funds require an initial **“lock-up” period** of several years.
     -   Investors cannot withdraw funds during this time.
     -   Allows hedge funds to invest in **illiquid assets** without facing immediate redemption pressure.
 
----
+------------------------------------------------------------------------
 
 ## References
 
