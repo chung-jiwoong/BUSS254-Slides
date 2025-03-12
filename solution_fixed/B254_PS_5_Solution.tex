@@ -1,0 +1,657 @@
+\documentclass[11.5pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+% \usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage[colorlinks=true,urlcolor=cmu]{hyperref}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{float}	% Positioning tables
+\definecolor{darkgreen}{rgb}{0,0.66,0}
+\definecolor{cmu}{rgb}{0.76,0,0}
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textwidth      6.5in
+\headheight     0.0in
+\topmargin      0.0in
+\textheight=7.8in
+
+\begin{document}
+
+\newcommand*\ruleline[1]{\par\noindent\raisebox{.8ex}{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}}
+
+\renewcommand{\headheight}{0.7in}
+\setlength{\headwidth}{\textwidth}
+\fancyhead[L]{\textbf{\sc{BUSS254. Investments}}}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[R]{\sc{{Instructor: Ji-Woong Chung}}}
+\fancyfoot[L]{\sc{}}
+\pagestyle{fancy}
+\vspace{1.5cm}
+\onehalfspacing
+
+\begin{center}
+\large{\textbf{\sc{Problem Set 5: Answer Key}}}
+\vspace{1.0cm}
+\end{center}
+
+%\noindent The answer key will not be shared. Feel free to share your answers in the course webpage to receive feedbacks (or help others). 
+
+
+\vspace{20pt}
+
+
+\noindent 1. The bond price is \rule{1cm}{0.15mm} in YTM.?
+
+\begin{enumerate}[a]
+
+\item decreasing and convex
+
+\item decreasing and concave
+
+\item increasing and convex
+
+\item increasing and concave
+\end{enumerate}
+
+\textbf{Solution:}  (a)
+
+
+\vspace{30pt}
+
+
+\noindent 2. The current YTM is 5\% and the price of the bond is \$100. Suppose that the yield increases by 100 bps (that is, to 6\%), and the bond price declines by \$10. Suppose that the YTM then increases further, by another 100 bps (that is, to 7\%). The bond price will \rule{1cm}{0.15mm}.
+
+
+\begin{enumerate}[a]
+	
+	\item rise by less than \$10
+	
+	\item rise by more than \$10
+	
+	\item decline by less than \$10
+	
+	\item decline by more than \$10
+\end{enumerate}
+
+\textbf{Solution:} (c)
+
+\vspace{30pt}
+
+
+
+\noindent 3. Cash can be thought of as an asset. What is the duration for cash?
+
+\noindent \textbf{Solution:} Cash gives an immediate cash flow; the investor does not have to wait to receive the cash. Therefore, cash has a duration of zero.
+
+
+
+\vspace{30pt}
+
+
+\newpage
+
+
+\noindent 4. Consider the following bonds:
+
+Bond A: 1-year zero-coupon bond (face value = \$100)
+
+Bond B: 2-year zero-coupon bond (face value = \$1,000)
+
+Bond C: 2-year coupon bond paying a 10\% annual coupon (face value = \$1,000)
+
+\noindent Then, Bonds A and B are combined to produce a fourth bond, D (whose cash flows are equal to those of A + those of B). Which of the following is true?
+
+
+\begin{enumerate}[a]
+	
+	\item A has a higher duration than B
+	
+	\item B has a lower duration than C
+	
+	\item C has a higher duration than D
+	
+	\item None of the above
+\end{enumerate}
+
+\noindent \textbf{Solution:}  (c) Bond A and Bond B are zero-coupon bonds, so their durations are the same as their maturities. Hence, Bond A and Bond B have 1-year and 2-year durations, respectively. Hence, (a) is false. Bond C has the same maturity as Bond B, but is a coupon bond. Hence, Bond C’s duration will be lower than Bond B, and (b) is false (recall that the duration is the average of the times to promised cash flows while the maturity is the term to the final cash flow). Now compare C and D. Bond C’s cash flow is \$100 in year 1 and \$1,100 in year 2. Bond D’s cash flow is \$100 in year 1 and \$1,000 in year 2. Hence, Bond C’s year-2 cash flow is higher, meaning that Bond C’s duration (as an average time of cash flows) will be higher than Bond D. Hence, (c) is true.
+
+\vspace{30pt}
+
+
+
+\noindent 5. What is the Macaulay duration of the following bond? .
+
+Face Value \$100
+
+Maturity (years) 5
+
+Coupon Rate: 5\%
+
+YTM: 5\%
+
+Coupon Frequency: 2
+
+
+\textbf{Solution:}  4.4854 years
+
+\vspace{50pt}
+
+\newpage
+
+
+
+\noindent 6. What is the coupon rate for the following bond?
+
+Settlement Date: 1-Jan-2016
+
+Maturity Date: 1-Jan-2021
+
+Macaulay Duration: 5 years
+
+YTM: 3\%
+
+
+\noindent \textbf{Solution:}  The duration (5 years) is the same as the maturity (5 years). Hence, this is a zero coupon bond, meaning that the coupon rate is zero.
+
+\vspace{30pt}
+
+
+
+
+
+
+\noindent 7. Which of the following bonds has a longer duration?
+
+
+\begin{enumerate}[a]
+	
+	\item Bond Y, a coupon bond with a 5-year maturity
+	
+	\item Bond X, with the same coupon payments and YTM, but with a maturity of 30 years
+	
+	\item Neither, Y and X have the same durations.
+	
+	\item Cannot compare the durations of Y and X without further information
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (b) If coupon payments and YTM are the same, then the bond with the longer maturity will have a higher duration. It will take longer on average to receive the bond’s cash flows.
+
+\vspace{30pt}
+
+
+
+
+\noindent 8. Consider a coupon bond with 10-year maturity. The YTM increases from 5\% to 10\% (while everything else remains the same). Which of the following is correct?
+
+
+\begin{enumerate}[a]
+	
+	\item The bond’s price increases
+	
+	\item The bond’s duration decreases
+	
+	\item Neither (a) nor (b)
+	
+	\item Both (a) and (b)
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (b) The price is decreasing in the YTM, so if the YTM increases, then the bond’s price will decrease. Hence, (a) is false. A bond’s duration is higher when the YTM is lower, so if the YTM increases, the duration will decrease. Hence, (b) is true. Note that the change in duration is only true for coupon bonds; a zero coupon bond’s duration is always equal to its maturity, regardless of the YTM.
+
+\vspace{30pt}
+
+
+\newpage
+
+
+\noindent 9. Today you are considering buying Bond L or Bond M, and are concerned about their price sensitivities. L and M are identical in their coupon rate, YTM, and the frequency of coupon payments. The only difference is that L has a shorter maturity than M. Suppose that if the YTM increases by 100 bps, L’s price will decrease by 5\%. Therefore, M’s price will \rule{1cm}{0.15mm}.
+
+
+\begin{enumerate}[a]
+	
+	\item decrease by less than 5\%
+	
+	\item decrease by more than 5\%
+	
+	\item increase by less than 5\%
+	
+	\item crease by more than 5\%
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (b) First, bond price is decreasing in YTM, so if the YTM increases, the bond price will decrease, thus options (c) and (d) are incorrect. Second, M will have a higher duration than L (because of same coupon payments, but longer maturity), and therefore will be more sensitive to YTM changes. The price of M should decrease by more than 5\%.
+
+\vspace{30pt}
+
+
+
+
+
+
+\noindent 10. For which of the following bonds is the price more sensitive to changes in the YTM?
+
+
+\begin{enumerate}[a]
+	
+	\item 30-year bond with 5\% coupon rate and semiannual coupon payment.
+	
+	\item Zero coupon bond with 15-year maturity.
+	
+	\item (a) and (b) have the same price sensitivity.
+	
+	\item Cannot determine which has higher price sensitivity without further information.
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (d) The only thing we know for certain is that the zero coupon bond in (b) has a duration of 15 years. Depending on YTM, the coupon bond in (a) could have a duration equal to, greater than, or less than 15 years (you can verify this by calculating the duration of a 30-year 5\% coupon bond with different YTMs).Therefore, without further information, we cannot say if (a) or (b) has a higher duration, and therefore higher price sensitivity.
+
+\vspace{30pt}
+
+
+\newpage
+
+
+\noindent 11. Consider a bond with Macaulay duration of 5.5 years. The YTM is 10\%. When the YTM increases by 100 bps (to 11\%), what should happen to the price (as an approximation using duration)?
+
+
+\begin{enumerate}[a]
+	
+	\item The price decreases by 5.5\%
+	
+	\item The price decreases by 5\%
+	
+	\item The price decreases by 10\%
+	
+	\item The price increases by 5.5\%
+	
+	\item The price increases by 5\%
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (b) Given the duration of 5.5 and the YTM of 10\%, modified duration will be equal to $MD = D/(1+y)=5.5/(1+0.10)=5.0$. Therefore, the percentage price change can be approximated as $-MD \times \Delta y =-5\times1$. Hence, a 100 bps (or 1 percentage-point) increase in the YTM will decrease the price by 5\%.
+
+\vspace{30pt}
+
+
+
+
+\noindent 12. You are doing a stress test for K-Bank. The only asset that K-Bank has is \$250 million invested in the following security.
+
+Settlement Date: 1 January 2016
+
+Maturity Date: 1 January 2018
+
+Face Value: 100
+
+Coupon Rate: 4\%
+
+Frequency (per year): 2
+
+YTM: 5\%
+
+Day count basis: ACT/360
+
+
+\noindent If the YTM increases by 1,000 bps, by how much (approximately) do you expect K-Bank’s asset to shrink? 
+
+\vspace{20pt}
+
+\noindent \textbf{Solution:}  Duration: You can manually compute the duration using the formula, or type in a blank cell: =DURATION("1-1-2016","1-1-2018",4\%,5\%,2). Using either method, you will obtain a duration of 1.94 years. Hence, $\Delta P =( -D \Delta y)P = (-1.94 \times 0.1)(250) =-48.53 $
+
+Using the Excel PRICE function: PRICE("1-1-2016","1-1-2018",4\%,5\%,100,2) = 98.12, equivalent to the sum of the discounted cash flows. And PRICE("1-1-2016","1-1-2018",4\%,15\%,100,2) = 81.57. Hence, asset value drop by $ (81.57 - 98.12) \times 250m/100= -41.35 $
+
+
+\vspace{30pt}
+
+
+\newpage
+
+
+
+
+\noindent 13. Portfolio immunization consists of….
+
+
+\begin{enumerate}[a]
+	
+	\item Minimizing liabilities to minimize portfolio risk
+	
+	\item Equalizing the duration of assets to that of liabilities
+	
+	\item Maximizing dividend payoffs to shareholders
+	
+	\item Driving the duration of equity to zero
+	
+	\item Eliminating all risk from the portfolio
+	
+	\item All of the above
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (d) Portfolio immunization means protecting the investor’s equity (assets minus liabilities) from changes in value due to changes in yields. Thus, it implies driving the duration of equity to zero; if duration is zero, a change in yields will have virtually no impact on the value of equity. Note that since, in general, Assets do not equal Liabilities, the duration of assets will not be equalized to that of liabilities.
+
+\vspace{30pt}
+
+
+
+
+\noindent 14. When the YTM changes, either up or down, the actual price of the security compared to a price obtained by a (linear) approximation using duration is …
+
+
+\begin{enumerate}[a]
+	
+	\item Higher
+	
+	\item Lower
+	
+	\item Exactly equal to
+	
+	\item Can be higher or lower than the approximated price, depending on other characteristics of the security.
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (a) Because the price-yield curve is convex, the actual price (always) is higher than the price (linearly) approximated with duration. You can see this easily by drawing a convex price-yield curve with a linear tangency line denoting duration. You can see that any point on the curve to the right or left of the tangency point is higher than the duration line. Thus, any price predicted by duration will be lower than the actual on the curve.
+
+
+
+\vspace{30pt}
+
+
+\newpage
+
+
+\noindent 15. Suppose two bonds have the same price and duration. If YTM changes, the price of the higher convexity bond will be \rule{1cm}{0.15mm} the price of the lower convexity bond.
+
+
+\begin{enumerate}[a]
+	
+	\item Higher than
+	
+	\item Lower than
+	
+	\item Equal to
+	
+	\item Higher, lower or equal to (depends on other characteristics)
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} (a) A bond with higher convexity will have a higher price than otherwise equal bonds when the YTM changes, regardless of whether the YTM rises or falls. Just as convexity leads to a higher price than that predicted linearly by duration, greater convexity leads to higher prices whenever YTM changes. You can observe this by drawing two price-yield curves with the same duration at one point, but with differing convexity. The curve with greater convexity always lies above the other.
+
+
+
+\vspace{30pt}
+
+
+
+
+\noindent 16. Consider a bond which has a maturity of four years and pays a 3\% coupon rate (with annual coupon payments). The bond sells at par value of \$100. First, calculate the bond's (modified) convexity. If YTM increases by 200 bps, calculate the new price of the bond predicted by using both duration and convexity.
+
+
+\noindent \textbf{Solution:} Convexity: 17.7776, Duration: 3.7171, dP=-7.0786, New price=92.9214
+
+
+
+\vspace{50pt}
+
+
+
+
+\noindent 17. Consider three bonds: Alpha, Beta and Epsilon, as follows:
+
+\begin{table}[h]
+	\begin{tabular}{cccc}
+		& Maturity & Duration & Convexity \\ \hline
+		Alpha   & 2        & 1.9      & 0.05      \\
+		Beta    & 5        & 4.1      & 0.25      \\
+		Epsilon & 10       & 7.5      & 0.95   \\  \hline
+	\end{tabular}
+\end{table}
+
+\noindent Sppose an investor has constructed a portfolio Gamma consisting of \$7,500 of Alpha and \$5,000 of Epsilon. 
+
+\noindent a) What is the duration of Gamma? \\
+b) What is the convexity of Gamma? \\
+c) The investor claims that he prefers Gamma - with a value of \$12,500 - to the same amount invested in Beta. Why is this so? (Continue to assume that YTM is the same for both investments regardless of their maturities).
+
+\noindent \textbf{Solution:} a) The duration of a portfolio is the average of the durations of the securities in the portfolio weighted by the value: that is, $(1.9\times7,500+7.5\times5,000)/(12,500)=4.1$.
+b) The convexity measure of a portfolio is the average of the convexities of the securities in the portfolio weighted by the values. That is, $(0.05\times7,500+0.95\times5,000)/(12,500)=0.41$
+c) Gamma and Beta have the same duration, and hence have the same price sensitivity to small yield changes. However, the portfolio’s convexity measure is 0.41, while Beta’s convexity measure is only 0.25. A bond with higher convexity will have a higher price when the YTM changes, compared to otherwise equal bonds, and regardless of whether the YTM rises or falls. %Hence, (b) is true. Finally, (c) is not true because Gamma’s price will fall if YTM increases.
+
+
+\vspace{50pt}
+
+
+
+
+\noindent 18. Suppose that the YTM of the 1-year, 2-year, and 3-year zero coupon bonds are 2\%, 3\% and 3.5\%, respectively. A 3-year coupon bond is trading at \$106.8, what is the coupon payment of the bond? Assume annual coupon payment.
+
+
+\noindent \textbf{Solution:} Use Goal Seek function in Excel. 5.88\%
+
+
+\vspace{50pt}
+
+
+
+
+\noindent 19. Concerning the par-yield, which of the following statements is correct?
+
+\begin{enumerate}[a]
+	
+	\item The par-yield is always higher than the spot rate at the same maturity.
+	
+	\item It is the coupon rate that makes the par value equal to the present value of cash flow, given the YTM.
+	
+	\item For a 1-year annual coupon bond, its par-yield is always its YTM.
+	
+	\item Options B and C are correct.
+	
+	\item Options A and C are correct.
+\end{enumerate}
+
+
+\noindent \textbf{Solution:} d) The correct answer is D. Answer A is incorrect as hinted by the formula for calculating the par-yield --- the Par-yield is a kind of weighted-average of the spot rate, thus it could be higher or lower than the spot rate at the same maturity. Answer B is the definition of par-yield. Answer C follows from the following formula $100(1+x)/(1+s)=100$. It suggests that the par-yield of 1-year coupon bond is always its YTM, s.
+
+
+\vspace{30pt}
+
+
+
+\newpage 
+
+
+
+\noindent 20. Suppose that the spot interest rates of the 1-year, 2-year, 3-year and 4-year zero-coupon bonds are 1.63\%, 1.96\%, 2.19\%, 2.47\%, respectively. Please calculate the par yields for 1-year, 2-year, 3-year and 4-year.
+
+\vskip1cm
+
+\noindent \textbf{Solution:} 1.63, 1.96, 2.18, 2.45\%
+
+
+\vspace{70pt}
+
+\noindent 21. Construct the yield curve using the following information. In other words, what are zero rates for 1-, 2-, and 3-year? Assume annual coupon payment.
+
+\begin{table}[h]
+	\begin{tabular}{cccc}
+		Bond & Maturity & Coupon & Price   \\ \hline
+		A    & 1        & \$5    & \$100.8 \\
+		B    & 2        & \$3.5  & \$97.1  \\
+		C    & 3        & \$6.4  & \$94.2  \\ \hline
+	\end{tabular}
+\end{table}
+
+\noindent \textbf{Solution:} 0.04166, 0.05077, 0.0895
+
+
+\vspace{70pt}
+
+
+
+
+
+\noindent 22. Regarding the bootstrapping and regression approaches, which of the following statements is true?
+
+\begin{enumerate}[a]
+	
+	\item The regression approach provides a perfectly accurate measure of spot rates at all maturities.
+	
+	\item The yield curve constructed by bootstrapping and regression approaches is either upward or downward sloping; that is, cannot be either hump-shaped or “U”-shaped.
+	
+	\item The yield curve constructed by bootstrapping and regression approaches might be “discontinuous”, and linear interpolation can be used to fill “gaps” in the yield curve.
+	
+	\item The yield curve constructed by the regression approach is too inaccurate to be useful.
+\end{enumerate}
+
+
+
+\noindent \textbf{Solution}: (c).  (a) is not true, since the regression approach incurs an error, which it tries to minimize. (b) is not true, as both approaches can produce hump or “U” shapes. (d) is also incorrect; although there are more refined methods that fit the data better than a linear regression, it does not follow that this method is entirely useless.
+
+\vspace{30pt}
+
+
+
+\newpage
+
+
+
+\noindent 23. Assuming that that the pure expectation hypothesis of interest rate holds, if the yield curve is upward-sloping, then investors are expecting the interest rates to:
+
+\begin{enumerate}[a]
+	
+	\item Stay constant over the foreseeable horizon
+	
+	\item Rise in the future
+	
+	\item Fall in the future
+	
+	\item Cannot be determined without further information
+\end{enumerate}
+
+
+
+\noindent \textbf{Solution}: (b). An upward-sloping yield curve implies that the forward interest rate is higher than the spot rate. Under the strong form of the pure expectation hypothesis of interest rates, the forward interest rate is equal to the expected future spot rates, which implies that the expected future spot rate is higher than the current spot rate. So investors are expecting a rise in interest rate in the future.
+
+\vspace{30pt}
+
+
+
+
+
+\noindent 24. The price risk premium reflects the amount that is required to compensate investors for the higher price risk of holding longer-term securities because:
+
+\begin{enumerate}[a]
+	
+	\item Longer-term securities are more expensive
+	
+	\item Longer-term securities have greater convexity
+	
+	\item Longer-term securities have smaller cash flows
+	
+	\item Longer-term securities have higher duration
+	
+	\item Longer-term securities are less liquid
+\end{enumerate}
+
+
+
+\noindent \textbf{Solution}: (d). The reason why longer-term securities have greater price risk is because their price is more sensitive to changes in yields; that is, they have higher duration.
+
+\vspace{30pt}
+
+
+
+
+
+\newpage
+
+
+\noindent 25. Other things being equal, the convexity premium:
+
+\begin{enumerate}[a]
+	
+	\item Increases with the maturity
+	
+	\item Decreases with maturity
+	
+	\item Remains constant as maturity increases
+	
+	\item Has no identifiable relationship with maturity
+\end{enumerate}
+
+
+
+\noindent \textbf{Solution}: (b)  Other things being equal, longer the maturity, higher the convexity. Higher convexity implies that the upside risk to the bond price is higher than the downside risk. Therefore, the convexity premium will decrease with the maturity. That is, (all else equal) shorter-maturity bonds pay a premium over longer-maturity bonds due to their lower convexity.
+
+\vspace{30pt}
+
+
+
+
+
+
+
+\noindent 26. You are given the following information (the pure expectation of future spot rates $E[s_{i-1,1}]$, the term premium $tp$, at different maturities). Assume that $t = 0$ (today), therefore we drop the subscript $t$ from all of the expressions below. Calculate the forward interest rates and spot rates.
+
+\begin{table}[h]
+	\begin{tabular}{cccccc}
+		i & 1      & 2      & 3      & 4      & 5      \\ \hline
+	$E[s_{i-1,1}]$	& 5.00\% & 4.50\% & 4.30\% & 4.00\% & 3.80\% \\
+	$tp$	& 0.00\% & 0.40\% & 0.60\% & 1.10\% & 1.50\% \\
+	$f_{i-1,i}$	&        &        &        &        &        \\
+	$s_i$	&        &        &        &        &        \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\noindent \textbf{Solution}:  
+\begin{table}[h]
+	\begin{tabular}{llllll}
+		i & 1      & 2      & 3      & 4      & 5      \\ \hline
+		& 5.00\% & 4.50\% & 4.30\% & 4.00\% & 3.80\% \\
+		& 0.00\% & 0.40\% & 0.60\% & 1.10\% & 1.50\% \\
+		& 5.00\% & 4.90\% & 4.90\% & 5.10\% & 5.30\% \\
+		& 5.00\% & 4.95\% & 4.93\% & 4.97\% & 5.04\% \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\vspace{70pt}
+
+\newpage
+
+\noindent 27. If the market segmentation hypothesis holds, which of the following statements is correct?
+
+\begin{enumerate}[a]
+	
+	\item Investors who trade in the short-term bond market do not (or cannot) trade in the long-term bond market and vice versa.
+	
+	\item An increase in the supply of the short-term bond will not drive up the price of long-term bond.
+	
+	\item An increase in the demand of the short-term bond will drive up the price of long-term bond.
+	
+	\item Options A and C only.
+	
+	\item Options A and B only.
+	
+	\item None of the above
+\end{enumerate}
+
+
+
+\noindent \textbf{Solution}: (e)  Statement C is incorrect because the market for short-term and long term bonds are independent, thus the change in the supply and demand conditions in one market cannot affect the supply and demand condition in the other market.
+
+
+\vspace{30pt}
+
+
+
+\end{document} 

@@ -1,0 +1,614 @@
+---
+title: "Practice Problem Set"
+subtitle: "BUSS254 Investments"
+author: "Prof. Ji-Woong Chung"
+format: html
+number-sections: true
+execute:
+    echo: false
+    eval: false
+---
+
+-   If you notice any typos or errors, please feel free to [email me](chung_jiwoong@korea.ac.kr).
+
+---
+
+## Problem
+
+What is the investor allowed to do when the bond is embedded with a put option (i.e. puttable bonds)?
+
+a. The issuer can repurchase the bond at specific price before maturity.
+
+b. The investor can modify the bond maturity by selling the bond back to the issuer at par value on designated dates.
+
+c. The investor can sell the issue back to the issuer at the bond price at a designated date.
+
+d. The investor can sell the issue back to the issuer at par value at the maturity date.
+
+## Problem
+
+When the interest rate used to calculate the NPV is equal to the IRR it holds that:?
+
+a. The initial investment is greater than the present discounted value of the cash flows.
+
+b. The initial investment is equal to the present discounted value of the cash flows.
+
+c. The initial investment is lower than the present discounted value of the cash flows.
+
+## Problem
+
+The price of a coupon bond increases when, all else equal:
+
+a. The coupon rate increases.
+
+b. The yield-to-maturity (YTM) increases.
+
+c. The time to maturity increases.
+
+d. None of the above.
+
+## Problem
+
+Consider the following bonds:
+
+Bond X: 2-year zero coupon bond, pays \$201 at maturity;
+
+Bond Y: 1- year zero coupon bond, pays \$10 at maturity;
+
+Bond Z: 2-year, 5\% coupon (paid semiannually) bond, face value = \$200.
+
+Suppose you construct a portfolio of X+Y consisting of (long positions of) Bond X and Bond Y so that you have combined the cash flows at their defined dates.
+
+If the YTM is the same for all bonds and the portfolio considered, which of the following is true?
+
+a. Price(Z) > Price(X+Y)
+
+b. Price(Z) = Price(X+Y)
+
+c. Price(Z) < Price(X+Y)
+
+d. Cannot determine which price is greater without further information.
+
+## Problem
+
+Consider a bond maturing in 20 years, paying 8\% semiannual coupons, with face value of \$1,000. Assume the YTM is 6\%. Find the bond price. Find the price of the above bond if the YTM rises to 10\%.
+
+\vspace{70pt}
+
+## Problem
+
+Suppose that the price of a bond is equal to \$900. You know that using a YTM equal to 8\% to discount the bond cash flows, you obtain a present value equal to \$850. Hence, we can assume that the YTM will definitely be:
+
+a. Higher than 8\%
+
+b. Lower than 8\%
+
+c. Equal to 8\%
+
+d. Cannot determine how large the YTM can be without further information.
+
+## Problem
+
+Consider a bond, paying 8\% semiannual coupons, with face value of \$1,000, maturing in 15 years and selling for \$724.7. Find the (annual) YTM. What is the effective annual yield? (Hint: You can use IRR function or Goal Seek in Excel)
+
+\vspace{70pt}
+
+## Problem
+
+What is the YTM of a \$100 face value 15-year bond paying 7.5\% annual coupons and priced at 102.45?
+
+\vspace{70pt}
+
+## Problem
+
+Consider a 20-year bond paying 8.5\% (semi-annually) and selling for \$850.42 per \$1,000 par value. This bond is callable in 5 years at \$1,025. Find the yield-to-call (YTC). (Hint: You can use IRR function or Goal Seek in Excel. YTC is the YTM until the call date.)
+
+\vspace{70pt}
+
+## Problem
+
+A bond is trading at a premium when:
+
+a. Its coupon rate is lower than the YTM
+
+b. Its coupon rate is equal to the YTM
+
+c. Its coupon rate is higher than the YTM
+
+d. None of the Above
+
+## Problem
+
+Consider three bonds, A, B and C, each maturing in 30, 15, and 5 years, respectively, and paying 7\% semiannual coupons, and with face value of \$1,000.
+
+What can you say about the relationship between the bond price and the YTM?
+
+a. The relationship is negative and convex.
+
+b. The relationship is negative and concave.
+
+c. There is a linear positive relationship between YTM and bond prices.
+
+d. There is a negative linear relationship between YTM and bond prices.
+
+## Problem
+
+(From 11) When do the three bonds have the same price?
+
+a. At maturity
+
+b. At ten years from maturity
+
+c. When the coupon rate is equal to the YTM
+
+d. Options A and C
+
+e. None of the above
+
+## Problem
+
+(From 11) Which of the three bonds is most sensitive to changes in the YTM?
+
+a. Bond A
+
+b. Bond B
+
+c. Bond C
+
+d. All three have the same sensitivity.
+
+e. More information is needed.
+
+## Problem
+
+Suppose you have a 20-year bond paying 8\% semiannual coupon, with face value of \$1,000. As we approach maturity, what happens to the price of the bond?
+
+a. The bond price converges toward the face value.
+
+b. The bond price diverges from its face value.
+
+c. The bond can converge or diverge depending on whether it is premium or discount.
+
+d. There is no clear pattern in how the bond price moves over time.
+
+## Problem
+
+Suppose that on October 22, 2015 you buy a bond which paid the last annual coupon on June 15, 2015. The bond pays 8.3\% annual coupons and matures on June 15, 2021. Its current market (clean) price is \$102.48, while its face value is \$100. The accrued interest calculation basis is Actual/365. 1) Calculate accrued interest, which is due to the previous bondholder. 2) Calculate the dirty price. 3) Calculate the YTM.
+
+\vspace{100pt}
+
+## Problem
+
+When settlement date and coupon dates are the same, the accrued interest is equal to:
+
+a. The coupon payment
+
+b. Different possible values, depending on the basis used to calculate accrued interest
+
+c. Twice the coupon payment
+
+d. Zero
+
+## Problem
+
+Suppose that you are a fund manager at a sovereign wealth fund and have a portfolio of ten semiannual coupon bonds, with their characteristics (coupon rates, maturity, price, yield, face value) shown in the spreadsheet (``B254\_PS\_4\_Q17\_Data.xlsx''). Calculate (1) the portfolio semiannual YTM, (2) the bond–equivalent yield (=semiannual YTM$\times 2$), and (3) the effective annual yield.
+
+## Problem
+
+The bond price is \rule{1cm}{0.15mm} in YTM.?
+
+a. decreasing and convex
+
+b. decreasing and concave
+
+c. increasing and convex
+
+d. increasing and concave
+
+## Problem
+
+The current YTM is 5\% and the price of the bond is \$100. Suppose that the yield increases by 100 bps (that is, to 6\%), and the bond price declines by \$10. Suppose that the YTM then increases further, by another 100 bps (that is, to 7\%). The bond price will \rule{1cm}{0.15mm}.
+
+a. rise by less than \$10
+
+b. rise by more than \$10
+
+c. decline by less than \$10
+
+d. decline by more than \$10
+
+## Problem
+
+Cash can be thought of as an asset. What is the duration for cash?
+
+## Problem
+
+Consider the following bonds:
+
+Bond A: 1-year zero-coupon bond (face value = \$100)
+
+Bond B: 2-year zero-coupon bond (face value = \$1,000)
+
+Bond C: 2-year coupon bond paying a 10\% annual coupon (face value = \$1,000)
+
+Then, Bonds A and B are combined to produce a fourth bond, D (whose cash flows are equal to those of A + those of B). Which of the following is true?
+
+a. A has a higher duration than B
+
+b. B has a lower duration than C
+
+c. C has a higher duration than D
+
+d. None of the above
+
+## Problem
+
+What is the Macaulay duration of the following bond? .
+
+Face Value \$100
+
+Maturity (years) 5
+
+Coupon Rate: 5\%
+
+YTM: 5\%
+
+Coupon Frequency: 2
+
+## Problem
+
+What is the coupon rate for the following bond?
+
+Settlement Date: 1-Jan-2016
+
+Maturity Date: 1-Jan-2021
+
+Macaulay Duration: 5 years
+
+YTM: 3\%
+
+## Problem
+
+Which of the following bonds has a longer duration?
+
+a. Bond Y, a coupon bond with a 5-year maturity
+
+b. Bond X, with the same coupon payments and YTM, but with a maturity of 30 years
+
+c. Neither, Y and X have the same durations.
+
+d. Cannot compare the durations of Y and X without further information
+
+## Problem
+
+Consider a coupon bond with 10-year maturity. The YTM increases from 5\% to 10\% (while everything else remains the same). Which of the following is correct?
+
+a. The bond’s price increases
+
+b. The bond’s duration decreases
+
+c. Neither (a) nor (b)
+
+d. Both (a) and (b)
+
+## Problem
+
+Today you are considering buying Bond L or Bond M, and are concerned about their price sensitivities. L and M are identical in their coupon rate, YTM, and the frequency of coupon payments. The only difference is that L has a shorter maturity than M. Suppose that if the YTM increases by 100 bps, L’s price will decrease by 5\%. Therefore, M’s price will \rule{1cm}{0.15mm}.
+
+a. decrease by less than 5\%
+
+b. decrease by more than 5\%
+
+c. increase by less than 5\%
+
+d. crease by more than 5\%
+
+## Problem
+
+For which of the following bonds is the price more sensitive to changes in the YTM?
+
+a. 30-year bond with 5\% coupon rate and semiannual coupon payment.
+
+b. Zero coupon bond with 15-year maturity.
+
+c. (a) and (b) have the same price sensitivity.
+
+d. Cannot determine which has higher price sensitivity without further information.
+
+## Problem
+
+Consider a bond with Macaulay duration of 5.5 years. The YTM is 10\%. When the YTM increases by 100 bps (to 11\%), what should happen to the price (as an approximation using duration)?
+
+a. The price decreases by 5.5\%
+
+b. The price decreases by 5\%
+
+c. The price decreases by 10\%
+
+d. The price increases by 5.5\%
+
+e. The price increases by 5\%
+
+## Problem
+
+You are doing a stress test for K-Bank. The only asset that K-Bank has is \$250 million invested in the following security.
+
+Settlement Date: 1 January 2016
+
+Maturity Date: 1 January 2018
+
+Face Value: 100
+
+Coupon Rate: 4\%
+
+Frequency (per year): 2
+
+YTM: 5\%
+
+Day count basis: ACT/360
+
+If the YTM increases by 1,000 bps, by how much (approximately) do you expect K-Bank’s asset to shrink?
+
+\vspace{20pt}
+
+## Problem
+
+Portfolio immunization consists of….
+
+a. Minimizing liabilities to minimize portfolio risk
+
+b. Equalizing the duration of assets to that of liabilities
+
+c. Maximizing dividend payoffs to shareholders
+
+d. Driving the duration of equity to zero
+
+e. Eliminating all risk from the portfolio
+
+f. All of the above
+
+## Problem
+
+When the YTM changes, either up or down, the actual price of the security compared to a price obtained by a (linear) approximation using duration is …
+
+a. Higher
+
+b. Lower
+
+c. Exactly equal to
+
+d. Can be higher or lower than the approximated price, depending on other characteristics of the security.
+
+## Problem
+
+Suppose two bonds have the same price and duration. If YTM changes, the price of the higher convexity bond will be \rule{1cm}{0.15mm} the price of the lower convexity bond.
+
+a. Higher than
+
+b. Lower than
+
+c. Equal to
+
+d. Higher, lower or equal to (depends on other characteristics)
+
+## Problem
+
+Consider a bond which has a maturity of four years and pays a 3\% coupon rate (with annual coupon payments). The bond sells at par value of \$100. First, calculate the bond's (modified) convexity. If YTM increases by 200 bps, calculate the new price of the bond predicted by using both duration and convexity.
+
+## Problem
+
+Consider three bonds: Alpha, Beta and Epsilon, as follows:
+
+|         | Maturity | Duration | Convexity |
+| :------ | :------- | :------- | :-------- |
+| Alpha   | 2        | 1.9      | 0.05      |
+| Beta    | 5        | 4.1      | 0.25      |
+| Epsilon | 10       | 7.5      | 0.95      |
+
+Suppose an investor has constructed a portfolio Gamma consisting of \$7,500 of Alpha and \$5,000 of Epsilon.
+
+a) What is the duration of Gamma?
+
+b) What is the convexity of Gamma?
+
+c) The investor claims that he prefers Gamma - with a value of \$12,500 - to the same amount invested in Beta. Why is this so? (Continue to assume that YTM is the same for both investments regardless of their maturities).
+
+## Problem
+
+Suppose that the YTM of the 1-year, 2-year, and 3-year zero coupon bonds are 2\%, 3\% and 3.5\%, respectively. A 3-year coupon bond is trading at \$106.8, what is the coupon payment of the bond? Assume annual coupon payment.
+
+## Problem
+
+Concerning the par-yield, which of the following statements is correct?
+
+a. The par-yield is always higher than the spot rate at the same maturity.
+
+b. It is the coupon rate that makes the par value equal to the present value of cash flow, given the YTM.
+
+c. For a 1-year annual coupon bond, its par-yield is always its YTM.
+
+d. Options B and C are correct.
+
+e. Options A and C are correct.
+
+## Problem
+
+Suppose that the spot interest rates of the 1-year, 2-year, 3-year and 4-year zero-coupon bonds are 1.63\%, 1.96\%, 2.19\%, 2.47\%, respectively. Please calculate the par yields for 1-year, 2-year, 3-year and 4-year.
+
+\vskip1cm
+
+## Problem
+
+Construct the yield curve using the following information. In other words, what are zero rates for 1-, 2-, and 3-year? Assume annual coupon payment.
+
+|   Bond | Maturity | Coupon | Price   |
+| :----- | :------- | :----- | :------ |
+| A      | 1        | \$5    | \$100.8 |
+| B      | 2        | \$3.5  | \$97.1  |
+| C      | 3        | \$6.4  | \$94.2  |
+
+## Problem
+
+Regarding the bootstrapping and regression approaches, which of the following statements is true?
+
+a. The regression approach provides a perfectly accurate measure of spot rates at all maturities.
+
+b. The yield curve constructed by bootstrapping and regression approaches is either upward or downward sloping; that is, cannot be either hump-shaped or “U”-shaped.
+
+c. The yield curve constructed by bootstrapping and regression approaches might be “discontinuous”, and linear interpolation can be used to fill “gaps” in the yield curve.
+
+d. The yield curve constructed by the regression approach is too inaccurate to be useful.
+
+## Problem
+
+Assuming that that the pure expectation hypothesis of interest rate holds, if the yield curve is upward-sloping, then investors are expecting the interest rates to:
+
+a. Stay constant over the foreseeable horizon
+
+b. Rise in the future
+
+c. Fall in the future
+
+d. Cannot be determined without further information
+
+## Problem
+
+The price risk premium reflects the amount that is required to compensate investors for the higher price risk of holding longer-term securities because:
+
+a. Longer-term securities are more expensive
+
+b. Longer-term securities have greater convexity
+
+c. Longer-term securities have smaller cash flows
+
+d. Longer-term securities have higher duration
+
+e. Longer-term securities are less liquid
+
+## Problem
+
+Other things being equal, the convexity premium:
+
+a. Increases with the maturity
+
+b. Decreases with maturity
+
+c. Remains constant as maturity increases
+
+d. Has no identifiable relationship with maturity
+
+## Problem
+
+You are given the following information (the pure expectation of future spot rates $E[s_{i-1,1}]$, the term premium $tp$, at different maturities). Assume that $t = 0$ (today), therefore we drop the subscript $t$ from all of the expressions below. Calculate the forward interest rates and spot rates.
+
+| i      | 1      | 2      | 3      | 4      | 5      |
+| :----- | :----- | :----- | :----- | :----- | :----- |
+| $E[s_{i-1,1}]$ | 5.00\% | 4.50\% | 4.30\% | 4.00\% | 3.80\% |
+| $tp$   | 0.00\% | 0.40\% | 0.60\% | 1.10\% | 1.50\% |
+| $f_{i-1,i}$  |        |        |        |        |        |
+| $s_i$  |        |        |        |        |        |
+
+## Problem
+
+If the market segmentation hypothesis holds, which of the following statements is correct?
+
+a. Investors who trade in the short-term bond market do not (or cannot) trade in the long-term bond market and vice versa.
+
+b. An increase in the supply of the short-term bond will not drive up the price of long-term bond.
+
+c. An increase in the demand of the short-term bond will drive up the price of long-term bond.
+
+d. Options A and C only.
+
+e. Options A and B only.
+
+f. None of the above
+
+# Programming Exercises (Optional)
+
+## Exercise: Bond Pricing and YTM Calculation
+
+Write an R function that calculates the price of a bond given its maturity (years), coupon rate (annual, as a decimal), face value, and YTM (as a decimal), assuming semi-annual coupon payments.  Then, write another R function that calculates the YTM given its Maturity (years), coupon rate (annual, as a decimal), Face Value and the Price.
+
+Show that the functions are working correctly by using the prior problem where it says: "Consider a bond maturing in 20 years, paying 8\% semiannual coupons, with face value of \$1,000. Assume the YTM is 6\%. Find the bond price. Find the price of the above bond if the YTM rises to 10\%."
+
+```r
+# Function to calculate the price of a bond
+bond_price <- function(maturity, coupon_rate, face_value, ytm) {
+  n <- maturity * 2 # Number of periods
+  coupon <- coupon_rate * face_value / 2 # Semi-annual coupon payment
+  ytm_semi <- ytm / 2 # Semi-annual YTM
+  
+  # Calculate bond price
+  price <- (coupon * (1 - (1 + ytm_semi)^-n) / ytm_semi) + (face_value / (1 + ytm_semi)^n)
+  return(price)
+}
+
+# Function to calculate the YTM of a bond
+bond_ytm <- function(maturity, coupon_rate, face_value, price) {
+  n <- maturity * 2 # Number of periods
+  coupon <- coupon_rate * face_value / 2 # Semi-annual coupon payment
+  
+  # Create a function to calculate the difference between the market price and the calculated price
+  price_diff <- function(ytm_semi) {
+    if (ytm_semi == 0) return(price - (coupon * n + face_value))  # Handle zero division case
+    calculated_price <- (coupon * (1 - (1 + ytm_semi)^-n) / ytm_semi) + (face_value / (1 + ytm_semi)^n)
+    return(price - calculated_price)
+  }
+  
+  # Use uniroot to find the YTM that makes price_diff equal to zero
+  result <- uniroot(price_diff, interval = c(0.0001, 1)) # Interval is semi-annual YTM between 0 and 1
+  ytm_semi <- result$root
+
+  
+  ytm <- ytm_semi * 2 # Annual YTM
+  return(ytm)
+}
+
+# Test the function with the given values
+maturity <- 20
+coupon_rate <- 0.08
+face_value <- 1000
+ytm1 <- 0.06
+ytm2 <- 0.10
+
+price1 <- bond_price(maturity, coupon_rate, face_value, ytm1)
+price2 <- bond_price(maturity, coupon_rate, face_value, ytm2)
+
+cat("Bond price with 6% YTM:", price1, "\n")
+cat("Bond price with 10% YTM:", price2, "\n")
+
+# Test the YTM function with the first bond:
+cat("YTM of Bond 1: ", bond_ytm(maturity, coupon_rate, face_value, price1), "\n")
+```
+
+## R Coding Exercise 2: Portfolio Duration
+
+Create a data frame in R that represents the bonds in Portfolio Gamma (Alpha and Epsilon).  The data frame should include columns for:
+
+*   Bond Name (Alpha, Epsilon)
+*   Value (Investment Amount)
+*   Duration
+*   Convexity
+
+Then, write R code to calculate the portfolio duration and portfolio convexity of Gamma, as described in the solution to the problem.
+
+```r
+# Create a data frame for the bonds in Portfolio Gamma
+bonds <- data.frame(
+  BondName = c("Alpha", "Epsilon"),
+  Value = c(7500, 5000),
+  Duration = c(1.9, 7.5),
+  Convexity = c(0.05, 0.95)
+)
+
+# Calculate portfolio duration
+total_value <- sum(bonds$Value)
+portfolio_duration <- sum(bonds$Duration * bonds$Value) / total_value
+
+# Calculate portfolio convexity
+portfolio_convexity <- sum(bonds$Convexity * bonds$Value) / total_value
+
+cat("Portfolio Duration:", portfolio_duration, "\n")
+cat("Portfolio Convexity:", portfolio_convexity, "\n")
+```

@@ -1,5 +1,5 @@
 ---
-title: "Practice Problem Set 1"
+title: "Practice Problem Set - Solution"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
 format: html

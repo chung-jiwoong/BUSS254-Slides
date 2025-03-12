@@ -26,7 +26,7 @@
 
 **Lecture3: Financial Markets 2 (Capital Markets)**
 
-[Note: HTML](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_market2/chapter_market2.html) 
+[Note: HTML](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_market2/chapter_market2.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_market2/chapter_market2.pdf) / 
 
 
