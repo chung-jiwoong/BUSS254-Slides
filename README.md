@@ -43,4 +43,5 @@
 [Note: HTML](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_fixed/chapter_fixed.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_fixed/chapter_fixed.pdf) / 
 [Problem Set](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_fixed/problem_fixed.html) / 
-[Solution](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_fixed/solution_fixed.html)
+[Solution](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_fixed/solution_fixed.html) / 
+[Duration and Convexity](https://raw.githack.com/chung-jiwoong/BUSS254-Slides/refs/heads/main/chapter_fixed/data/Duration_Convexity1.xlsx)
