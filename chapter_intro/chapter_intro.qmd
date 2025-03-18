@@ -607,7 +607,7 @@ ggplot(data, aes(x = Returns, fill = Type)) +
 - Value at Risk (VaR) represents the potential loss in value of a portfolio, given a certain probability over a specific time period.
     - Key question: How much could we lose with a given probability
     - E.g., with a 5% probability, our portfolio may experience a loss greater than the VaR amount.
-    - I.e., There is a 95% probability that our loss will not excees the VaR amount.
+    - I.e., There is a 95% probability that our loss will not exceed the VaR amount.
 
 
 ::: {style="text-align: center;"}
@@ -660,7 +660,7 @@ $$
 
 ## Value at Risk - Example II
 
-- ***Q.*** A portfolio worth \$10 million has a 1-day standard deviation of \$200,000 and an approximate mean of zero. Assume that the change is normally distributed. What is the 1-day 99% VaR for our portfolio consisting of a \$10 million position in Microsoft? What is the 10-day 99% VaR?
+- ***Q.*** A portfolio worth \$10 million has a 1-day standard deviation of \$200,000 and an approximate mean of zero. Assume that the change is normally distributed. What is the 1-day 99% VaR for our portfolio consisting of a \$10 million position? What is the 10-day 99% VaR?
     
     ***Answer:*** $\texttt{norm.s.inv(0.01)} = -2.326$, meaning that there is a 1% probability that a normally distributed variable will decrease in value by more than 2.326 standard deviations.
     

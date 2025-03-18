@@ -1,5 +1,5 @@
 ---
-title: "Practice Problem Set - Solution"
+title: "Fixed Income Securities - Solution"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
 format: html

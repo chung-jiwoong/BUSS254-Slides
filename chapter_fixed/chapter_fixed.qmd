@@ -3,7 +3,6 @@ title: "Fixed Income Securities"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
 format: 
-  #pdf: default
   revealjs:
     theme: simple
     transition: fade
@@ -11,6 +10,7 @@ format:
     scrollable: true
     slide-number: true
     chalkboard: TRUE
+  pdf: default
 revealjs-plugins:
   - revealjs-text-resizer 
 execute:
@@ -28,6 +28,8 @@ execute:
 *   Swap rates
 *   Interest rate risk: measurement and management
 *   Term structure of interest rates
+*   Reading: BKM, Ch. 14, 15, and 16, Tuckman and Serrat, Ch. 1 - 4
+
 
 
 # Fixed Income: Basics
@@ -662,7 +664,7 @@ $$
 The SOFR curve, for example, gives the fixed rates that can be exchanged for SOFR for various terms.
 
 ::: {style="text-align: center;"}
-![](fixed_SOFR_Curve.png)
+![](img/fixed_SOFR_Curve.png)
 :::
 
 
@@ -745,7 +747,7 @@ Solving for $d$'s (can use matrix), you can use discount factors in the table. C
 *   When spot rates are increasing, swap (par) rates are below spot rates.
 
 ::: {style="text-align: center;"}
-![](fixed_Forward_Spot_Swap_Curve.png)
+![](img/fixed_Forward_Spot_Swap_Curve.png)
 :::
 
 
@@ -821,11 +823,11 @@ NB Beware of units (decimal or percentage). It's confusing!
 
 
 
-*   Dollar duration: $ D_d = - dP/dy $
+*   Dollar duration: $D_d = - dP/dy$
 
     *   The change in the dollar price of a bond for a 1 unit (i.e. 100\%) change in interest rates (per \$100 face)
 
-*   $DV01$ (Dollar Value of 0.01\%): $ DV01 = D_d/10,000, $ ($100\%=10,000 bps) $
+*   $DV01$ (Dollar Value of 0.01\%): $DV01 = D_d/10,000, (100\%=10,000 bps)$
 
     *   The change in the price of a bond for 1 bps of change in interest rates (per \$100 face)
 
@@ -843,7 +845,7 @@ $$
 P(y) = \frac{100c}{y} \left( 1- \frac{1}{\left( 1+\frac{y}{2} \right)^{2T}} \right) + \frac{1}{\left( 1+\frac{y}{2} \right)^{2T}}
 $$
 
-Then $DV01 = \frac{1}{10,000} D_d = \frac{1}{10,000} dP/dy  $.
+Then $DV01 = \frac{1}{10,000} D_d = \frac{1}{10,000} dP/dy$.
 
 $$
 DV01 =\frac{1}{10,000} \frac{1}{1+\frac{y}{2}} \left[ \frac{100c}{2} \sum_{t=1}^{2T} \frac{t}{2} \frac{1}{\left( 1+\frac{y}{2} \right)^t} + T \frac{100}{\left( 1+\frac{y}{2} \right)^{2T}} \right]
@@ -855,7 +857,7 @@ $$
 
 ## Duration
 
-*   (Modified or Adjusted) Duration: $ D = - \frac{(d P / P)}{d y} = D_d/P $
+*   (Modified or Adjusted) Duration: $D = - \frac{(d P / P)}{d y} = D_d/P$
 
     *   The *percent* change in price for a 100 basis point change in yield.
 
@@ -871,11 +873,11 @@ $$
 
 *   The first derivative of price function, $P(y)$. The slope (tangent line) of $P(y)$ at $y$.
 
-*   The terms inside the brackets in (3) $ = \sum_{t=1}^{2T} \frac{t}{2} W_t$
+*   The terms inside the brackets in (3) $= \sum_{t=1}^{2T} \frac{t}{2} W_t$
 
     *   The weighted sum of the times at which cash flows are received, with $W_t = $ the present value of the cash flow received at that time.
 
-*   The terms inside the brackets in (5) $ = \sum_{t=1}^{2T} \frac{t}{2} \omega_t$
+*   The terms inside the brackets in (5) $= \sum_{t=1}^{2T} \frac{t}{2} \omega_t$
 
     *   $\omega_t = W_t/P$, the present value of the cash flow received at that time divided by the bond price.
 
@@ -895,9 +897,9 @@ $$
 
     *   Instead of taking derivative, perturbe $y$ by $x$ bp and see how much $P$ changes.
 
-    *   $ D_d = - dP/dy \Longrightarrow - \Delta P/ \Delta y$
+    *   $D_d = - dP/dy \Longrightarrow - \Delta P/ \Delta y$
 
-    *   $ D = - \frac{(d P / P)}{d y} \Longrightarrow - \frac{(\Delta P / P)}{\Delta y} $
+    *   $D = - \frac{(d P / P)}{d y} \Longrightarrow - \frac{(\Delta P / P)}{\Delta y}$
 
 *   Does not assume parallel shifts in bond yields (talk later).
 
@@ -958,7 +960,7 @@ $$
 
 *   A measure of the price sensitivity (semi-elasticity) to a change in YTM.
 
-1.  $ D \approx T$ ($D_{Mac} = T) $ for zero-coupon bonds.
+1.  $D \approx T$ ($D_{Mac} = T)$ for zero-coupon bonds.
 
 2.  Higher maturity, higher $D$
 
@@ -1150,7 +1152,7 @@ See Excel spreadsheet, *Fixed\_Income.xlsx*
 
     *   Investors require premium to hold a bond with a particular maturity over another maturity.
 
-    *   Suppose $ r_2 = \frac{r_1+ E[r_{1,2}]+tp_{1,2}}{2}$.
+    *   Suppose $r_2 = \frac{r_1+ E[r_{1,2}]+tp_{1,2}}{2}$.
 
     *   Even when $r_1 = E[r_{1,2}]$, i.e., the market does not expect rates to rise, $r_2 > r_1$ if $tp_{1,2}>0$.
 
@@ -1339,17 +1341,17 @@ The bank wants to reduce the duration of its equity from 43 to 0. That is, it wa
 
 3.  Find $x$ and $y$ in:
 
-    *   $x(7.005) = \$1mm(4.1688) \Rightarrow x =\$593,861.5 $
+    *   $x(7.005) = \$1mm(4.1688) \Rightarrow x =\$593,861.5$
 
-    *   $y(2.7) = \$1mm(4.1688) \Rightarrow y = \$1,540,720 $
+    *   $y(2.7) = \$1mm(4.1688) \Rightarrow y = \$1,540,720$
 
 4.  If yields rise by 1\% overnight on all the bonds:
 
-    *   For 5 yr, yield to 7.9\%,: $P=\$959.423/1,000=0.959423$, Loss: $(\$1,000,000)(1-0.959423) = \$40,577 $
+    *   For 5 yr, yield to 7.9\%,: $P=\$959.423/1,000=0.959423$, Loss: $(\$1,000,000)(1-0.959423) = \$40,577$
 
     *   For 10 year yield to 7.5\% $P=\$1034.81/1109=0.93311$, Loss: $(\$595,167)(1-0.93311) = \$39,810$
 
-    *   For 3 year yield to 7\%: $P=\$981.42/\$1,008.1=0.97353$, Loss: $(\$1,543,947)(1-.97353) = \$40,861 $
+    *   For 3 year yield to 7\%: $P=\$981.42/\$1,008.1=0.97353$, Loss: $(\$1,543,947)(1-.97353) = \$40,861$
 
 ## Example (cont'd)
 
@@ -1365,11 +1367,11 @@ The bank wants to reduce the duration of its equity from 43 to 0. That is, it wa
 
 *   Match hedge ratios:
 
-    *   $ \$1m(4.1688) = P2(7.005) + P3(2.700)$
+    *   $\$1m(4.1688) = P2(7.005) + P3(2.700)$
 
 *   Match gamma:
 
-    *   $ \$1m(21.038) = P2(62.98) + P3(8.939) $
+    *   $\$1m(21.038) = P2(62.98) + P3(8.939) $
 
 *   2 linear equations in two unknowns. Solve for P2 and P3.
 
@@ -1418,14 +1420,5 @@ The bank wants to reduce the duration of its equity from 43 to 0. That is, it wa
         *   If this shift is not parallel, anything could happen.
 
 *   Tread-off: yield vs. convexity!
-
-## References
-
-*   BKM, Chapters 14, 15, and 16
-
-*   Tuckman and Serrat, Chapters 1 through 4
-
-*   Prof. Jennifer Carpenter's lecture notes
-
 
 

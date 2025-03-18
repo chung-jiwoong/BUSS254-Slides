@@ -242,8 +242,8 @@ A **repurchase agreement (repo)** is a short-term secured loan where securities 
 **Repos and Monetary Policy**
 
 - **Central banks** use **repos and reverse repos** to manage liquidity and control short-term rates.
-  - **Injecting liquidity**: A repo transaction (**central bank buys securities**) adds reserves to the system.  
-  - **Draining liquidity**: A reverse repo (**central bank sells securities**) absorbs reserves, reducing money supply.  
+  - **Injecting liquidity**: A reverse transaction (**central bank buys securities**) adds reserves to the system.  
+  - **Draining liquidity**: A repo (**central bank sells securities**) absorbs reserves, reducing money supply.  
   - **Repo rates influence** credit conditions, inflation, and economic growth.
 
 **Significance of the Repo Market**

@@ -152,6 +152,7 @@ Prof.&nbsp;Ji-Woong Chung
 <li>Swap rates</li>
 <li>Interest rate risk: measurement and management</li>
 <li>Term structure of interest rates</li>
+<li>Reading: BKM, Ch. 14, 15, and 16, Tuckman and Serrat, Ch. 1 - 4</li>
 </ul>
 </section>
 <section>
@@ -876,7 +877,7 @@ P = \frac{c/2}{y/2} \left( 1 - \frac{1}{(1+y/2)^{2T}} \right) + \frac{1}{(1+y/2)
 <h2>Term Structure of SOFR Rates</h2>
 <p>The SOFR curve, for example, gives the fixed rates that can be exchanged for SOFR for various terms.</p>
 <div style="text-align: center;">
-<p><img data-src="fixed_SOFR_Curve.png"></p>
+<p><img data-src="img/fixed_SOFR_Curve.png"></p>
 </div>
 </section>
 <section id="pricing-interest-rate-swaps" class="slide level2">
@@ -948,7 +949,7 @@ r_t \approx \frac{f_{0.5} + f_{1} + ... + f_{t}}{2t}
 <li><p>When spot rates are increasing, swap (par) rates are below spot rates.</p></li>
 </ul>
 <div style="text-align: center;">
-<p><img data-src="fixed_Forward_Spot_Swap_Curve.png"></p>
+<p><img data-src="img/fixed_Forward_Spot_Swap_Curve.png"></p>
 </div>
 </section>
 <section id="bond-pricing-between-coupon-payment-dates" class="slide level2">
@@ -1019,11 +1020,11 @@ r_t \approx \frac{f_{0.5} + f_{1} + ... + f_{t}}{2t}
 <h2>Dollar Duration and DV01</h2>
 <p>NB Beware of units (decimal or percentage). It’s confusing!</p>
 <ul>
-<li><p>Dollar duration: $ D_d = - dP/dy $</p>
+<li><p>Dollar duration: <span class="math inline">\(D_d = - dP/dy\)</span></p>
 <ul>
 <li>The change in the dollar price of a bond for a 1 unit (i.e.&nbsp;100%) change in interest rates (per $100 face)</li>
 </ul></li>
-<li><p><span class="math inline">\(DV01\)</span> (Dollar Value of 0.01%): $ DV01 = D_d/10,000, $ ($100%=10,000 bps) $</p>
+<li><p><span class="math inline">\(DV01\)</span> (Dollar Value of 0.01%): <span class="math inline">\(DV01 = D_d/10,000, (100\%=10,000 bps)\)</span></p>
 <ul>
 <li><p>The change in the price of a bond for 1 bps of change in interest rates (per $100 face)</p></li>
 <li><p>a.k.a Dollar Value of a Basis Point (DVBP), Present Value of a Basis Point (PVBP).</p></li>
@@ -1039,7 +1040,7 @@ P(y) = \frac{100c}{2} \sum_{t=1}^{2T} \frac{1}{\left( 1+\frac{y}{2} \right)^t} +
 <p><span class="math display">\[
 P(y) = \frac{100c}{y} \left( 1- \frac{1}{\left( 1+\frac{y}{2} \right)^{2T}} \right) + \frac{1}{\left( 1+\frac{y}{2} \right)^{2T}}
 \]</span></p>
-<p>Then $DV01 = D_d = dP/dy $.</p>
+<p>Then <span class="math inline">\(DV01 = \frac{1}{10,000} D_d = \frac{1}{10,000} dP/dy\)</span>.</p>
 <p><span class="math display">\[
 DV01 =\frac{1}{10,000} \frac{1}{1+\frac{y}{2}} \left[ \frac{100c}{2} \sum_{t=1}^{2T} \frac{t}{2} \frac{1}{\left( 1+\frac{y}{2} \right)^t} + T \frac{100}{\left( 1+\frac{y}{2} \right)^{2T}} \right]
 \]</span></p>
@@ -1050,7 +1051,7 @@ DV01 = \frac{1}{10,000} \left[ \frac{100c}{y^2} \left( 1- \frac{1}{\left( 1+\fra
 <section id="duration" class="slide level2">
 <h2>Duration</h2>
 <ul>
-<li><p>(Modified or Adjusted) Duration: $ D = - = D_d/P $</p>
+<li><p>(Modified or Adjusted) Duration: <span class="math inline">\(D = - \frac{(d P / P)}{d y} = D_d/P\)</span></p>
 <ul>
 <li>The <em>percent</em> change in price for a 100 basis point change in yield.</li>
 </ul></li>
@@ -1066,11 +1067,11 @@ D = \frac{1}{P} \left[ \frac{100c}{y^2} \left( 1- \frac{1}{\left( 1+\frac{y}{2} 
 <h2>Interpretations</h2>
 <ul>
 <li><p>The first derivative of price function, <span class="math inline">\(P(y)\)</span>. The slope (tangent line) of <span class="math inline">\(P(y)\)</span> at <span class="math inline">\(y\)</span>.</p></li>
-<li><p>The terms inside the brackets in (3) $ = _{t=1}^{2T} W_t$</p>
+<li><p>The terms inside the brackets in (3) <span class="math inline">\(= \sum_{t=1}^{2T} \frac{t}{2} W_t\)</span></p>
 <ul>
 <li>The weighted sum of the times at which cash flows are received, with $W_t = $ the present value of the cash flow received at that time.</li>
 </ul></li>
-<li><p>The terms inside the brackets in (5) $ = _{t=1}^{2T} _t$</p>
+<li><p>The terms inside the brackets in (5) <span class="math inline">\(= \sum_{t=1}^{2T} \frac{t}{2} \omega_t\)</span></p>
 <ul>
 <li><span class="math inline">\(\omega_t = W_t/P\)</span>, the present value of the cash flow received at that time divided by the bond price.</li>
 </ul></li>
@@ -1089,8 +1090,8 @@ D = \frac{1}{P} \left[ \frac{100c}{y^2} \left( 1- \frac{1}{\left( 1+\frac{y}{2} 
 <ul>
 <li><p>Simply replace <span class="math inline">\(d\)</span> with <span class="math inline">\(\Delta\)</span>. To be more realistic, replace <span class="math inline">\(y\)</span> with <span class="math inline">\(r_t\)</span>.</p></li>
 <li><p>Instead of taking derivative, perturbe <span class="math inline">\(y\)</span> by <span class="math inline">\(x\)</span> bp and see how much <span class="math inline">\(P\)</span> changes.</p></li>
-<li><p>$ D_d = - dP/dy - P/ y$</p></li>
-<li><p>$ D = - - $</p></li>
+<li><p><span class="math inline">\(D_d = - dP/dy \Longrightarrow - \Delta P/ \Delta y\)</span></p></li>
+<li><p><span class="math inline">\(D = - \frac{(d P / P)}{d y} \Longrightarrow - \frac{(\Delta P / P)}{\Delta y}\)</span></p></li>
 </ul></li>
 <li><p>Does not assume parallel shifts in bond yields (talk later).</p></li>
 <li><p>Useful for bonds with embedded options (e.g.&nbsp;callable bonds, mortgages) and portfolios of bonds, where the price-yield relationship is ``peculiar.’’</p></li>
@@ -1144,7 +1145,7 @@ D_{c=y} = \frac{1}{y} \left(1- \frac{1}{(1+\frac{y}{2})^{2T}}\right)
 <li><p>A measure of the price sensitivity (semi-elasticity) to a change in YTM.</p></li>
 </ul>
 <ol type="1">
-<li><p>$ D T$ ($D_{Mac} = T) $ for zero-coupon bonds.</p></li>
+<li><p><span class="math inline">\(D \approx T\)</span> (<span class="math inline">\(D_{Mac} = T)\)</span> for zero-coupon bonds.</p></li>
 <li><p>Higher maturity, higher <span class="math inline">\(D\)</span></p></li>
 <li><p>Higher coupon, lower <span class="math inline">\(D\)</span></p></li>
 <li><p>Higher yield (market rate), lower <span class="math inline">\(D\)</span></p></li>
@@ -1315,7 +1316,7 @@ P = \sum P_i (y_i) = \sum P_i (y)
 <li><p>The Liquidity Preference Hypothesis</p>
 <ul>
 <li><p>Investors require premium to hold a bond with a particular maturity over another maturity.</p></li>
-<li><p>Suppose $ r_2 = $.</p></li>
+<li><p>Suppose <span class="math inline">\(r_2 = \frac{r_1+ E[r_{1,2}]+tp_{1,2}}{2}\)</span>.</p></li>
 <li><p>Even when <span class="math inline">\(r_1 = E[r_{1,2}]\)</span>, i.e., the market does not expect rates to rise, <span class="math inline">\(r_2 &gt; r_1\)</span> if <span class="math inline">\(tp_{1,2}&gt;0\)</span>.</p></li>
 <li><p>Alternatively, the no-arbitrage condition suggests that we can define it as <span class="math inline">\(tp_{1,2} = f_{1,2} - E[r_{1,2}]\)</span></p></li>
 <li><p>That is, the excess of the forward rate over pure expectation of future interest rate</p></li>
@@ -1510,14 +1511,14 @@ P = \sum P_i (y_i) = \sum P_i (y)
 </ul></li>
 <li><p>Find <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in:</p>
 <ul>
-<li><p>$x(7.005) = $1mm(4.1688) x =$593,861.5 $</p></li>
-<li><p>$y(2.7) = $1mm(4.1688) y = $1,540,720 $</p></li>
+<li><p><span class="math inline">\(x(7.005) = \$1mm(4.1688) \Rightarrow x =\$593,861.5\)</span></p></li>
+<li><p><span class="math inline">\(y(2.7) = \$1mm(4.1688) \Rightarrow y = \$1,540,720\)</span></p></li>
 </ul></li>
 <li><p>If yields rise by 1% overnight on all the bonds:</p>
 <ul>
-<li><p>For 5 yr, yield to 7.9%,: <span class="math inline">\(P=\$959.423/1,000=0.959423\)</span>, Loss: $($1,000,000)(1-0.959423) = $40,577 $</p></li>
+<li><p>For 5 yr, yield to 7.9%,: <span class="math inline">\(P=\$959.423/1,000=0.959423\)</span>, Loss: <span class="math inline">\((\$1,000,000)(1-0.959423) = \$40,577\)</span></p></li>
 <li><p>For 10 year yield to 7.5% <span class="math inline">\(P=\$1034.81/1109=0.93311\)</span>, Loss: <span class="math inline">\((\$595,167)(1-0.93311) = \$39,810\)</span></p></li>
-<li><p>For 3 year yield to 7%: <span class="math inline">\(P=\$981.42/\$1,008.1=0.97353\)</span>, Loss: $($1,543,947)(1-.97353) = $40,861 $</p></li>
+<li><p>For 3 year yield to 7%: <span class="math inline">\(P=\$981.42/\$1,008.1=0.97353\)</span>, Loss: <span class="math inline">\((\$1,543,947)(1-.97353) = \$40,861\)</span></p></li>
 </ul></li>
 </ol>
 </section>
@@ -1533,11 +1534,11 @@ P = \sum P_i (y_i) = \sum P_i (y)
 </ul></li>
 <li><p>Match hedge ratios:</p>
 <ul>
-<li>$ $1m(4.1688) = P2(7.005) + P3(2.700)$</li>
+<li><span class="math inline">\(\$1m(4.1688) = P2(7.005) + P3(2.700)\)</span></li>
 </ul></li>
 <li><p>Match gamma:</p>
 <ul>
-<li>$ $1m(21.038) = P2(62.98) + P3(8.939) $</li>
+<li>$$1m(21.038) = P2(62.98) + P3(8.939) $</li>
 </ul></li>
 <li><p>2 linear equations in two unknowns. Solve for P2 and P3.</p></li>
 </ul>
@@ -1614,14 +1615,6 @@ P = \sum P_i (y_i) = \sum P_i (y)
 </ul></li>
 </ul></li>
 <li><p>Tread-off: yield vs.&nbsp;convexity!</p></li>
-</ul>
-</section>
-<section id="references" class="slide level2">
-<h2>References</h2>
-<ul>
-<li><p>BKM, Chapters 14, 15, and 16</p></li>
-<li><p>Tuckman and Serrat, Chapters 1 through 4</p></li>
-<li><p>Prof.&nbsp;Jennifer Carpenter’s lecture notes</p></li>
 </ul>
 
 </section></section>
