@@ -3,14 +3,14 @@ title: "Financial Markets: Part I"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
 format: 
-  pdf: default
   revealjs:
     theme: simple
     transition: fade
     transition-speed: fast
     scrollable: true
     slide-number: true
-    chalkboard: TRUE
+    chalkboard: true
+  pdf: default
 revealjs-plugins:
   - revealjs-text-resizer #
 execute:
@@ -589,15 +589,17 @@ Consider a zero coupon bond with price $P$ and face value $M$
     *   People in different countries took different strategies to ease the calculation of accrued interests over time
     *   30 days per month? 360 or 365 days per year?
 *   Conventions vary from country to country and from instrument to instrument
+  
+    * **$X/Y$, where $X$ is the number of days in a month, and $Y$ is the number of days in a year**.
 
     *   Actual/Acutal: US treasury bonds, Australia
     *   30/360 method: US corporate/municipal bonds, Eurobonds
     *   Actual/360: US money market
     *   Actual/365: Korea, UK, Japan
-    *   $X/Y$, where $X$ is the number of days in a month, and $Y$ is the number of days in a year.
 
 
-[Source: <https://www.rbcits.com/en/gmi/global-custody/market-profiles.page>}]{.aside}
+
+[Source: <https://www.rbcits.com/en/gmi/global-custody/market-profiles.page>{.aside}
 
 ---
 
