@@ -2,17 +2,17 @@
 title: "Financial Markets: Part II"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
-format: 
+format:
   revealjs:
     theme: simple
     transition: fade
     transition-speed: fast
     scrollable: true
     slide-number: true
-    chalkboard: TRUE
+    chalkboard: true
   pdf: default
-revealjs-plugins:
-  - revealjs-text-resizer #
+revealjs-plugins: 
+  - revealjs-text-resizer
 execute:
   echo: true
   eval: true
