@@ -110,7 +110,7 @@ execute:
 *   91-day (discount), 1-, 2-, and 3-year (coupon)
 
 ::: {style="text-align: center"}
-![](img/market_MSB_balance.png
+![](img/market_MSB_balance.png)
 :::
 
 ---
