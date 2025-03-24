@@ -3,7 +3,6 @@ title: "Financial Markets: Part III"
 subtitle: "BUSS254 Investments"
 author: "Prof. Ji-Woong Chung"
 format:
-  pdf: default
   revealjs:
     theme: simple
     transition: fade
@@ -11,6 +10,7 @@ format:
     scrollable: true
     slide-number: true
     chalkboard: true
+  pdf: default
 revealjs-plugins: 
   - revealjs-text-resizer
 execute:
