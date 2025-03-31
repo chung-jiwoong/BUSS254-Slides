@@ -10,7 +10,7 @@ format:
     scrollable: true
     slide-number: true
     chalkboard: true
-  pdf: default
+  typst: default
 revealjs-plugins: 
   - revealjs-text-resizer
 execute:
