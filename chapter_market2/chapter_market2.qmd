@@ -10,7 +10,7 @@ format:
     scrollable: true
     slide-number: true
     chalkboard: true
-  typst: default
+  pdf: default
 revealjs-plugins: 
   - revealjs-text-resizer
 execute:
@@ -881,6 +881,7 @@ Source: Capital Market Factbook - SIFMA, 2024
 ::: {style="text-align: center"}
 ![](img/market_Forex_Derivatives.png)
 :::
+
 
 ---
 
