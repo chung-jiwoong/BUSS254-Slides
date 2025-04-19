@@ -96,24 +96,6 @@ Suppose Susan opens a brokerage account to short-sell 100 shares of XYZ at \$10 
 
 ## Problem
 
-XYZ stock price and dividend history are as follows:
-
-|      | Beginning-of-year Price | Dividend paid at Year-End |
-| :--- | :----------------------- | :------------------------ |
-| 2010 | \$100                    | \$4                         |
-| 2011 | \$110                    | \$4                         |
-| 2012 | \$90                     | \$4                         |
-| 2013 | \$95                     | \$4                         |
-
-(a) What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
-
-(b) An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sell one share at the beginning of 2012, and sell all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?
-
-
----
-
-## Problem
-
 The following table is a simple scenario of the stock market:
 
 | Scenario         | Probability | Holding-period return (%) |

@@ -184,49 +184,6 @@ Suppose Susan opens a brokerage account to short-sell 100 shares of XYZ at \$10 
 
 ## Problem
 
-XYZ stock price and dividend history are as follows:
-
-|      | Beginning-of-year Price | Dividend paid at Year-End |
-| :--- | :----------------------- | :------------------------ |
-| 2010 | \$100                    | \$4                         |
-| 2011 | \$110                    | \$4                         |
-| 2012 | \$90                     | \$4                         |
-| 2013 | \$95                     | \$4                         |
-
-(a) What are the arithmetic and geometric average rates of return for the investor? (Note, these are also called time-weighted average rate of returns)
-
-(b) An investor buys three shares of XYZ at the beginning of 2010, buys another two shares at the beginning of 2011, sell one share at the beginning of 2012, and sell all four remaining shares at the beginning of 2013. What is the internal rate of return (a.k.a., dollar-weighted rate of return)?
-
-**Solution:**
-
-(a) The rates of return vary each year based on the stock's price fluctuation.
-    *Return in 2010 = (Ending Price + Dividends - Beginning Price) / (Beginning Price) = (110+4 - 100)/100 = 14%
-    *Return in 2011 = (90+4-110)/110 = -14.55%
-    *Return in 2012 = (95+4-90)/90 = 10%
-    *Return in 2013 = (Ending Price + Dividends - Beginning Price) / (Beginning Price) = (0+4 -95)/95 = -95/95 = -95.79%
-
-    The arithmetic average return (AM) = (Sum of Annual Returns) / number of periods = (14 -14.55 + 10 + 0.1579) / 4 = 3.1515%
-
-    The geometric average rate of return (GM) = [(1 + Return1) * (1 + Return2) * (1 + Return3) ... ]^(1/number of periods) -1.
-
-    The geometric average rate of return (GM) = [(1 + 0.14) * (1 + -0.1455) * (1 + 0.1) * (1 + 0.0421)]^(1/4)-1 = 2.3319%
-
-(b) Dollar Weighted Return looks at how much of a particular asset an investor invests in and what is the return on invested assets.
-
-|      | Cash flows        | Dividend paid at Year-End |
-| :--- | :---------------- | :------------------------ |
-| 2010 | - 3 \* \$100      | 3\* \$4                   |
-| 2011 | - 2 \* \$110      | 5 \* \$4                   |
-| 2012 | +\$90             | 4 \* \$4                   |
-| 2013 | + 4 \* \$95       | 0 \* \$4                   |
-
-    The cashflow takes into account the price of purchase as well as any dividends or payouts. For instance in 2010, the total investment is = 3 * 100 = \$300. However at year end 2010, dividends were issued. Thus, total cashflow = 3 * 4= 12.
-    Cash flow streams: -300, (-200+12), (90+20), 380. Using IRR function in Excel, the IRR is -0.1661%. This is a negative return of -16.61%
-
----
-
-## Problem
-
 The following table is a simple scenario of the stock market:
 
 | Scenario         | Probability | Holding-period return (%) |

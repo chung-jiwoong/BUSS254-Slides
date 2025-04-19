@@ -16,7 +16,7 @@ execute:
 
 ## Problem
 
-Go to [finance.yahoo.com](https://finance.yahoo.com)) search for the ticker symbol of Palantir Technologies Inc.
+Go to [finance.yahoo.com](https://finance.yahoo.com) search for the ticker symbol of Palantir Technologies Inc.
 
 ###
 
@@ -339,7 +339,7 @@ cat("Tesla - Arithmetic Mean Return:", round(arithmetic_mean_tesla, 6), "\n")
 cat("Tesla - Geometric Mean Return:", round(geometric_mean_tesla, 6), "\n")
 cat("Tesla - Standard Deviation:", round(std_dev_tesla, 6), "\n")
 ```
-````
+
 **Solution:** *Solution generated based on the day the data is pulled. For example as of 2024-07-03*
 
 ```
