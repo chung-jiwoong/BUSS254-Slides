@@ -818,7 +818,7 @@ P = \frac{c/2}{y/2} \left( 1 - \frac{1}{(1+y/2)^{2T}} \right) + \frac{1}{(1+y/2)
 \left( 1+ \frac{r_t}{2} \right)^{2t} = \left( 1+ \frac{r_{t-0.5}}{2} \right)^{2t-1} \left( 1+ \frac{f_{t-0.5,t}}{2} \right)
 \]</span></p>
 <ul>
-<li>Denote $ f_{0,0.5} = f_{0.5}$. By definition, $ f_{0.5} = r_{0.5}$</li>
+<li>Denote <span class="math inline">\(f_{0,0.5} = f_{0.5}\)</span>. By definition, <span class="math inline">\(f_{0.5} = r_{0.5}\)</span></li>
 </ul>
 <p><span class="math display">\[
 \left( 1+ \frac{r_t}{2} \right)^{2t} = \left( 1+ \frac{f_{0.5}}{2} \right) \left( 1+ \frac{f_{1}}{2} \right) ... \left( 1+ \frac{f_{t}}{2} \right)
@@ -1069,7 +1069,7 @@ D = \frac{1}{P} \left[ \frac{100c}{y^2} \left( 1- \frac{1}{\left( 1+\frac{y}{2} 
 <li><p>The first derivative of price function, <span class="math inline">\(P(y)\)</span>. The slope (tangent line) of <span class="math inline">\(P(y)\)</span> at <span class="math inline">\(y\)</span>.</p></li>
 <li><p>The terms inside the brackets in (3) <span class="math inline">\(= \sum_{t=1}^{2T} \frac{t}{2} W_t\)</span></p>
 <ul>
-<li>The weighted sum of the times at which cash flows are received, with $W_t = $ the present value of the cash flow received at that time.</li>
+<li>The weighted sum of the times at which cash flows are received, with <span class="math inline">\(W_t\)</span> = the present value of the cash flow received at that time.</li>
 </ul></li>
 <li><p>The terms inside the brackets in (5) <span class="math inline">\(= \sum_{t=1}^{2T} \frac{t}{2} \omega_t\)</span></p>
 <ul>
@@ -1129,7 +1129,7 @@ D_{c=0} = \frac{T}{(1+\frac{y}{2})}
 \]</span></p>
 <p>{<span class="math inline">\(\$Dur=100T/(1+y/2)^{2T+1}\)</span>,Macaulay Duration <span class="math inline">\(= T\)</span>}</p>
 <ul>
-<li>Par bonds: set $ c = y$ in (4) and (6). <span class="math inline">\(P=100\)</span>.</li>
+<li>Par bonds: set <span class="math inline">\(c = y\)</span> in (4) and (6). <span class="math inline">\(P=100\)</span>.</li>
 </ul>
 <p><span class="math display">\[
 DV01_{c=y} = \frac{1}{100y} \left(1- \frac{1}{(1+\frac{y}{2})^{2T}}\right)
@@ -1303,7 +1303,7 @@ P = \sum P_i (y_i) = \sum P_i (y)
 <li><p>No-arbitrage implies <span class="math inline">\((1+r_2)^2 = (1+r_1)(1+f_{1,2})\)</span>.</p></li>
 <li><p>The PEH suggests that <span class="math inline">\((1+r_1)(1+f_{1,2})=(1+r_1)(1+E[r_{1,2}])\)</span></p></li>
 <li><p>Also, <span class="math inline">\((1+r_2)^2 = (1+r_1)(1+E[r_{1,2}])\)</span>. Hence, <span class="math inline">\(r_2 \approx \frac{r_1+E[r_{1,2}]}{2}\)</span></p></li>
-<li><p>If <span class="math inline">\(r_2 &gt; r_1\)</span>, then $ E[r_{1,2}]&gt;r_1$</p></li>
+<li><p>If <span class="math inline">\(r_2 &gt; r_1\)</span>, then <span class="math inline">\(E[r_{1,2}]&gt;r_1\)</span></p></li>
 </ul></li>
 </ul>
 <div style="text-align: center;">
@@ -1442,12 +1442,12 @@ P = \sum P_i (y_i) = \sum P_i (y)
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">Equity</td>
-<td style="text-align: left;">$15m (D=<span class="math inline">\(D_E\)</span> years)</td>
+<td style="text-align: left;">$15m (<span class="math inline">\(D=D_E\)</span> years)</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li><p>Duration of a portfolio is the average of the durations of the portfolio’s components: $5 = (285/300)3 + (15/300)D_E $</p>
+<li><p>Duration of a portfolio is the average of the durations of the portfolio’s components: <span class="math inline">\(5 = (285/300)3 + (15/300)D_E\)</span></p>
 <ul>
 <li><p><span class="math inline">\(D_E=43\)</span>, the bank (and regulators) may worry about this level of duration mismatch.</p></li>
 <li><p>If the yield increase by 25 bp, equity reduces by 11%!</p></li>
@@ -1465,7 +1465,7 @@ P = \sum P_i (y_i) = \sum P_i (y)
 <li><p><span class="math inline">\(D_E \approx 0\)</span></p></li>
 </ul></li>
 <li><p>However, the bank gave up the returns from mortgages.</p></li>
-<li><p>``Zero risk’’ is not (usually) optimal – bank business is to achieve returns by taking some risks.</p></li>
+<li><p>“Zero risk” is not (usually) optimal – bank business is to achieve returns by taking some risks.</p></li>
 </ul>
 </section>
 <section id="limitations-of-immunization" class="slide level2">
@@ -1538,7 +1538,7 @@ P = \sum P_i (y_i) = \sum P_i (y)
 </ul></li>
 <li><p>Match gamma:</p>
 <ul>
-<li>$$1m(21.038) = P2(62.98) + P3(8.939) $</li>
+<li><span class="math inline">\(\$1m(21.038) = P2(62.98) + P3(8.939)\)</span></li>
 </ul></li>
 <li><p>2 linear equations in two unknowns. Solve for P2 and P3.</p></li>
 </ul>

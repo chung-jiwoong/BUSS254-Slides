@@ -598,7 +598,7 @@ $$
 \left( 1+ \frac{r_t}{2} \right)^{2t} = \left( 1+ \frac{r_{t-0.5}}{2} \right)^{2t-1} \left( 1+ \frac{f_{t-0.5,t}}{2} \right)
 $$
 
-*   Denote $ f_{0,0.5} = f_{0.5}$. By definition, $ f_{0.5} = r_{0.5}$
+*   Denote $f_{0,0.5} = f_{0.5}$. By definition, $f_{0.5} = r_{0.5}$
 
 $$
 \left( 1+ \frac{r_t}{2} \right)^{2t} = \left( 1+ \frac{f_{0.5}}{2} \right) \left( 1+ \frac{f_{1}}{2} \right) ... \left( 1+ \frac{f_{t}}{2} \right)
@@ -875,7 +875,7 @@ $$
 
 *   The terms inside the brackets in (3) $= \sum_{t=1}^{2T} \frac{t}{2} W_t$
 
-    *   The weighted sum of the times at which cash flows are received, with $W_t = $ the present value of the cash flow received at that time.
+    *   The weighted sum of the times at which cash flows are received, with $W_t$ = the present value of the cash flow received at that time.
 
 *   The terms inside the brackets in (5) $= \sum_{t=1}^{2T} \frac{t}{2} \omega_t$
 
@@ -944,7 +944,7 @@ $$
 
 {$\$Dur=100T/(1+y/2)^{2T+1}$,Macaulay Duration $= T$}
 
-*   Par bonds: set $ c = y$ in (4) and (6). $P=100$.
+*   Par bonds: set $c = y$ in (4) and (6). $P=100$.
 
 $$
 DV01_{c=y} = \frac{1}{100y} \left(1- \frac{1}{(1+\frac{y}{2})^{2T}}\right)
@@ -1139,7 +1139,7 @@ See Excel spreadsheet, *Fixed\_Income.xlsx*
 
     *   Also, $(1+r_2)^2 = (1+r_1)(1+E[r_{1,2}])$. Hence, $r_2 \approx \frac{r_1+E[r_{1,2}]}{2}$
 
-    *   If $r_2 > r_1$, then $ E[r_{1,2}]>r_1$
+    *   If $r_2 > r_1$, then $E[r_{1,2}]>r_1$
 
 ::: {style="text-align: center;"}
 ![](img/fixed_Expectation.png)
@@ -1273,9 +1273,9 @@ Many financial institutions hold short-term liabilities (checking and savings ac
 
 | Assets | \$300m (D=5 years) | Liab.  | \$285m (D=3 years) |
 | :----- | :----------------- | :----- | :----------------- |
-|        |                    | Equity | \$15m (D=$D_E$ years) |
+|        |                    | Equity | \$15m ($D=D_E$ years) |
 
-*   Duration of a portfolio is the average of the durations of the portfolio’s components: $5 = (285/300)3 + (15/300)D_E  $
+*   Duration of a portfolio is the average of the durations of the portfolio’s components: $5 = (285/300)3 + (15/300)D_E$
 
     *   $D_E=43$, the bank (and regulators) may worry about this level of duration mismatch.
 
@@ -1295,7 +1295,7 @@ The bank wants to reduce the duration of its equity from 43 to 0. That is, it wa
 
 *   However, the bank gave up the returns from mortgages.
 
-*   ``Zero risk'' is not (usually) optimal – bank business is to achieve returns by taking some risks.
+*   "Zero risk" is not (usually) optimal – bank business is to achieve returns by taking some risks.
 
 ## Limitations of Immunization
 
@@ -1371,7 +1371,7 @@ The bank wants to reduce the duration of its equity from 43 to 0. That is, it wa
 
 *   Match gamma:
 
-    *   $\$1m(21.038) = P2(62.98) + P3(8.939) $
+    *   $\$1m(21.038) = P2(62.98) + P3(8.939)$
 
 *   2 linear equations in two unknowns. Solve for P2 and P3.
 

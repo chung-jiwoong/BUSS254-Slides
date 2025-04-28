@@ -44,4 +44,5 @@
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_fixed/chapter_fixed.pdf) / 
 [Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/problem_fixed.html) / 
 [Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/solution_fixed.html) / 
-[Duration and Convexity](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Duration_Convexity1.xlsx)
+[Spreadsheet 1](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Fixed_Income.xlsx)
+[Spreadsheet 2](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Duration_Convexity1.xlsx)
