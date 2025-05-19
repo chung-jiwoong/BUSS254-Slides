@@ -44,7 +44,7 @@
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_fixed/chapter_fixed.pdf) / 
 [Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/problem_fixed.html) / 
 [Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/solution_fixed.html) / 
-[Spreadsheet 1](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Fixed_Income.xlsx)
+[Spreadsheet 1](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Fixed_Income.xlsx) / 
 [Spreadsheet 2](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/data/Duration_Convexity1.xlsx)
 
 
@@ -54,3 +54,4 @@
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives1.pdf) / 
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives2.pdf) / 
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives3.pdf) / 
+[Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_derivatives/problem_derivatives.html) / 

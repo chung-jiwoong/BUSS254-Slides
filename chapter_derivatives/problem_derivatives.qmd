@@ -1,0 +1,123 @@
+---
+title: "Introduction to Derivatives"
+subtitle: "BUSS284 Investments"
+author: "Prof. Ji-Woong Chung"
+format: typst
+number-sections: true
+execute:
+    echo: true
+    eval: true
+---
+
+1.  The current level of the S&P500 index is $3000$, the futures price of a contract on S&P500 maturing 3 months from now is $F = 3009$. The futures contract is settled in cash with the payout at maturity equal to the closing value of the S&P500 index on that day. The 1-year continuously compounded spot risk-free rate is $r = 2.7\%$. What value of the S&P500 dividend yield is implied by this data? Use continuous compounding for the dividend yield.
+
+<!-- # Solution: 1.5%: $y = 2.7\% - 4 \cdot \ln(3009/3000)$ -->
+
+------------------------------------------------------------------------
+
+2.  The 1-year risk-free interest rate of investments in US dollars is $r_{USD} = 1.22\%$. The 1-year risk-free interest rate of investments in Canadian dollars is $r_{CAD} = 4.00\%$. Use annual compounding. The current (spot) exchange rate between the two currencies is $1.41$, i.e., the price of 1 USD is 1.41 CAD. The 1-year forward price of 1 USD is 1.41 CAD. You can trade in 1-year risk-free bonds denominated in both US and Canadian dollars, in the forward contract to buy 1 USD 1 year from now, and in the spot foreign exchange market, where you can buy and sell USD. Consider the following strategy:
+
+    a.  Borrow $x$ USD at $1.22\%$ today, which means that the total loan repayment obligation after a year would be $(1 + 1.22\%)x$ USD.
+
+    b.  Convert $y$ USD into CAD at the spot rate of $1.41$.
+
+    c.  Lock in the $4.00\%$ rate on the deposit amount of $1.41y$ CAD, and simultaneously enter into a forward contract that converts the full maturity amount of the deposit into USD at the one-year forward rate of USD = $1.41$ CAD.
+
+    d.  After one year, settle the forward contract at the contracted rate of $1.41$. Suppose the above arbitrage strategy generates 100 USD today and nothing otherwise, solve for $x$ and $y$.
+
+<!-- # Solution: $x = 3741.01$, $y = 3641.01$: $x - y = 100$ at 0, $(1.04)y - (1.0122)x = 0$ -->
+
+------------------------------------------------------------------------
+
+3.  Suppose that on Day 0 you take a long position in a futures contract on copper maturing on Day 3. Each contract is on 2,000 kilograms of copper, with the closing futures price on Day 0 equal to $94$ per kilogram. Suppose the closing futures prices on Day 1, 2, and 3 are $104$, $98$, $101$ respectively. The futures contract is marked to market daily, at the end of the trading day, with resulting gains and losses settled using a margin account. Compute the cash flow into/from the margin account resulting from marking to market a long position in 1 futures contract at the end of Day 2.
+
+<!-- # Solution: $-12000$: $CF = 2000(98 - 104)$ -->
+
+------------------------------------------------------------------------
+
+4.  Suppose the 1-month and 3-month future prices for oil are $F_1 = 36.1$ and $F_3 = 35.7$ per barrel. Assume the spot interest rates are the same for the first three months and equal to $r = 2.7\%$ (annualized, continuously compounded). What is the net convenience yield on storing oil implied by the market data?
+
+<!-- # Solution: $9.29\%$: $y = 2.6\% - 6 \ln(35.7/36.1)$ -->
+
+------------------------------------------------------------------------
+
+5.  Consider a European Call option of stock XYZ. The current price of the option is $7.89$. This option has 6 months to maturity and the strike price is $100$. Currently, the price of XYZ stock is $70$. The 6-month interest rate (annualized, continuously compounded) is $5\%$. Compute the net payoff, considering the time value of money, to the buyer of the option at the expiration of the options, assuming that:
+
+    a.  the price of XYZ at maturity is $125$
+
+    b.  the price of XYZ at maturity is $80$
+
+<!-- # Solution: $16.91$: $\max(125 - 100, 0) - 7.89 e^{0.05 \cdot 6/12}$ and $-8.09$ -->
+
+------------------------------------------------------------------------
+
+6.  Consider a stock, XYZ, which pays no dividends over the next year. The current stock price of XYZ is $105$. You observe prices of two European options, both maturing in one year from now. One is a European call option with the strike price of $130$, which currently trades at $17$. The other is a European put option with the strike price of $130$, which currently trades at $40$. What value of the one-year risk-free interest rate (continuously compounded) is consistent with absence of arbitrage?
+
+<!-- # Solution: Put-call parity: $r = 1.55\%$ -->
+
+------------------------------------------------------------------------
+
+7.  Stock AAA is currently traded at $170$ per share. The stock price will either go up or go down by $10\%$ in each of the next two years. The annual interest rate is $1\%$. Assume the stock pays no dividends the next two years. Bank XYZ issues a two-year European call option on the stock with the strike price $180$.
+
+    a.  Suppose the price goes up at Year 1. How many shares of the stock and cash do you need to replicate the payoff of the call option? (in Year 1)
+
+    b.  Suppose the price goes down at Year 1. What is the price of the option?
+
+    c.  What is the price of the option at Year 0?
+
+```{=html}
+<!-- # Solution:
+
+# a. Cash = $-114.5$ (borrow), Shares = $0.69$
+
+# b. Current stock price is $153.0$ and it can go to $168.3$ or $137.7$. Hence, the payoff of the option will be $0$ in both following states. The value of the option at Year 1 is $0$.
+
+# c. $7.62$ -->
+```
+
+------------------------------------------------------------------------
+
+8.  Consider a stock paying no dividends. Price movements follow the binomial model with the following tree. Interest rate is $5\%$ per period.
+
+```{r, engine = 'tikz'}
+#| echo: false
+
+\begin{center}
+	\tikzstyle{bag} = [text width=6em, text centered]
+	\tikzstyle{end} = []
+	\begin{tikzpicture}[sloped]
+		\node (a) at ( 0,0) [bag] {$S_0=300$};
+		\node (b) at ( 3,-1) [bag] {$S_0d=210$};
+		\node (c) at ( 3,1) [bag] {$S_0u=630$};
+		\node (d) at ( 6,-2) [bag] {$S_{0}dd=147$};
+		\node (e) at ( 6,0) [bag] {$S_{0}ud=441$};
+		\node (f) at ( 6,2) [bag] {$S_{0}uu=1323$};
+		\draw [->] (a) to node [below] {$d$} (b);
+		\draw [->] (a) to node [above] {$u$} (c);
+		\draw [->] (c) to node [below] {$u$} (f);
+		\draw [->] (c) to node [above] {$d$} (e);
+		\draw [->] (b) to node [below] {$u$} (e);
+		\draw [->] (b) to node [above] {$d$} (d);
+	\end{tikzpicture}
+\end{center}
+```
+
+a.  What is the risk-neutral probability of the up-move at the time-0 node?
+
+b.  Using risk-neutral probabilities, compute the value of an option, which pays $1$ at the end of the second period if the stock price at that time exceeds the initial price at time 0, and nothing otherwise.
+
+------------------------------------------------------------------------
+
+9.  All assumptions of the Black-Scholes-Merton option pricing model hold. Stock XYZ is priced at $50$. It has volatility $30%$ per year. The annualized continuously-compounded risk-free interest rate is $1.6%$.
+
+    a.  Compute the price of a European call option with strike price $51$, which matures in 3 months.
+
+    b.  Compute the price of a European put option with the same strike price and the same maturity date using the put-call parity.
+
+------------------------------------------------------------------------
+
+10. All Black-Scholes-Merton assumptions hold. Stock XYZ is priced at $50$. It has volatility $25%$ per year. The annualized continuously-compounded risk-free interest rate is $2.5%$ and will remain constant for the next 6 months. Consider two European options: a call with the strike price of $55$, which matures in 3 months; and a put with the strike price of $50$, which matures in 6 months. Which of the following statements is true?
+
+    a.  The call has higher implied volatility than the put.
+    b.  The put has higher implied volatility than the call.
+    c.  The call has the same implied volatility as the put.
