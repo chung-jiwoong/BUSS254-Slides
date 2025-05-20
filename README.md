@@ -55,3 +55,4 @@
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives2.pdf) / 
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives3.pdf) / 
 [Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_derivatives/problem_derivatives.html) / 
+[Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_derivatives/solution_derivatives.html) 
