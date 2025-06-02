@@ -68,3 +68,5 @@
 **Lecture7: The CAPM and APT**
 
 [NotePDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_capm/chapter_capm.pdf) / 
+[Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_capm/problem_capm.html) / 
+[Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_capm/solution_capm.html) 
