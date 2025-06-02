@@ -62,3 +62,9 @@
 **Lecture7: Portfolio Theory**
 
 [NotePDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_portfolio/chapter_portfolio.pdf) / 
+
+
+
+**Lecture7: The CAPM and APT**
+
+[NotePDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_capm/chapter_capm.pdf) / 
