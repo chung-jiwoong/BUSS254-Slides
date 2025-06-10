@@ -8,7 +8,7 @@
 
 ---
 
-**Lecture1: Introduction and Overview**
+**Lecture 1: Introduction and Overview**
 
 [Note: HTML](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_intro/chapter_intro.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_intro/chapter_intro.pdf) / 
@@ -16,7 +16,7 @@
 [Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_intro/solution_intro.html)
 
     
-**Lecture2: Financial Markets 1 (Money Markets)**
+**Lecture 2: Financial Markets 1 (Money Markets)**
 
 [Note: HTML](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_market1/chapter_market1.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_market1/chapter_market1.pdf) / 
@@ -24,13 +24,13 @@
 [Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_market1/solution_market1.html)
 
 
-**Lecture3: Financial Markets 2 (Capital Markets)**
+**Lecture 3: Financial Markets 2 (Capital Markets)**
 
 [Note: HTML](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_market2/chapter_market2.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_market2/chapter_market2.pdf) / 
 
 
-**Lecture4: Financial Markets 3 (Trading & Investment Companies)**
+**Lecture 4: Financial Markets 3 (Trading & Investment Companies)**
 
 [Note: HTML](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_market3/chapter_market3.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_market3/chapter_market3.pdf) / 
@@ -38,7 +38,7 @@
 [Solution](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_market3/solution_market3.html)
 
 
-**Lecture5: Fixed Income Securities**
+**Lecture 5: Fixed Income Securities**
 
 [Note: HTML](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_fixed/chapter_fixed.html) / 
 [Note: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_fixed/chapter_fixed.pdf) / 
@@ -49,7 +49,7 @@
 
 
 
-**Lecture6: Financial Derivatives**
+**Lecture 6: Financial Derivatives**
 
 [Note 1: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives1.pdf) / 
 [Note 2: PDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_derivatives/chapter_derivatives2.pdf) / 
@@ -59,13 +59,13 @@
 
 
 
-**Lecture7: Portfolio Theory**
+**Lecture 7: Portfolio Theory**
 
 [NotePDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_portfolio/chapter_portfolio.pdf) / 
 [Spreadsheet 1](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_portfolio/portfolio.xlsx) 
 
 
-**Lecture7: The CAPM and APT**
+**Lecture 8: The CAPM and APT**
 
 [NotePDF](https://github.com/chung-jiwoong/BUSS254-Slides/blob/main/chapter_capm/chapter_capm.pdf) / 
 [Problem Set](https://chung-jiwoong.github.io/BUSS254-Slides/chapter_capm/problem_capm.pdf) / 
